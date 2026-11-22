@@ -18,8 +18,9 @@ sphere packing in dimension 8, the strong prime number theorem, an Erdős proble
 
 ## Make a card, with no coding
 
-You need an AI assistant that can run programs on a computer, such as **Claude Code**, **OpenAI Codex**,
-**Gemini CLI** or **Cursor**. A chat window that cannot run programs will not work.
+You need an AI assistant that can run programs: a coding assistant on your computer, such as **Claude Code**,
+**OpenAI Codex**, **Gemini CLI** or **Cursor**, or a chatbot that runs code in the cloud, such as **Claude** at
+claude.ai with code execution turned on (tested on 2026-11-22). A chat window that cannot run programs will not work.
 
 Copy this message into it, with the link to the Lean project you are curious about:
 
@@ -35,7 +36,8 @@ and give you:
 
 A small project takes under a minute. The 175,000-file Riemann Hypothesis archive takes about 3 minutes. The first
 run also downloads about 70 MB of data from Mathlib's website; if it cannot (for example in a cloud
-chatbot's sandbox), the tool uses the copy of that data included with it.
+chatbot's sandbox), the tool uses the copy of that data included with it. Such sandboxes often have no web browser either; then there
+is no card.png, and card.html has the same card.
 
 ## How to read a card
 
@@ -165,7 +167,7 @@ Files that are too large, too deeply nested or too slow to read are skipped with
 HTML-escaped on the card, and the cached Mathlib index is plain JSON.
 
 The full method, every formula and every known limitation are in [METHOD.md](METHOD.md). `python3 tests/test_extract.py`,
-`python3 tests/test_wrapper.py` and `python3 tests/test_security.py` run the regression tests (172 checks). Proof
+`python3 tests/test_wrapper.py` and `python3 tests/test_security.py` run the regression tests (177 checks). Proof
 Anatomy was written with Claude Code (Anthropic). Before release, OpenAI Codex reviewed the code in three rounds and
 then for security; every confirmed finding was fixed and turned into a test, and the approximations that remain are
 listed in METHOD.md.

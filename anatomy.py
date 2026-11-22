@@ -192,6 +192,13 @@ def py(script, *args, timeout=1800):
         sys.exit(f"stopped: {script} did not finish (see the message above)")
 
 
+def repo_id(u):
+    """A repository link reduced for comparing two links: no scheme, "www.", ".git" or trailing slash; lower case
+    (GitHub, GitLab and Codeberg ignore case in owner and repository names)."""
+    u = re.sub(r"^[a-z]+://", "", (u or "").strip().lower())
+    return re.sub(r"(\.git)?/*$", "", re.sub(r"^www\.", "", u))
+
+
 def public_url(u):
     """The source URL without user name, password, token, query or fragment, for printing and for the card."""
     if not re.match(r"^(https?|ssh)://", u): return u
@@ -576,7 +583,19 @@ def main():
 
     if not a.no_compare:
         step("4/4 comparing with the reference set")
-        refs = [p["key"] for p in json.load(open(os.path.join(REF, "projects.json"), encoding="utf-8")) if p["key"] != key]
+        mine = {repo_id(x) for x in (url, public_url(a.source) if is_git else "") if repo_id(x)}
+        counted = {x.strip("/") for x in include} | {f"{src_dir}/{x}".strip("/") for x in include}
+
+        def same_project(p):
+            """The same repository; for a reference project that is single files in a larger repository, also the same
+            files (another problem from the same collection is a different project)."""
+            files = [x for x in p.get("include") or [] if x.endswith(".lean")]
+            return repo_id(p.get("url")) in mine and (not files or any(f.strip("/") in counted for f in files))
+        refs, same = [], []
+        for p in json.load(open(os.path.join(REF, "projects.json"), encoding="utf-8")):
+            if p["key"] == key: continue                               # this run's card replaces the reference copy
+            (same if same_project(p) else refs).append(p["key"])
+        if same: print(f"left out of the comparison: the reference card for the same project ({', '.join(same)})", flush=True)
         refuse_links(*(os.path.join(out, f) for f in ("corpus.html", "compare.html", "corpus.json")))
         for k in refs:
             refuse_links(os.path.join(out, k))

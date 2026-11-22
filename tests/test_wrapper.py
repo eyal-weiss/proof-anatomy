@@ -15,6 +15,11 @@ def check(name, cond, detail=""):
     if not cond: FAILS.append(name)
 
 
+check("repository links compare equal regardless of scheme, case, .git and trailing slash",
+      A.repo_id("https://GitHub.com/teorth/PFR.git/") == A.repo_id("github.com/teorth/pfr") == "github.com/teorth/pfr"
+      and A.repo_id("https://github.com/teorth/pfr2") != A.repo_id("github.com/teorth/pfr") and A.repo_id("") == "")
+
+
 def layout(fn, text):
     d = tempfile.mkdtemp()
     open(os.path.join(d, fn), "w", encoding="utf-8").write(text)
@@ -54,6 +59,33 @@ check("a --main outside the project is refused", out.returncode != 0 and "refuse
 out = subprocess.run([sys.executable, os.path.join(HERE, "anatomy.py"), "https://github.com/example/x", "--rev=--orphan=x",
                       "--out", tempfile.mkdtemp(), "--no-compare", "--no-png"], capture_output=True, text=True)
 check("a --rev that looks like an option is refused", out.returncode != 0 and "--rev must be" in (out.stderr + out.stdout), out.stderr[-300:])
+
+# A card for one of the reference projects, saved under another name, is not compared with that project's reference copy.
+import json
+proj = tempfile.mkdtemp()
+open(os.path.join(proj, "Demo.lean"), "w", encoding="utf-8").write(
+    "import Mathlib\ntheorem t1 (x : ℝ) : 0 ≤ Real.sqrt x := Real.sqrt_nonneg x\n"
+    "theorem t2 (s : Finset ℕ) : s.card = s.card := Finset.card_eq_of_bijective (fun i _ => i) (by simp) (by simp) (by simp)\n")
+def closest(*extra):
+    o = tempfile.mkdtemp()
+    r = subprocess.run([sys.executable, os.path.join(HERE, "anatomy.py"), proj, "--key", "mine", "--out", o, "--no-png", *extra],
+                       capture_output=True, text=True)
+    k = json.load(open(os.path.join(o, "mine", "card.json"), encoding="utf-8"))
+    return r.stdout, [c["key"] for c in (k.get("resemblance") or {}).get("closest", [])]
+out1, keys1 = closest("--url", "https://github.com/teorth/PFR.git")
+out2, keys2 = closest()
+check("a card from a reference project's repository leaves that reference copy out of the comparison",
+      "pfr" not in keys1 and len(keys1) == 6 and "same project (pfr)" in out1, (keys1, out1[-300:]))
+check("other cards are compared with all seven reference projects", "pfr" in keys2 and len(keys2) == 7, keys2)
+# Erdős 846 is one file in a collection: another file from the same repository is a different project; the same file is not.
+erdos = "https://github.com/google-deepmind/alphaproof-nexus-results"
+os.makedirs(os.path.join(proj, "APNOutputs", "ErdosProblems"), exist_ok=True)
+for fn in ("erdos_846.lean", "erdos_1.lean"):
+    open(os.path.join(proj, "APNOutputs", "ErdosProblems", fn), "w", encoding="utf-8").write(open(os.path.join(proj, "Demo.lean"), encoding="utf-8").read())
+_, keys3 = closest("--url", erdos, "--include", "APNOutputs/ErdosProblems/erdos_1.lean")
+_, keys4 = closest("--url", erdos, "--include", "APNOutputs/ErdosProblems/erdos_846.lean")
+check("another problem from the same collection is still compared with Erdős 846", "erdos846" in keys3 and len(keys3) == 7, keys3)
+check("the same file from that collection is not compared with its own reference copy", "erdos846" not in keys4 and len(keys4) == 6, keys4)
 
 print(f"\n{len(FAILS)} failed" if FAILS else "\nall passed")
 sys.exit(1 if FAILS else 0)

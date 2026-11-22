@@ -148,8 +148,10 @@ Each card's `areas_L2` is normalized to sum to 1. Similarity = cosine similarity
 common, 1 = the same mix). The comparison page orders projects by average-linkage hierarchical clustering on
 1 − similarity, and lists families by cutting the tree at the largest gap between successive merge heights (with at
 least three projects). The Lean core group is one of the dimensions. Cards with no Mathlib area at all (only Lean
-core and other libraries) are left out of the comparison. Similarities depend on the
-projects in the set; the card says how many were compared.
+core and other libraries) are left out of the comparison. A card made from the same repository as a reference
+project (same link, ignoring case, `https://`, `.git` and a trailing slash) is not compared with that project's
+reference copy. When the reference project is a single file in a larger collection (Erdős 846), this applies only
+to a card that counts that same file. Similarities depend on the projects in the set; the card says how many were compared.
 
 ## Tests
 

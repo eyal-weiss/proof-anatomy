@@ -8,7 +8,9 @@ run the tool, check the result, and hand them the card with a plain-language exp
 The tool's value is that **every number on the card is computed, not judged**. Do not add your own assessment of the
 mathematics to the card or present one as if it came from the tool. When you explain the card, describe what the
 numbers say. If the person asks for your opinion (is the proof correct, is it important), give it separately and
-say clearly that it is yours, not the tool's. Never say or imply that the card verifies a proof.
+say clearly that it is yours, not the tool's. The same goes for background you add yourself (what the proof is
+about, how it works): keep it out of your summary of the card, or label it as yours. Never say or imply that the card
+verifies a proof.
 
 ## 1. Get the tool and check the requirements
 

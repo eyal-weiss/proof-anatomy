@@ -1,0 +1,8 @@
+/cards/
+build/
+__pycache__/
+*.pyc
+.venv/
+.clone-*/
+*.tmp.png
+files.jsonl.gz

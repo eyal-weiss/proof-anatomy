@@ -1,0 +1,645 @@
+{
+ "title": "Polynomial Freiman–Ruzsa conjecture (Gowers, Green, Manners, Tao; Lean project led by Tao)",
+ "short": "PFR conjecture",
+ "url": "github.com/teorth/pfr",
+ "source": {
+  "url": "github.com/teorth/pfr",
+  "commit": "1ef23c3c5a83db690fe3b3b5c2e8299fae17b81a"
+ },
+ "tool": "proof-anatomy",
+ "mathlib_table": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "numbers": {
+  "files": 74,
+  "code_lines": 17884,
+  "theorems": 909,
+  "definitions": 72
+ },
+ "mathlib": {
+  "theorems": 246464,
+  "definitions": 44906,
+  "files": 8557,
+  "source": "leanprover-community.github.io/mathlib4_docs declaration data"
+ },
+ "areas": {
+  "Algebra": 22.22,
+  "MeasureTheory": 19.46,
+  "Data": 14.52,
+  "Lean core & other libraries": 13.65,
+  "Probability": 10.66,
+  "Order": 4.9,
+  "Basic": 3.86,
+  "Topology": 2.78,
+  "Analysis": 2.68,
+  "SetTheory": 1.66,
+  "Logic": 1.26,
+  "Tactic": 1.15,
+  "LinearAlgebra": 0.63,
+  "GroupTheory": 0.34,
+  "RingTheory": 0.08,
+  "Combinatorics": 0.08,
+  "Util": 0.05,
+  "Dynamics": 0.02
+ },
+ "areas_L2": {
+  "Lean core & other libraries": 13.646,
+  "MeasureTheory/Measure": 9.738,
+  "Algebra/Group": 9.312,
+  "Data/Set": 6.795,
+  "MeasureTheory/MeasurableSpace": 6.105,
+  "Probability/Kernel": 5.944,
+  "Algebra/BigOperators": 4.79,
+  "Algebra/Order": 4.196,
+  "Data/Finset": 3.138,
+  "Data/Fintype": 2.27,
+  "Analysis/SpecialFunctions": 2.203,
+  "Probability/Independence": 2.202,
+  "Order/Defs": 1.757,
+  "MeasureTheory/Integral": 1.756,
+  "SetTheory/Cardinal": 1.657,
+  "Order/Filter": 1.438,
+  "Basic/ENNReal": 1.341,
+  "Probability/IdentDistrib": 1.32,
+  "MeasureTheory/OuterMeasure": 1.062,
+  "Topology/Algebra": 1.024,
+  "Algebra/Module": 0.995,
+  "Algebra/Ring": 0.921,
+  "Basic/Finite": 0.918,
+  "Data/ZMod": 0.908,
+  "Probability/ConditionalProbability": 0.902,
+  "Algebra/GroupWithZero": 0.817,
+  "Basic/Logic": 0.786,
+  "Algebra/Notation": 0.71,
+  "Logic/Equiv": 0.608,
+  "Data/Fin": 0.607,
+  "Topology/Defs": 0.474,
+  "Logic/Function": 0.447,
+  "MeasureTheory/Group": 0.424,
+  "Topology/Order": 0.417,
+  "Analysis/Complex": 0.383,
+  "Basic/Countable": 0.361,
+  "Data/Nat": 0.351,
+  "Tactic/Positivity": 0.337,
+  "Order/Interval": 0.308,
+  "Tactic/NormNum": 0.304,
+  "Probability/UniformOn": 0.287,
+  "Topology/Constructions": 0.259,
+  "MeasureTheory/Constructions": 0.257,
+  "Algebra/NeZero": 0.255,
+  "Tactic/Measurability": 0.249,
+  "GroupTheory/QuotientGroup": 0.225,
+  "Order/Basic": 0.224,
+  "Tactic/Finiteness": 0.211,
+  "Data/Prod": 0.194,
+  "LinearAlgebra/Span": 0.189,
+  "Order/Disjoint": 0.18,
+  "Order/ConditionallyCompleteLattice": 0.17,
+  "Order/SetNotation": 0.161,
+  "Topology/Continuous": 0.155,
+  "Basic/SetLike": 0.145,
+  "Order/BoundedOrder": 0.141,
+  "Order/BooleanAlgebra": 0.131,
+  "Topology/Instances": 0.127,
+  "LinearAlgebra/FreeModule": 0.123,
+  "Data/Int": 0.12,
+  "Basic/Nonempty": 0.114,
+  "Logic/Pairwise": 0.114,
+  "MeasureTheory/Function": 0.105,
+  "Topology/Neighborhoods": 0.102,
+  "Order/Fin": 0.098,
+  "Algebra/Field": 0.093,
+  "Logic/Embedding": 0.093,
+  "Basic/IsEmpty": 0.089,
+  "Combinatorics/Additive": 0.084,
+  "Topology/Compactness": 0.083,
+  "LinearAlgebra/Dimension": 0.074,
+  "Analysis/Normed": 0.073,
+  "RingTheory/Finiteness": 0.07,
+  "Order/CompleteLattice": 0.064,
+  "Util/AtomM": 0.054,
+  "Data/Subtype": 0.051,
+  "LinearAlgebra/Quotient": 0.051,
+  "GroupTheory/Coset": 0.05,
+  "Topology/Separation": 0.05,
+  "LinearAlgebra/AffineSpace": 0.048,
+  "Order/Monotone": 0.045,
+  "Topology/Sequences": 0.045,
+  "Order/Bounds": 0.045,
+  "Order/RelClasses": 0.045,
+  "Algebra/CharP": 0.044,
+  "Algebra/CharZero": 0.043,
+  "LinearAlgebra/Basis": 0.04,
+  "Algebra/Quotient": 0.039,
+  "Basic/NNReal": 0.035,
+  "Tactic/Ring": 0.035,
+  "Order/Heyting": 0.034,
+  "Basic/Real": 0.032,
+  "Topology/Clopen": 0.031,
+  "Data/Sigma": 0.028,
+  "Analysis/Convex": 0.026,
+  "LinearAlgebra/Dual": 0.026,
+  "Basic/Unique": 0.025,
+  "LinearAlgebra/Matrix": 0.024,
+  "Order/Notation": 0.024,
+  "Order/Lattice": 0.022,
+  "GroupTheory/Complement": 0.022,
+  "GroupTheory/OrderOfElement": 0.022,
+  "LinearAlgebra/Prod": 0.019,
+  "Data/ULift": 0.017,
+  "Dynamics/Ergodic": 0.017,
+  "GroupTheory/GroupAction": 0.017,
+  "Data/Sum": 0.016,
+  "Basic/Nontrivial": 0.015,
+  "LinearAlgebra/BilinearMap": 0.014,
+  "LinearAlgebra/Isomorphisms": 0.014,
+  "Order/MinMax": 0.014,
+  "RingTheory/Noetherian": 0.014,
+  "Tactic/Lift": 0.014,
+  "Topology/ContinuousMap": 0.014,
+  "Data/Bool": 0.014,
+  "MeasureTheory/PiSystem": 0.014,
+  "Data/FunLike": 0.01,
+  "LinearAlgebra/Projection": 0.01
+ },
+ "areas_filled_pct": 0.0,
+ "borrowed": {
+  "mathlib_pct": 68.3,
+  "core_pct": 14.1,
+  "own_pct": 17.6,
+  "mathlib_uses": 13360,
+  "core_uses": 2761,
+  "own_uses": 3441,
+  "folder_level": "PFR/",
+  "by_folder": [
+   {
+    "folder": "(files directly in PFR/)",
+    "lines_pct": 55.9,
+    "own_pct": 15.2
+   },
+   {
+    "folder": "ForMathlib",
+    "lines_pct": 30.6,
+    "own_pct": 23.9
+   },
+   {
+    "folder": "Mathlib",
+    "lines_pct": 12.3,
+    "own_pct": 9.5
+   },
+   {
+    "folder": "Tactic",
+    "lines_pct": 1.2,
+    "own_pct": 34.8
+   }
+  ]
+ },
+ "statement": {
+  "main_file": "PFR/Main.lean",
+  "sentences": [
+   "PFR_conjecture is stated with Mathlib's own definitions AddCommGroup, Module, ZMod, Set, Submodule and Nat.card."
+  ],
+  "trace": [
+   [
+    {
+     "name": "PFR_conjecture",
+     "file": "PFR/Main.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem PFR_conjecture {G : Type*} [AddCommGroup G] [Module (ZMod 2) G]\n    {A : Set G} {K : ℝ} (hA₀ : A.Nonempty) (Afin : A.Finite)\n    (hA : (A + A).ncard ≤ K * A.ncard) :\n    ∃ (H : Submodule (ZMod 2) G) (c : Set G), c.Finite ∧ (H : Set G).Finite ∧\n      Nat.card c < 2 * K ^ 12 ∧ (H : Set G).ncard ≤ A.ncard ∧ A ⊆ c + H",
+     "refs": [
+      {
+       "name": "AddCommGroup",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Group.Defs",
+       "full": "AddCommGroup",
+       "kind": "class"
+      },
+      {
+       "name": "Module",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Defs",
+       "full": "Module",
+       "kind": "class"
+      },
+      {
+       "name": "ZMod",
+       "where": "mathlib",
+       "module": "Mathlib.Data.ZMod.Defs",
+       "full": "ZMod",
+       "kind": "def"
+      },
+      {
+       "name": "Set",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Set.Defs",
+       "full": "Set",
+       "kind": "structure"
+      },
+      {
+       "name": "hA₀",
+       "where": "local"
+      },
+      {
+       "name": "A.Nonempty",
+       "where": "local"
+      },
+      {
+       "name": "Afin",
+       "where": "local"
+      },
+      {
+       "name": "A.Finite",
+       "where": "local"
+      },
+      {
+       "name": "A.ncard",
+       "where": "local"
+      },
+      {
+       "name": "Submodule",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Submodule.Defs",
+       "full": "Submodule",
+       "kind": "structure"
+      },
+      {
+       "name": "c.Finite",
+       "where": "local"
+      },
+      {
+       "name": "Nat.card",
+       "where": "mathlib",
+       "module": "Mathlib.SetTheory.Cardinal.Finite",
+       "full": "Nat.card",
+       "kind": "def"
+      }
+     ]
+    }
+   ]
+  ]
+ },
+ "famous": [
+  {
+   "title": "Extreme value theorem",
+   "files": 3
+  },
+  {
+   "title": "Fubini's theorem",
+   "files": 3
+  }
+ ],
+ "map": null,
+ "folder_map": {
+  "level": 3,
+  "nodes": [
+   {
+    "id": "PFR/",
+    "lines_pct": 55.9,
+    "label": "PFR",
+    "folder": "PFR/"
+   },
+   {
+    "id": "PFR/ForMathlib/Entropy",
+    "lines_pct": 24.04,
+    "label": "Entropy",
+    "folder": "PFR/ForMathlib/Entropy"
+   },
+   {
+    "id": "PFR/Mathlib/Probability",
+    "lines_pct": 9.52,
+    "label": "Probability",
+    "folder": "PFR/Mathlib/Probability"
+   },
+   {
+    "id": "PFR/ForMathlib/",
+    "lines_pct": 4.97,
+    "label": "ForMathlib",
+    "folder": "PFR/ForMathlib/"
+   },
+   {
+    "id": "PFR/ForMathlib/FiniteRange",
+    "lines_pct": 1.56,
+    "label": "FiniteRange",
+    "folder": "PFR/ForMathlib/FiniteRange"
+   },
+   {
+    "id": "PFR/Mathlib/MeasureTheory",
+    "lines_pct": 1.35,
+    "label": "MeasureTheory",
+    "folder": "PFR/Mathlib/MeasureTheory"
+   },
+   {
+    "id": "PFR/Tactic/",
+    "lines_pct": 1.19,
+    "label": "Tactic",
+    "folder": "PFR/Tactic/"
+   },
+   {
+    "id": "PFR/Mathlib/Analysis",
+    "lines_pct": 0.58,
+    "label": "Analysis",
+    "folder": "PFR/Mathlib/Analysis"
+   },
+   {
+    "id": "PFR/Mathlib/LinearAlgebra",
+    "lines_pct": 0.44,
+    "label": "LinearAlgebra",
+    "folder": "PFR/Mathlib/LinearAlgebra"
+   }
+  ],
+  "edges": [
+   [
+    "PFR/",
+    "PFR/ForMathlib/Entropy",
+    6
+   ],
+   [
+    "PFR/ForMathlib/Entropy",
+    "PFR/Mathlib/MeasureTheory",
+    5
+   ],
+   [
+    "PFR/ForMathlib/",
+    "PFR/Mathlib/Probability",
+    4
+   ],
+   [
+    "PFR/ForMathlib/Entropy",
+    "PFR/Mathlib/Probability",
+    4
+   ],
+   [
+    "PFR/",
+    "PFR/ForMathlib/",
+    3
+   ],
+   [
+    "PFR/",
+    "PFR/Mathlib/LinearAlgebra",
+    3
+   ],
+   [
+    "PFR/Mathlib/MeasureTheory",
+    "PFR/Mathlib/Probability",
+    3
+   ],
+   [
+    "PFR/",
+    "PFR/Mathlib/MeasureTheory",
+    2
+   ],
+   [
+    "PFR/ForMathlib/",
+    "PFR/ForMathlib/Entropy",
+    2
+   ],
+   [
+    "PFR/ForMathlib/",
+    "PFR/ForMathlib/FiniteRange",
+    2
+   ],
+   [
+    "PFR/ForMathlib/Entropy",
+    "PFR/ForMathlib/FiniteRange",
+    2
+   ],
+   [
+    "PFR/",
+    "PFR/ForMathlib/FiniteRange",
+    1
+   ],
+   [
+    "PFR/",
+    "PFR/Mathlib/Analysis",
+    1
+   ],
+   [
+    "PFR/",
+    "PFR/Tactic/",
+    1
+   ],
+   [
+    "PFR/ForMathlib/",
+    "PFR/Mathlib/LinearAlgebra",
+    1
+   ],
+   [
+    "PFR/ForMathlib/FiniteRange",
+    "PFR/Mathlib/Probability",
+    1
+   ]
+  ],
+  "shown": 9,
+  "folders": 13
+ },
+ "history": {
+  "commits": 1816,
+  "contributors": 44,
+  "first": "2023-11-12",
+  "last": "2026-11-05",
+  "months": 37,
+  "per_month": [
+   [
+    "2023-11",
+    782
+   ],
+   [
+    "2023-12",
+    287
+   ],
+   [
+    "2024-01",
+    75
+   ],
+   [
+    "2024-02",
+    21
+   ],
+   [
+    "2024-03",
+    2
+   ],
+   [
+    "2024-04",
+    1
+   ],
+   [
+    "2024-05",
+    225
+   ],
+   [
+    "2024-06",
+    80
+   ],
+   [
+    "2024-07",
+    7
+   ],
+   [
+    "2024-08",
+    55
+   ],
+   [
+    "2024-09",
+    3
+   ],
+   [
+    "2024-10",
+    14
+   ],
+   [
+    "2024-11",
+    34
+   ],
+   [
+    "2024-12",
+    0
+   ],
+   [
+    "2025-01",
+    2
+   ],
+   [
+    "2025-02",
+    3
+   ],
+   [
+    "2025-03",
+    9
+   ],
+   [
+    "2025-04",
+    5
+   ],
+   [
+    "2025-05",
+    42
+   ],
+   [
+    "2025-06",
+    2
+   ],
+   [
+    "2025-07",
+    83
+   ],
+   [
+    "2025-08",
+    3
+   ],
+   [
+    "2025-09",
+    1
+   ],
+   [
+    "2025-10",
+    1
+   ],
+   [
+    "2025-11",
+    6
+   ],
+   [
+    "2025-12",
+    5
+   ],
+   [
+    "2026-01",
+    4
+   ],
+   [
+    "2026-02",
+    1
+   ],
+   [
+    "2026-03",
+    2
+   ],
+   [
+    "2026-04",
+    0
+   ],
+   [
+    "2026-05",
+    4
+   ],
+   [
+    "2026-06",
+    10
+   ],
+   [
+    "2026-07",
+    2
+   ],
+   [
+    "2026-08",
+    18
+   ],
+   [
+    "2026-09",
+    21
+   ],
+   [
+    "2026-10",
+    5
+   ],
+   [
+    "2026-11",
+    1
+   ]
+  ],
+  "rule": "commits by authors whose name or e-mail marks a bot are left out; shown only with at least 20 commits over 3 months"
+ },
+ "pins": {
+  "mathlib_rev": "8fe7ce475b056f0b266d7107893f2c4d772c712f",
+  "toolchain": "leanprover/lean4:v4.36.0-rc2"
+ },
+ "coverage": {
+  "qualified_uses": 4965,
+  "resolved_to_mathlib_pct": 84.2
+ },
+ "resemblance": {
+  "compared": 6,
+  "method": "Similarity of two projects' mixes of Mathlib areas: the share of code lines attributed to each of Mathlib's second-level folders (such as NumberTheory/LSeries), compared by cosine similarity; 1 means the same mix, 0 nothing in common. It compares the foundations the code is built on, not the problems the proofs solve.",
+  "closest": [
+   {
+    "key": "rh",
+    "title": "Proof of the Riemann Hypothesis (Alpöge, 2026)",
+    "short": "Riemann Hypothesis",
+    "similarity": 0.747
+   },
+   {
+    "key": "erdos846",
+    "title": "Erdős problem 846 (AlphaProof Nexus, AI-generated)",
+    "short": "Erdős 846",
+    "similarity": 0.733
+   },
+   {
+    "key": "flt",
+    "title": "Fermat's Last Theorem project (Imperial College London, in progress)",
+    "short": "FLT project",
+    "similarity": 0.715
+   },
+   {
+    "key": "carleson",
+    "title": "Carleson's theorem (van Doorn et al.)",
+    "short": "Carleson",
+    "similarity": 0.707
+   },
+   {
+    "key": "spherepacking",
+    "title": "Sphere packing in dimension 8 (Lean project, completed with Math Inc's Gauss)",
+    "short": "Sphere packing (dim 8)",
+    "similarity": 0.664
+   },
+   {
+    "key": "strongpnt",
+    "title": "Strong prime number theorem (Math Inc, mostly AI-generated by Gauss)",
+    "short": "Strong PNT",
+    "similarity": 0.509
+   }
+  ]
+ }
+}

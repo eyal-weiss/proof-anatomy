@@ -1,0 +1,257 @@
+{
+ "title": "Erdős problem 846 (AlphaProof Nexus, AI-generated)",
+ "short": "Erdős 846",
+ "url": "github.com/google-deepmind/alphaproof-nexus-results",
+ "source": {
+  "url": "github.com/google-deepmind/alphaproof-nexus-results",
+  "commit": "0647711a71183c1ea492ad60860776617ce1ea88"
+ },
+ "tool": "proof-anatomy",
+ "mathlib_table": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "numbers": {
+  "files": 1,
+  "code_lines": 811,
+  "theorems": 47,
+  "definitions": 7
+ },
+ "mathlib": {
+  "theorems": 246464,
+  "definitions": 44906,
+  "files": 8557,
+  "source": "leanprover-community.github.io/mathlib4_docs declaration data"
+ },
+ "areas": {
+  "Algebra": 33.29,
+  "Lean core & other libraries": 24.35,
+  "Data": 17.51,
+  "Order": 11.43,
+  "Analysis": 3.57,
+  "Tactic": 3.57,
+  "Basic": 3.03,
+  "LinearAlgebra": 2.17,
+  "Topology": 1.09
+ },
+ "areas_L2": {
+  "Lean core & other libraries": 24.347,
+  "Algebra/Order": 16.64,
+  "Data/Set": 10.908,
+  "Algebra/Group": 10.27,
+  "Order/Defs": 7.135,
+  "Data/Finset": 6.604,
+  "Order/Monotone": 4.291,
+  "Basic/Logic": 2.488,
+  "Analysis/Normed": 2.488,
+  "Tactic/NormNum": 2.305,
+  "Algebra/BigOperators": 2.171,
+  "LinearAlgebra/AffineSpace": 2.171,
+  "Algebra/Polynomial": 1.72,
+  "Algebra/GroupWithZero": 1.403,
+  "Tactic/Positivity": 1.26,
+  "Analysis/InnerProductSpace": 1.085,
+  "Algebra/NeZero": 0.543,
+  "Algebra/Ring": 0.543,
+  "Basic/IsEmpty": 0.543,
+  "Topology/Compactness": 0.543,
+  "Topology/Constructions": 0.543
+ },
+ "areas_filled_pct": 0.0,
+ "borrowed": {
+  "mathlib_pct": 27.3,
+  "core_pct": 9.0,
+  "own_pct": 63.6,
+  "mathlib_uses": 236,
+  "core_uses": 78,
+  "own_uses": 549,
+  "folder_level": "APNOutputs/ErdosProblems/",
+  "by_folder": [
+   {
+    "folder": "(files directly in APNOutputs/ErdosProblems/)",
+    "lines_pct": 100.0,
+    "own_pct": 63.6
+   }
+  ]
+ },
+ "statement": {
+  "main_file": "APNOutputs/ErdosProblems/erdos_846.lean",
+  "sentences": [
+   "Erdos846.target_theorem_0 is stated with the project's own definitions NonTrilinearFor and WeaklyNonTrilinear, which are built on Mathlib's Set and Finset."
+  ],
+  "trace": [
+   [
+    {
+     "name": "Erdos846.target_theorem_0",
+     "file": "APNOutputs/ErdosProblems/erdos_846.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem target_theorem_0\n  : answer(\n  False\n  ) ↔ ∀ᵉ (A : Set ℝ²) (ε > 0), A.Infinite → NonTrilinearFor A ε → WeaklyNonTrilinear A",
+     "refs": [
+      {
+       "name": "answer",
+       "where": "unresolved"
+      },
+      {
+       "name": "False",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "False",
+       "kind": "inductive"
+      },
+      {
+       "name": "Set",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Set.Defs",
+       "full": "Set",
+       "kind": "structure"
+      },
+      {
+       "name": "A.Infinite",
+       "where": "local"
+      },
+      {
+       "name": "NonTrilinearFor",
+       "where": "project",
+       "file": "APNOutputs/ErdosProblems/erdos_846.lean",
+       "full": "Erdos846.NonTrilinearFor",
+       "kind": "def"
+      },
+      {
+       "name": "WeaklyNonTrilinear",
+       "where": "project",
+       "file": "APNOutputs/ErdosProblems/erdos_846.lean",
+       "full": "Erdos846.WeaklyNonTrilinear",
+       "kind": "def"
+      }
+     ]
+    },
+    {
+     "name": "Erdos846.NonTrilinearFor",
+     "file": "APNOutputs/ErdosProblems/erdos_846.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "def NonTrilinearFor (A : Set ℝ²) (ε : ℝ) : Prop :=\n  ∀ B : Finset ℝ², ↑B ⊆ A → ∃ C ⊆ B,\n    ε * B.card ≤ C.card ∧ NonTrilinear (C : Set ℝ²)",
+     "refs": [
+      {
+       "name": "Set",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Set.Defs",
+       "full": "Set",
+       "kind": "structure"
+      },
+      {
+       "name": "Finset",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Finset.Defs",
+       "full": "Finset",
+       "kind": "structure"
+      },
+      {
+       "name": "B.card",
+       "where": "local"
+      },
+      {
+       "name": "C.card",
+       "where": "local"
+      },
+      {
+       "name": "NonTrilinear",
+       "where": "unresolved"
+      }
+     ]
+    },
+    {
+     "name": "Erdos846.WeaklyNonTrilinear",
+     "file": "APNOutputs/ErdosProblems/erdos_846.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "def WeaklyNonTrilinear (A : Set ℝ²) : Prop :=\n  ∃ B : Finset (Set ℝ²), A = sSup B ∧ ∀ b ∈ B, NonTrilinear b",
+     "refs": [
+      {
+       "name": "Set",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Set.Defs",
+       "full": "Set",
+       "kind": "structure"
+      },
+      {
+       "name": "Finset",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Finset.Defs",
+       "full": "Finset",
+       "kind": "structure"
+      },
+      {
+       "name": "sSup",
+       "where": "unresolved"
+      },
+      {
+       "name": "NonTrilinear",
+       "where": "unresolved"
+      }
+     ]
+    }
+   ]
+  ]
+ },
+ "famous": [
+  {
+   "title": "Tychonoff's theorem",
+   "files": 1
+  }
+ ],
+ "map": null,
+ "folder_map": null,
+ "history": null,
+ "pins": {
+  "mathlib_rev": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+  "toolchain": "leanprover/lean4:v4.27.0"
+ },
+ "coverage": {
+  "qualified_uses": 100,
+  "resolved_to_mathlib_pct": 68.0
+ },
+ "resemblance": {
+  "compared": 6,
+  "method": "Similarity of two projects' mixes of Mathlib areas: the share of code lines attributed to each of Mathlib's second-level folders (such as NumberTheory/LSeries), compared by cosine similarity; 1 means the same mix, 0 nothing in common. It compares the foundations the code is built on, not the problems the proofs solve.",
+  "closest": [
+   {
+    "key": "rh",
+    "title": "Proof of the Riemann Hypothesis (Alpöge, 2026)",
+    "short": "Riemann Hypothesis",
+    "similarity": 0.757
+   },
+   {
+    "key": "pfr",
+    "title": "Polynomial Freiman–Ruzsa conjecture (Gowers, Green, Manners, Tao; Lean project led by Tao)",
+    "short": "PFR conjecture",
+    "similarity": 0.733
+   },
+   {
+    "key": "carleson",
+    "title": "Carleson's theorem (van Doorn et al.)",
+    "short": "Carleson",
+    "similarity": 0.713
+   },
+   {
+    "key": "spherepacking",
+    "title": "Sphere packing in dimension 8 (Lean project, completed with Math Inc's Gauss)",
+    "short": "Sphere packing (dim 8)",
+    "similarity": 0.711
+   },
+   {
+    "key": "flt",
+    "title": "Fermat's Last Theorem project (Imperial College London, in progress)",
+    "short": "FLT project",
+    "similarity": 0.686
+   },
+   {
+    "key": "strongpnt",
+    "title": "Strong prime number theorem (Math Inc, mostly AI-generated by Gauss)",
+    "short": "Strong PNT",
+    "similarity": 0.639
+   }
+  ]
+ }
+}

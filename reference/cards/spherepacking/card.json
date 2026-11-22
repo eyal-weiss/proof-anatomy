@@ -1,0 +1,1444 @@
+{
+ "title": "Sphere packing in dimension 8 (Lean project, completed with Math Inc's Gauss)",
+ "short": "Sphere packing (dim 8)",
+ "url": "github.com/thefundamentaltheor3m/Sphere-Packing-Lean",
+ "source": {
+  "url": "github.com/thefundamentaltheor3m/Sphere-Packing-Lean",
+  "commit": "e07215872319dcadd7ced28670ae4daa13b74b8d"
+ },
+ "tool": "proof-anatomy",
+ "mathlib_table": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "numbers": {
+  "files": 73,
+  "code_lines": 10315,
+  "theorems": 949,
+  "definitions": 253
+ },
+ "mathlib": {
+  "theorems": 246464,
+  "definitions": 44906,
+  "files": 8557,
+  "source": "leanprover-community.github.io/mathlib4_docs declaration data"
+ },
+ "areas": {
+  "Algebra": 25.96,
+  "Analysis": 17.63,
+  "Lean core & other libraries": 11.65,
+  "Basic": 8.61,
+  "Order": 8.51,
+  "Topology": 6.73,
+  "Data": 6.73,
+  "NumberTheory": 5.29,
+  "MeasureTheory": 4.21,
+  "LinearAlgebra": 2.15,
+  "Tactic": 1.47,
+  "Geometry": 0.45,
+  "Logic": 0.3,
+  "GroupTheory": 0.17,
+  "SetTheory": 0.13
+ },
+ "areas_L2": {
+  "Lean core & other libraries": 11.653,
+  "Algebra/Group": 10.515,
+  "Analysis/Complex": 6.933,
+  "Basic/Complex": 5.48,
+  "Algebra/Order": 5.245,
+  "NumberTheory/ModularForms": 4.9,
+  "Data/Set": 3.168,
+  "Order/Interval": 3.055,
+  "Analysis/Normed": 2.932,
+  "Topology/Algebra": 2.913,
+  "Analysis/Calculus": 2.896,
+  "Algebra/Ring": 2.47,
+  "Algebra/Module": 2.449,
+  "Algebra/Notation": 2.408,
+  "Order/Filter": 2.398,
+  "MeasureTheory/Integral": 2.192,
+  "Order/Defs": 1.747,
+  "Analysis/SpecialFunctions": 1.739,
+  "Algebra/GroupWithZero": 1.415,
+  "Analysis/InnerProductSpace": 1.268,
+  "Topology/Defs": 1.252,
+  "Basic/ENNReal": 1.247,
+  "Tactic/NormNum": 0.973,
+  "LinearAlgebra/Matrix": 0.914,
+  "Analysis/Fourier": 0.748,
+  "Data/Nat": 0.741,
+  "Topology/Order": 0.678,
+  "MeasureTheory/Measure": 0.659,
+  "Topology/MetricSpace": 0.65,
+  "Data/Fintype": 0.645,
+  "Data/Matrix": 0.549,
+  "Data/Int": 0.538,
+  "Algebra/BigOperators": 0.497,
+  "Tactic/Positivity": 0.495,
+  "Analysis/Distribution": 0.486,
+  "MeasureTheory/Constructions": 0.473,
+  "Geometry/Manifold": 0.446,
+  "Basic/Logic": 0.436,
+  "LinearAlgebra/Span": 0.343,
+  "Analysis/Asymptotics": 0.34,
+  "Basic/Real": 0.339,
+  "Order/CompleteLattice": 0.328,
+  "Basic/NNReal": 0.29,
+  "Algebra/Field": 0.289,
+  "LinearAlgebra/Basis": 0.263,
+  "Algebra/CharZero": 0.26,
+  "MeasureTheory/Group": 0.255,
+  "Topology/Neighborhoods": 0.245,
+  "Basic/FunLike": 0.245,
+  "MeasureTheory/Function": 0.239,
+  "Data/Subtype": 0.235,
+  "Basic/Finite": 0.232,
+  "Order/BoundedOrder": 0.225,
+  "Algebra/Star": 0.222,
+  "Logic/Function": 0.214,
+  "MeasureTheory/OuterMeasure": 0.205,
+  "MeasureTheory/MeasurableSpace": 0.19,
+  "Topology/Bornology": 0.186,
+  "Data/PNat": 0.183,
+  "Data/ZMod": 0.179,
+  "LinearAlgebra/Dimension": 0.165,
+  "Algebra/NeZero": 0.164,
+  "Basic/SetLike": 0.163,
+  "GroupTheory/GroupAction": 0.161,
+  "Order/Basic": 0.158,
+  "Topology/ContinuousMap": 0.156,
+  "Data/Fin": 0.145,
+  "SetTheory/Cardinal": 0.129,
+  "Order/SetNotation": 0.124,
+  "Topology/Instances": 0.124,
+  "Order/MinMax": 0.121,
+  "NumberTheory/Divisors": 0.12,
+  "Topology/UniformSpace": 0.116,
+  "Data/Finset": 0.116,
+  "Analysis/RCLike": 0.116,
+  "Topology/Compactness": 0.114,
+  "LinearAlgebra/BilinearForm": 0.109,
+  "Data/ENat": 0.105,
+  "Basic/IsEmpty": 0.095,
+  "NumberTheory/LSeries": 0.093,
+  "NumberTheory/ArithmeticFunction": 0.091,
+  "LinearAlgebra/SpecialLinearGroup": 0.089,
+  "Basic/Countable": 0.088,
+  "Data/Quot": 0.083,
+  "Order/LiminfLimsup": 0.077,
+  "Analysis/SpecificLimits": 0.076,
+  "Analysis/Real": 0.074,
+  "Topology/ContinuousOn": 0.072,
+  "Topology/Separation": 0.071,
+  "Topology/Constructions": 0.068,
+  "LinearAlgebra/LinearIndependent": 0.065,
+  "LinearAlgebra/FreeModule": 0.059,
+  "NumberTheory/Bernoulli": 0.052,
+  "Order/Bounds": 0.051,
+  "Logic/Equiv": 0.048,
+  "Topology/Continuous": 0.043,
+  "LinearAlgebra/Determinant": 0.041,
+  "LinearAlgebra/Finsupp": 0.041,
+  "LinearAlgebra/FiniteDimensional": 0.04,
+  "Logic/Pairwise": 0.038,
+  "Order/Lattice": 0.037,
+  "NumberTheory/TsumDivisorsAntidiagonal": 0.035,
+  "Order/TypeTags": 0.034,
+  "Data/Rat": 0.033,
+  "Algebra/Algebra": 0.027,
+  "Order/ConditionallyCompleteLattice": 0.027,
+  "Order/RelClasses": 0.024,
+  "Analysis/Convex": 0.023,
+  "Order/Monotone": 0.023,
+  "Topology/Homeomorph": 0.022,
+  "Topology/Compactification": 0.021,
+  "Order/BooleanAlgebra": 0.021,
+  "Order/Disjoint": 0.021,
+  "LinearAlgebra/StdBasis": 0.021,
+  "Order/OrderDual": 0.021,
+  "Order/WithBot": 0.019,
+  "GroupTheory/Index": 0.014,
+  "Data/Finsupp": 0.009
+ },
+ "areas_filled_pct": 0.23,
+ "borrowed": {
+  "mathlib_pct": 61.0,
+  "core_pct": 9.7,
+  "own_pct": 29.3,
+  "mathlib_uses": 7468,
+  "core_uses": 1188,
+  "own_uses": 3587,
+  "folder_level": "SpherePacking/",
+  "by_folder": [
+   {
+    "folder": "ModularForms",
+    "lines_pct": 33.1,
+    "own_pct": 39.4
+   },
+   {
+    "folder": "MagicFunction",
+    "lines_pct": 26.7,
+    "own_pct": 35.8
+   },
+   {
+    "folder": "Basic",
+    "lines_pct": 18.7,
+    "own_pct": 14.5
+   },
+   {
+    "folder": "ForMathlib",
+    "lines_pct": 7.6,
+    "own_pct": 16.1
+   },
+   {
+    "folder": "Tactic",
+    "lines_pct": 7.4,
+    "own_pct": 13.7
+   },
+   {
+    "folder": "CohnElkies",
+    "lines_pct": 6.4,
+    "own_pct": 5.1
+   }
+  ]
+ },
+ "statement": {
+  "main_file": "SpherePacking/MainTheorem.lean",
+  "sentences": [
+   "SpherePacking.MainTheorem is stated with the project's own definitions SpherePackingConstant and E8Packing.density, which are built on Mathlib's Pairwise, WithLp.linearEquiv, Set, EuclideanSpace, Submodule and DiscreteTopology; some go further into project definitions."
+  ],
+  "trace": [
+   [
+    {
+     "name": "SpherePacking.MainTheorem",
+     "file": "SpherePacking/MainTheorem.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem SpherePacking.MainTheorem : SpherePackingConstant 8 = E8Packing.density",
+     "refs": [
+      {
+       "name": "SpherePackingConstant",
+       "where": "project",
+       "file": "SpherePacking/Basic/SpherePacking.lean",
+       "full": "SpherePackingConstant",
+       "kind": "def"
+      },
+      {
+       "name": "E8Packing.density",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Packing",
+       "kind": "def"
+      }
+     ]
+    },
+    {
+     "name": "SpherePackingConstant",
+     "file": "SpherePacking/Basic/SpherePacking.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "def SpherePackingConstant (d : ℕ) : ℝ≥0∞ :=\n  ⨆ S : SpherePacking d, S.density",
+     "refs": [
+      {
+       "name": "SpherePacking",
+       "where": "project",
+       "file": "SpherePacking/Basic/SpherePacking.lean",
+       "full": "SpherePacking",
+       "kind": "structure"
+      },
+      {
+       "name": "S.density",
+       "where": "local"
+      }
+     ]
+    },
+    {
+     "name": "E8Packing",
+     "file": "SpherePacking/Basic/E8.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "noncomputable def E8Packing : PeriodicSpherePacking 8 where\n  separation := √2\n  lattice := E8Lattice\n  centers := E8Lattice\n  centers_dist := by\n    simp only [Pairwise, E8Lattice, ne_eq, Subtype.forall, Subtype.mk.injEq]\n    intro a ha b hb hab\n    rw [SetLike.mem_coe, Submodule.mem_map] at ha hb\n    obtain ⟨a', ha', rfl⟩ := ha\n    obtain ⟨b', hb', rfl⟩ := hb\n    have hsub : a' - b' ∈ Submodule.E8 ℝ := Submodule.sub_mem _ ha' hb'\n    have hne : a' ≠ b' := by\n      contrapose hab\n      simp [hab]\n    have hne' : a' - b' ≠ 0 := sub_ne_zero.mpr hne\n    change √2 ≤ ‖(WithLp.linearEquiv 2 ℤ (Fin 8 → ℝ)).symm (a' - b')‖\n    simpa using (E8_norm_lower_bound (a' - b') hsub).resolve_left hne'\n  lattice_action x y := add_mem",
+     "refs": [
+      {
+       "name": "PeriodicSpherePacking",
+       "where": "project",
+       "file": "SpherePacking/Basic/SpherePacking.lean",
+       "full": "PeriodicSpherePacking",
+       "kind": "structure"
+      },
+      {
+       "name": "separation",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Packing.separation",
+       "kind": "aux"
+      },
+      {
+       "name": "lattice",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Packing.lattice",
+       "kind": "aux"
+      },
+      {
+       "name": "E8Lattice",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Lattice",
+       "kind": "abbrev"
+      },
+      {
+       "name": "centers",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Packing.centers",
+       "kind": "aux"
+      },
+      {
+       "name": "centers_dist",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Packing.centers_dist",
+       "kind": "aux"
+      },
+      {
+       "name": "simp",
+       "where": "unresolved"
+      },
+      {
+       "name": "only",
+       "where": "unresolved"
+      },
+      {
+       "name": "Pairwise",
+       "where": "mathlib",
+       "module": "Mathlib.Logic.Pairwise",
+       "full": "Pairwise",
+       "kind": "def"
+      },
+      {
+       "name": "ne_eq",
+       "where": "core",
+       "module": "Init.SimpLemmas",
+       "full": "ne_eq",
+       "kind": "theorem"
+      },
+      {
+       "name": "Subtype.forall",
+       "where": "core",
+       "module": "Init.Data.Subtype.Basic",
+       "full": "Subtype.forall",
+       "kind": "theorem"
+      },
+      {
+       "name": "Subtype.mk.injEq",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Subtype.mk",
+       "kind": "ctor"
+      },
+      {
+       "name": "intro",
+       "where": "unresolved"
+      },
+      {
+       "name": "hab",
+       "where": "local"
+      },
+      {
+       "name": "SetLike.mem_coe",
+       "where": "mathlib",
+       "module": "Mathlib.Basic.SetLike.Basic",
+       "full": "SetLike.mem_coe",
+       "kind": "theorem"
+      },
+      {
+       "name": "Submodule.mem_map",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Submodule.Map",
+       "full": "Submodule.mem_map",
+       "kind": "theorem"
+      },
+      {
+       "name": "obtain",
+       "where": "unresolved"
+      },
+      {
+       "name": "ha'",
+       "where": "local"
+      },
+      {
+       "name": "rfl",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "rfl",
+       "kind": "def"
+      },
+      {
+       "name": "hb'",
+       "where": "local"
+      },
+      {
+       "name": "hsub",
+       "where": "local"
+      },
+      {
+       "name": "Submodule.E8",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "Submodule.E8",
+       "kind": "def"
+      },
+      {
+       "name": "Submodule.sub_mem",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Submodule.Defs",
+       "full": "Submodule.sub_mem",
+       "kind": "theorem"
+      },
+      {
+       "name": "hne",
+       "where": "local"
+      },
+      {
+       "name": "contrapose",
+       "where": "unresolved"
+      },
+      {
+       "name": "hne'",
+       "where": "local"
+      },
+      {
+       "name": "sub_ne_zero.mpr",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Group.Basic",
+       "full": "sub_ne_zero",
+       "kind": "theorem"
+      },
+      {
+       "name": "change",
+       "where": "unresolved"
+      },
+      {
+       "name": "WithLp.linearEquiv",
+       "where": "mathlib",
+       "module": "Mathlib.Analysis.Normed.Lp.WithLp",
+       "full": "WithLp.linearEquiv",
+       "kind": "def"
+      },
+      {
+       "name": "Fin",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Fin",
+       "kind": "structure"
+      },
+      {
+       "name": "simpa",
+       "where": "unresolved"
+      },
+      {
+       "name": "using",
+       "where": "unresolved"
+      },
+      {
+       "name": "E8_norm_lower_bound",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8_norm_lower_bound",
+       "kind": "lemma"
+      },
+      {
+       "name": "lattice_action",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "E8Packing.lattice_action",
+       "kind": "aux"
+      },
+      {
+       "name": "add_mem",
+       "where": "unresolved"
+      }
+     ]
+    },
+    {
+     "name": "SpherePacking",
+     "file": "SpherePacking/Basic/SpherePacking.lean",
+     "kind": "structure",
+     "depth": 2,
+     "text": "structure SpherePacking (d : ℕ) where\n  centers : Set (EuclideanSpace ℝ (Fin d))\n  separation : ℝ\n  separation_pos : 0 < separation := by positivity\n  centers_dist : Pairwise (separation ≤ dist · · : centers → centers → Prop)",
+     "refs": [
+      {
+       "name": "centers",
+       "where": "unresolved"
+      },
+      {
+       "name": "Set",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Set.Defs",
+       "full": "Set",
+       "kind": "structure"
+      },
+      {
+       "name": "EuclideanSpace",
+       "where": "mathlib",
+       "module": "Mathlib.Analysis.InnerProductSpace.PiL2",
+       "full": "EuclideanSpace",
+       "kind": "def"
+      },
+      {
+       "name": "Fin",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Fin",
+       "kind": "structure"
+      },
+      {
+       "name": "separation",
+       "where": "unresolved"
+      },
+      {
+       "name": "separation_pos",
+       "where": "unresolved"
+      },
+      {
+       "name": "positivity",
+       "where": "mathlib",
+       "module": "Mathlib.Tactic.Positivity.Core",
+       "full": "positivity",
+       "kind": "def"
+      },
+      {
+       "name": "centers_dist",
+       "where": "unresolved"
+      },
+      {
+       "name": "Pairwise",
+       "where": "mathlib",
+       "module": "Mathlib.Logic.Pairwise",
+       "full": "Pairwise",
+       "kind": "def"
+      },
+      {
+       "name": "dist",
+       "where": "unresolved"
+      }
+     ]
+    },
+    {
+     "name": "PeriodicSpherePacking",
+     "file": "SpherePacking/Basic/SpherePacking.lean",
+     "kind": "structure",
+     "depth": 2,
+     "text": "structure PeriodicSpherePacking (d : ℕ) extends SpherePacking d where\n  lattice : Submodule ℤ (EuclideanSpace ℝ (Fin d))\n  lattice_action : ∀ ⦃x y⦄, x ∈ lattice → y ∈ centers → x + y ∈ centers\n  lattice_discrete : DiscreteTopology lattice := by infer_instance\n  lattice_isZLattice : IsZLattice ℝ lattice := by infer_instance",
+     "refs": [
+      {
+       "name": "SpherePacking",
+       "where": "project",
+       "file": "SpherePacking/Basic/SpherePacking.lean",
+       "full": "SpherePacking",
+       "kind": "structure"
+      },
+      {
+       "name": "lattice",
+       "where": "unresolved"
+      },
+      {
+       "name": "Submodule",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Submodule.Defs",
+       "full": "Submodule",
+       "kind": "structure"
+      },
+      {
+       "name": "EuclideanSpace",
+       "where": "mathlib",
+       "module": "Mathlib.Analysis.InnerProductSpace.PiL2",
+       "full": "EuclideanSpace",
+       "kind": "def"
+      },
+      {
+       "name": "Fin",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Fin",
+       "kind": "structure"
+      },
+      {
+       "name": "lattice_action",
+       "where": "unresolved"
+      },
+      {
+       "name": "centers",
+       "where": "unresolved"
+      },
+      {
+       "name": "lattice_discrete",
+       "where": "unresolved"
+      },
+      {
+       "name": "DiscreteTopology",
+       "where": "mathlib",
+       "module": "Mathlib.Topology.Order",
+       "full": "DiscreteTopology",
+       "kind": "class"
+      },
+      {
+       "name": "infer_instance",
+       "where": "unresolved"
+      },
+      {
+       "name": "lattice_isZLattice",
+       "where": "unresolved"
+      },
+      {
+       "name": "IsZLattice",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.ZLattice.Basic",
+       "full": "IsZLattice",
+       "kind": "class"
+      }
+     ]
+    },
+    {
+     "name": "E8Lattice",
+     "file": "SpherePacking/Basic/E8.lean",
+     "kind": "abbrev",
+     "depth": 2,
+     "text": "noncomputable abbrev E8Lattice : Submodule ℤ (EuclideanSpace ℝ (Fin 8)) :=\n  (Submodule.E8 ℝ).map (WithLp.linearEquiv 2 ℤ (Fin 8 → ℝ)).symm.toLinearMap",
+     "refs": [
+      {
+       "name": "Submodule",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Submodule.Defs",
+       "full": "Submodule",
+       "kind": "structure"
+      },
+      {
+       "name": "EuclideanSpace",
+       "where": "mathlib",
+       "module": "Mathlib.Analysis.InnerProductSpace.PiL2",
+       "full": "EuclideanSpace",
+       "kind": "def"
+      },
+      {
+       "name": "Fin",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Fin",
+       "kind": "structure"
+      },
+      {
+       "name": "Submodule.E8",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "Submodule.E8",
+       "kind": "def"
+      },
+      {
+       "name": "WithLp.linearEquiv",
+       "where": "mathlib",
+       "module": "Mathlib.Analysis.Normed.Lp.WithLp",
+       "full": "WithLp.linearEquiv",
+       "kind": "def"
+      }
+     ]
+    },
+    {
+     "name": "Submodule.E8",
+     "file": "SpherePacking/Basic/E8.lean",
+     "kind": "def",
+     "depth": 2,
+     "text": "noncomputable def Submodule.E8 (R : Type*) [Field R] [NeZero (2 : R)] :\n    Submodule ℤ (Fin 8 → R) where\n  carrier :=\n    {v | ((∀ i, ∃ n : ℤ, n = v i) ∨ (∀ i, ∃ n : ℤ, Odd n ∧ n = 2 • v i)) ∧ ∑ i, v i ≡ 0 [PMOD 2]}\n  add_mem' := by\n    simp only [Set.mem_ofPred_eq, and_imp, nsmul_eq_mul, Nat.cast_ofNat, Pi.add_apply]\n    rintro a b ha has hb hbs\n    constructor\n    · obtain ha | ha := ha\n      · refine hb.imp ?_ ?_\n        · intro hb i\n          obtain ⟨a', ha⟩ := ha i\n          obtain ⟨b', hb⟩ := hb i\n          use a' + b'\n          simp [ha, hb]\n        · intro hb i\n          obtain ⟨a', ha⟩ := ha i\n          obtain ⟨b', hb', hb⟩ := hb i\n          exact ⟨2 * a' + b', Even.add_odd (by simp) hb', by simp [← ha, ← hb, mul_add]⟩\n      · refine hb.symm.imp ?_ ?_\n        · intro hb i\n          obtain ⟨a', ha', ha⟩ := ha i\n          obtain ⟨b', hb', hb⟩ := hb i\n          use (a' + b') / 2\n          rw [Int.cast_div _ (by simpa using NeZero.ne 2), Int.cast_add, add_div (K := R), ha, hb,\n            Int.cast_ofNat,\n            mul_div_cancel_left₀ _ (NeZero.ne 2), mul_div_cancel_left₀ _ (NeZero.ne _)]\n          rw [← even_iff_two_dvd]\n          apply ha'.add_odd hb'\n        · intro hb i",
+     "refs": [
+      {
+       "name": "Field",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Field.Defs",
+       "full": "Field",
+       "kind": "class"
+      },
+      {
+       "name": "NeZero",
+       "where": "core",
+       "module": "Init.Data.NeZero",
+       "full": "NeZero",
+       "kind": "class"
+      },
+      {
+       "name": "Submodule",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Module.Submodule.Defs",
+       "full": "Submodule",
+       "kind": "structure"
+      },
+      {
+       "name": "Fin",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Fin",
+       "kind": "structure"
+      },
+      {
+       "name": "carrier",
+       "where": "unresolved"
+      },
+      {
+       "name": "Odd",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Ring.Parity",
+       "full": "Odd",
+       "kind": "def"
+      },
+      {
+       "name": "PMOD",
+       "where": "unresolved"
+      },
+      {
+       "name": "add_mem'",
+       "where": "unresolved"
+      },
+      {
+       "name": "simp",
+       "where": "unresolved"
+      },
+      {
+       "name": "only",
+       "where": "unresolved"
+      },
+      {
+       "name": "Set.mem_ofPred_eq",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Set.Operations",
+       "full": "Set.mem_ofPred_eq",
+       "kind": "theorem"
+      },
+      {
+       "name": "and_imp",
+       "where": "core",
+       "module": "Init.SimpLemmas",
+       "full": "and_imp",
+       "kind": "theorem"
+      },
+      {
+       "name": "nsmul_eq_mul",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Ring.Defs",
+       "full": "nsmul_eq_mul",
+       "kind": "theorem"
+      },
+      {
+       "name": "Nat.cast_ofNat",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Nat.Cast.Defs",
+       "full": "Nat.cast_ofNat",
+       "kind": "theorem"
+      },
+      {
+       "name": "Pi.add_apply",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Notation.Pi.Defs",
+       "full": "Pi.add_apply",
+       "kind": "theorem"
+      },
+      {
+       "name": "rintro",
+       "where": "unresolved"
+      },
+      {
+       "name": "has",
+       "where": "local"
+      },
+      {
+       "name": "hbs",
+       "where": "local"
+      },
+      {
+       "name": "constructor",
+       "where": "unresolved"
+      },
+      {
+       "name": "obtain",
+       "where": "unresolved"
+      },
+      {
+       "name": "refine",
+       "where": "unresolved"
+      },
+      {
+       "name": "hb.imp",
+       "where": "local"
+      },
+      {
+       "name": "intro",
+       "where": "unresolved"
+      },
+      {
+       "name": "use",
+       "where": "unresolved"
+      },
+      {
+       "name": "hb'",
+       "where": "local"
+      },
+      {
+       "name": "exact",
+       "where": "unresolved"
+      },
+      {
+       "name": "Even.add_odd",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Ring.Parity",
+       "full": "Even.add_odd",
+       "kind": "theorem"
+      },
+      {
+       "name": "mul_add",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Ring.Defs",
+       "full": "mul_add",
+       "kind": "theorem"
+      },
+      {
+       "name": "hb.symm.imp",
+       "where": "local"
+      },
+      {
+       "name": "ha'",
+       "where": "local"
+      },
+      {
+       "name": "Int.cast_div",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Int.Cast.Field",
+       "full": "Int.cast_div",
+       "kind": "theorem"
+      },
+      {
+       "name": "simpa",
+       "where": "unresolved"
+      },
+      {
+       "name": "using",
+       "where": "unresolved"
+      },
+      {
+       "name": "NeZero.ne",
+       "where": "core",
+       "module": "Init.Data.NeZero",
+       "full": "NeZero.ne",
+       "kind": "theorem"
+      },
+      {
+       "name": "Int.cast_add",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Int.Cast.Basic",
+       "full": "Int.cast_add",
+       "kind": "theorem"
+      },
+      {
+       "name": "add_div",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Field.Basic",
+       "full": "add_div",
+       "kind": "theorem"
+      },
+      {
+       "name": "Int.cast_ofNat",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Int.Cast.Basic",
+       "full": "Int.cast_ofNat",
+       "kind": "theorem"
+      },
+      {
+       "name": "mul_div_cancel_left₀",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.GroupWithZero.Defs",
+       "full": "mul_div_cancel_left₀",
+       "kind": "theorem"
+      },
+      {
+       "name": "even_iff_two_dvd",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Ring.Parity",
+       "full": "even_iff_two_dvd",
+       "kind": "theorem"
+      },
+      {
+       "name": "apply",
+       "where": "unresolved"
+      },
+      {
+       "name": "ha'.add_odd",
+       "where": "local"
+      },
+      {
+       "name": "ha'.add_even",
+       "where": "local"
+      },
+      {
+       "name": "Finset.sum_add_distrib",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+       "full": "Finset.sum_add_distrib",
+       "kind": "theorem"
+      },
+      {
+       "name": "has.add_right",
+       "where": "local"
+      },
+      {
+       "name": "hbs.add_left",
+       "where": "local"
+      },
+      {
+       "name": "zero_mem'",
+       "where": "unresolved"
+      },
+      {
+       "name": "Pi.zero_apply",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Notation.Pi.Defs",
+       "full": "Pi.zero_apply",
+       "kind": "theorem"
+      },
+      {
+       "name": "forall_const",
+       "where": "core",
+       "module": "Init.PropLemmas",
+       "full": "forall_const",
+       "kind": "theorem"
+      },
+      {
+       "name": "mul_zero",
+       "where": "unresolved"
+      },
+      {
+       "name": "Finset.sum_const_zero",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.BigOperators.Group.Finset.Defs",
+       "full": "Finset.sum_const_zero",
+       "kind": "theorem"
+      },
+      {
+       "name": "AddCommGroup.modEq_refl",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Group.ModEq",
+       "full": "AddCommGroup.modEq_refl",
+       "kind": "theorem"
+      },
+      {
+       "name": "and_true",
+       "where": "core",
+       "module": "Init.SimpLemmas",
+       "full": "and_true",
+       "kind": "theorem"
+      },
+      {
+       "name": "Or.inl",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Or.inl",
+       "kind": "ctor"
+      },
+      {
+       "name": "smul_mem'",
+       "where": "unresolved"
+      },
+      {
+       "name": "zsmul_eq_mul",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Int.Cast.Lemmas",
+       "full": "zsmul_eq_mul",
+       "kind": "theorem"
+      },
+      {
+       "name": "Pi.mul_apply",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Notation.Pi.Defs",
+       "full": "Pi.mul_apply",
+       "kind": "theorem"
+      },
+      {
+       "name": "Pi.intCast_apply",
+       "where": "mathlib",
+       "module": "Mathlib.Data.Int.Cast.Pi",
+       "full": "Pi.intCast_apply",
+       "kind": "theorem"
+      },
+      {
+       "name": "left",
+       "where": "unresolved"
+      },
+      {
+       "name": "Int.cast_mul",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Ring.Int.Defs",
+       "full": "Int.cast_mul",
+       "kind": "theorem"
+      },
+      {
+       "name": "rfl",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "rfl",
+       "kind": "def"
+      },
+      {
+       "name": "c.even_or_odd",
+       "where": "local"
+      },
+      {
+       "name": "hj'",
+       "where": "local"
+      },
+      {
+       "name": "ring",
+       "where": "unresolved"
+      },
+      {
+       "name": "right",
+       "where": "unresolved"
+      },
+      {
+       "name": "mul_left_comm",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.Group.Basic",
+       "full": "mul_left_comm",
+       "kind": "theorem"
+      },
+      {
+       "name": "Finset.mul_sum",
+       "where": "mathlib",
+       "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+       "full": "Finset.mul_sum",
+       "kind": "theorem"
+      },
+      {
+       "name": "has.zsmul'.trans",
+       "where": "local"
+      }
+     ]
+    },
+    {
+     "name": "E8_norm_lower_bound",
+     "file": "SpherePacking/Basic/E8.lean",
+     "kind": "lemma",
+     "depth": 2,
+     "text": "lemma E8_norm_lower_bound (v : Fin 8 → ℝ) (hv : v ∈ Submodule.E8 ℝ) :\n    v = 0 ∨ √2 ≤ ‖WithLp.toLp 2 v‖",
+     "refs": [
+      {
+       "name": "Fin",
+       "where": "core",
+       "module": "Init.Prelude",
+       "full": "Fin",
+       "kind": "structure"
+      },
+      {
+       "name": "Submodule.E8",
+       "where": "project",
+       "file": "SpherePacking/Basic/E8.lean",
+       "full": "Submodule.E8",
+       "kind": "def"
+      },
+      {
+       "name": "WithLp.toLp",
+       "where": "mathlib",
+       "module": "Mathlib.Analysis.Normed.Lp.WithLp",
+       "full": "WithLp.toLp",
+       "kind": "ctor"
+      }
+     ]
+    }
+   ]
+  ]
+ },
+ "famous": [
+  {
+   "title": "The Principle of Mathematical Induction",
+   "files": 1
+  },
+  {
+   "title": "The Triangle Inequality",
+   "files": 1
+  }
+ ],
+ "map": null,
+ "folder_map": {
+  "level": 3,
+  "nodes": [
+   {
+    "id": "SpherePacking/ModularForms/",
+    "lines_pct": 19.61,
+    "label": "ModularForms",
+    "folder": "SpherePacking/ModularForms/"
+   },
+   {
+    "id": "SpherePacking/Basic/",
+    "lines_pct": 18.68,
+    "label": "Basic",
+    "folder": "SpherePacking/Basic/"
+   },
+   {
+    "id": "SpherePacking/MagicFunction/a",
+    "lines_pct": 15.98,
+    "label": "a",
+    "folder": "SpherePacking/MagicFunction/a"
+   },
+   {
+    "id": "SpherePacking/ModularForms/JacobiTheta",
+    "lines_pct": 13.46,
+    "label": "JacobiTheta",
+    "folder": "SpherePacking/ModularForms/JacobiTheta"
+   },
+   {
+    "id": "SpherePacking/CohnElkies/",
+    "lines_pct": 6.4,
+    "label": "CohnElkies",
+    "folder": "SpherePacking/CohnElkies/"
+   },
+   {
+    "id": "SpherePacking/MagicFunction/",
+    "lines_pct": 6.21,
+    "label": "MagicFunction",
+    "folder": "SpherePacking/MagicFunction/"
+   },
+   {
+    "id": "SpherePacking/ForMathlib/",
+    "lines_pct": 5.24,
+    "label": "ForMathlib",
+    "folder": "SpherePacking/ForMathlib/"
+   },
+   {
+    "id": "SpherePacking/Tactic/",
+    "lines_pct": 4.81,
+    "label": "Tactic",
+    "folder": "SpherePacking/Tactic/"
+   },
+   {
+    "id": "SpherePacking/MagicFunction/b",
+    "lines_pct": 4.03,
+    "label": "b",
+    "folder": "SpherePacking/MagicFunction/b"
+   },
+   {
+    "id": "SpherePacking/Tactic/Test",
+    "lines_pct": 2.6,
+    "label": "Test",
+    "folder": "SpherePacking/Tactic/Test"
+   },
+   {
+    "id": "SpherePacking/ForMathlib/RadialSchwartz",
+    "lines_pct": 2.39,
+    "label": "RadialSchwartz",
+    "folder": "SpherePacking/ForMathlib/RadialSchwartz"
+   },
+   {
+    "id": "SpherePacking/MagicFunction/g",
+    "lines_pct": 0.52,
+    "label": "g",
+    "folder": "SpherePacking/MagicFunction/g"
+   }
+  ],
+  "edges": [
+   [
+    "SpherePacking/ModularForms/",
+    "SpherePacking/ModularForms/JacobiTheta",
+    10
+   ],
+   [
+    "SpherePacking/MagicFunction/",
+    "SpherePacking/MagicFunction/a",
+    9
+   ],
+   [
+    "SpherePacking/ForMathlib/",
+    "SpherePacking/ModularForms/",
+    8
+   ],
+   [
+    "SpherePacking/Basic/",
+    "SpherePacking/ForMathlib/",
+    6
+   ],
+   [
+    "SpherePacking/MagicFunction/a",
+    "SpherePacking/ModularForms/",
+    4
+   ],
+   [
+    "SpherePacking/Basic/",
+    "SpherePacking/CohnElkies/",
+    3
+   ],
+   [
+    "SpherePacking/ForMathlib/",
+    "SpherePacking/MagicFunction/",
+    3
+   ],
+   [
+    "SpherePacking/ForMathlib/",
+    "SpherePacking/ModularForms/JacobiTheta",
+    3
+   ],
+   [
+    "SpherePacking/CohnElkies/",
+    "SpherePacking/ForMathlib/",
+    2
+   ],
+   [
+    "SpherePacking/MagicFunction/",
+    "SpherePacking/MagicFunction/b",
+    2
+   ],
+   [
+    "SpherePacking/MagicFunction/a",
+    "SpherePacking/MagicFunction/g",
+    2
+   ],
+   [
+    "SpherePacking/MagicFunction/b",
+    "SpherePacking/MagicFunction/g",
+    2
+   ],
+   [
+    "SpherePacking/ModularForms/",
+    "SpherePacking/Tactic/",
+    2
+   ],
+   [
+    "SpherePacking/ModularForms/JacobiTheta",
+    "SpherePacking/Tactic/",
+    2
+   ],
+   [
+    "SpherePacking/Tactic/",
+    "SpherePacking/Tactic/Test",
+    2
+   ],
+   [
+    "SpherePacking/ForMathlib/RadialSchwartz",
+    "SpherePacking/MagicFunction/a",
+    1
+   ],
+   [
+    "SpherePacking/ForMathlib/RadialSchwartz",
+    "SpherePacking/MagicFunction/b",
+    1
+   ],
+   [
+    "SpherePacking/MagicFunction/b",
+    "SpherePacking/ModularForms/",
+    1
+   ],
+   [
+    "SpherePacking/MagicFunction/b",
+    "SpherePacking/ModularForms/JacobiTheta",
+    1
+   ],
+   [
+    "SpherePacking/MagicFunction/g",
+    "SpherePacking/Tactic/",
+    1
+   ]
+  ],
+  "shown": 12,
+  "folders": 14
+ },
+ "history": {
+  "commits": 1096,
+  "contributors": 36,
+  "first": "2024-02-28",
+  "last": "2026-11-21",
+  "months": 34,
+  "per_month": [
+   [
+    "2024-02",
+    6
+   ],
+   [
+    "2024-03",
+    26
+   ],
+   [
+    "2024-04",
+    9
+   ],
+   [
+    "2024-05",
+    105
+   ],
+   [
+    "2024-06",
+    0
+   ],
+   [
+    "2024-07",
+    157
+   ],
+   [
+    "2024-08",
+    149
+   ],
+   [
+    "2024-09",
+    24
+   ],
+   [
+    "2024-10",
+    20
+   ],
+   [
+    "2024-11",
+    31
+   ],
+   [
+    "2024-12",
+    42
+   ],
+   [
+    "2025-01",
+    62
+   ],
+   [
+    "2025-02",
+    38
+   ],
+   [
+    "2025-03",
+    23
+   ],
+   [
+    "2025-04",
+    29
+   ],
+   [
+    "2025-05",
+    66
+   ],
+   [
+    "2025-06",
+    110
+   ],
+   [
+    "2025-07",
+    10
+   ],
+   [
+    "2025-08",
+    4
+   ],
+   [
+    "2025-09",
+    8
+   ],
+   [
+    "2025-10",
+    12
+   ],
+   [
+    "2025-11",
+    23
+   ],
+   [
+    "2025-12",
+    22
+   ],
+   [
+    "2026-01",
+    43
+   ],
+   [
+    "2026-02",
+    9
+   ],
+   [
+    "2026-03",
+    21
+   ],
+   [
+    "2026-04",
+    10
+   ],
+   [
+    "2026-05",
+    1
+   ],
+   [
+    "2026-06",
+    6
+   ],
+   [
+    "2026-07",
+    10
+   ],
+   [
+    "2026-08",
+    5
+   ],
+   [
+    "2026-09",
+    3
+   ],
+   [
+    "2026-10",
+    9
+   ],
+   [
+    "2026-11",
+    3
+   ]
+  ],
+  "rule": "commits by authors whose name or e-mail marks a bot are left out; shown only with at least 20 commits over 3 months"
+ },
+ "pins": {
+  "mathlib_rev": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+  "toolchain": "leanprover/lean4:v4.36.0"
+ },
+ "coverage": {
+  "qualified_uses": 2868,
+  "resolved_to_mathlib_pct": 75.9
+ },
+ "resemblance": {
+  "compared": 6,
+  "method": "Similarity of two projects' mixes of Mathlib areas: the share of code lines attributed to each of Mathlib's second-level folders (such as NumberTheory/LSeries), compared by cosine similarity; 1 means the same mix, 0 nothing in common. It compares the foundations the code is built on, not the problems the proofs solve.",
+  "closest": [
+   {
+    "key": "rh",
+    "title": "Proof of the Riemann Hypothesis (Alpöge, 2026)",
+    "short": "Riemann Hypothesis",
+    "similarity": 0.812
+   },
+   {
+    "key": "strongpnt",
+    "title": "Strong prime number theorem (Math Inc, mostly AI-generated by Gauss)",
+    "short": "Strong PNT",
+    "similarity": 0.785
+   },
+   {
+    "key": "flt",
+    "title": "Fermat's Last Theorem project (Imperial College London, in progress)",
+    "short": "FLT project",
+    "similarity": 0.772
+   },
+   {
+    "key": "erdos846",
+    "title": "Erdős problem 846 (AlphaProof Nexus, AI-generated)",
+    "short": "Erdős 846",
+    "similarity": 0.711
+   },
+   {
+    "key": "carleson",
+    "title": "Carleson's theorem (van Doorn et al.)",
+    "short": "Carleson",
+    "similarity": 0.696
+   },
+   {
+    "key": "pfr",
+    "title": "Polynomial Freiman–Ruzsa conjecture (Gowers, Green, Manners, Tao; Lean project led by Tao)",
+    "short": "PFR conjecture",
+    "similarity": 0.664
+   }
+  ]
+ }
+}

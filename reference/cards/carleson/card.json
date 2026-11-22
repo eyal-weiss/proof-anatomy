@@ -1,0 +1,760 @@
+{
+ "title": "Carleson's theorem (van Doorn et al.)",
+ "short": "Carleson",
+ "url": "github.com/fpvandoorn/carleson",
+ "source": {
+  "url": "github.com/fpvandoorn/carleson",
+  "commit": "f7487cc9da4d1e73f009dc0280cd5b958f3e2c78"
+ },
+ "tool": "proof-anatomy",
+ "mathlib_table": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "numbers": {
+  "files": 125,
+  "code_lines": 41038,
+  "theorems": 2616,
+  "definitions": 374
+ },
+ "mathlib": {
+  "theorems": 246464,
+  "definitions": 44906,
+  "files": 8557,
+  "source": "leanprover-community.github.io/mathlib4_docs declaration data"
+ },
+ "areas": {
+  "Algebra": 20.4,
+  "MeasureTheory": 15.86,
+  "Order": 12.87,
+  "Basic": 11.98,
+  "Data": 11.57,
+  "Analysis": 10.62,
+  "Lean core & other libraries": 8.31,
+  "Topology": 6.54,
+  "Tactic": 1.24,
+  "Logic": 0.4,
+  "SetTheory": 0.06,
+  "LinearAlgebra": 0.06,
+  "Probability": 0.03,
+  "Dynamics": 0.03,
+  "GroupTheory": 0.02,
+  "Combinatorics": 0.01
+ },
+ "areas_L2": {
+  "Basic/ENNReal": 8.724,
+  "Lean core & other libraries": 8.312,
+  "Algebra/Order": 7.962,
+  "Data/Set": 7.04,
+  "Algebra/Group": 6.097,
+  "Analysis/SpecialFunctions": 5.168,
+  "MeasureTheory/Integral": 4.233,
+  "MeasureTheory/Function": 4.169,
+  "MeasureTheory/Measure": 3.567,
+  "Topology/MetricSpace": 3.42,
+  "Order/Interval": 3.383,
+  "Order/Defs": 3.38,
+  "Analysis/Normed": 3.319,
+  "Data/Finset": 1.982,
+  "Algebra/Notation": 1.735,
+  "Order/CompleteLattice": 1.447,
+  "MeasureTheory/MeasurableSpace": 1.412,
+  "Algebra/Ring": 1.411,
+  "Algebra/BigOperators": 1.324,
+  "Algebra/GroupWithZero": 1.314,
+  "Basic/NNReal": 1.15,
+  "MeasureTheory/Constructions": 1.114,
+  "Analysis/Complex": 1.019,
+  "Data/Nat": 1.012,
+  "MeasureTheory/OuterMeasure": 0.958,
+  "Basic/Logic": 0.909,
+  "Order/Filter": 0.866,
+  "Data/Fintype": 0.855,
+  "Topology/Algebra": 0.795,
+  "Basic/Complex": 0.693,
+  "Order/BoundedOrder": 0.668,
+  "Topology/Defs": 0.606,
+  "Order/BooleanAlgebra": 0.511,
+  "Tactic/Positivity": 0.416,
+  "Analysis/RCLike": 0.416,
+  "Topology/Order": 0.393,
+  "MeasureTheory/Group": 0.374,
+  "Topology/Instances": 0.372,
+  "Tactic/NormNum": 0.369,
+  "Order/Disjoint": 0.327,
+  "Tactic/Finiteness": 0.283,
+  "Order/Basic": 0.277,
+  "Analysis/Fourier": 0.276,
+  "Order/Bounds": 0.255,
+  "Order/SetNotation": 0.236,
+  "Order/Monotone": 0.233,
+  "Logic/Function": 0.231,
+  "Data/Int": 0.225,
+  "Basic/Real": 0.222,
+  "Order/RelClasses": 0.22,
+  "Algebra/NeZero": 0.215,
+  "Order/ConditionallyCompleteLattice": 0.164,
+  "Tactic/Measurability": 0.162,
+  "Analysis/Calculus": 0.156,
+  "Algebra/Field": 0.131,
+  "Order/SuccPred": 0.129,
+  "Topology/NhdsWithin": 0.121,
+  "Topology/EMetricSpace": 0.119,
+  "Data/Part": 0.107,
+  "Topology/Bases": 0.104,
+  "Order/Antichain": 0.103,
+  "Order/Max": 0.1,
+  "Algebra/Star": 0.094,
+  "Data/Subtype": 0.087,
+  "Topology/Bornology": 0.086,
+  "Order/LiminfLimsup": 0.084,
+  "Order/MinMax": 0.082,
+  "Logic/Equiv": 0.076,
+  "Data/PFun": 0.07,
+  "Basic/Finite": 0.069,
+  "Topology/Continuous": 0.068,
+  "Topology/ContinuousOn": 0.066,
+  "Algebra/CharZero": 0.065,
+  "Order/Minimal": 0.064,
+  "Data/Rat": 0.064,
+  "SetTheory/Cardinal": 0.063,
+  "Topology/Closure": 0.063,
+  "Basic/SetLike": 0.059,
+  "Basic/IsEmpty": 0.059,
+  "Analysis/MeanInequalitiesPow": 0.058,
+  "Topology/UniformSpace": 0.055,
+  "Basic/Countable": 0.051,
+  "Topology/Neighborhoods": 0.049,
+  "Data/Fin": 0.049,
+  "Order/RelSeries": 0.048,
+  "Order/Heyting": 0.048,
+  "Analysis/Real": 0.047,
+  "Order/Lattice": 0.047,
+  "Topology/Basic": 0.047,
+  "Order/Preorder": 0.044,
+  "Analysis/SpecificLimits": 0.041,
+  "Topology/Semicontinuity": 0.04,
+  "Logic/Encodable": 0.038,
+  "Data/Sigma": 0.036,
+  "Topology/ContinuousMap": 0.034,
+  "Algebra/Module": 0.031,
+  "Logic/Pairwise": 0.03,
+  "Order/Zorn": 0.029,
+  "Probability/Distributions": 0.029,
+  "Topology/Metrizable": 0.029,
+  "Order/KrullDimension": 0.028,
+  "Analysis/Convex": 0.028,
+  "Dynamics/Ergodic": 0.027,
+  "LinearAlgebra/Complex": 0.025,
+  "Logic/Embedding": 0.025,
+  "Topology/UnitInterval": 0.025,
+  "Analysis/Convolution": 0.024,
+  "Analysis/MeanInequalities": 0.023,
+  "Order/WellFounded": 0.022,
+  "LinearAlgebra/Dimension": 0.022,
+  "Basic/Rel": 0.022,
+  "Topology/Separation": 0.021,
+  "MeasureTheory/PiSystem": 0.02,
+  "GroupTheory/Coset": 0.019,
+  "Data/Quot": 0.018,
+  "MeasureTheory/Covering": 0.018,
+  "Analysis/InnerProductSpace": 0.016,
+  "LinearAlgebra/FiniteDimensional": 0.016,
+  "Analysis/SumIntegralExpDecay": 0.014,
+  "Data/Prod": 0.014,
+  "Data/EReal": 0.012,
+  "Order/OrderDual": 0.012,
+  "Topology/Compactness": 0.012,
+  "Topology/Constructions": 0.012,
+  "Basic/Nontrivial": 0.011,
+  "Order/WithBot": 0.011,
+  "Basic/FunLike": 0.01,
+  "Order/Hom": 0.009,
+  "Tactic/Linarith": 0.009,
+  "Order/WellFoundedSet": 0.009,
+  "Order/Directed": 0.008,
+  "Algebra/Algebra": 0.007,
+  "Combinatorics/Enumerative": 0.007,
+  "Order/Nat": 0.007,
+  "Analysis/CStarAlgebra": 0.007,
+  "Order/TypeTags": 0.007,
+  "Order/ConditionallyCompletePartialOrder": 0.006,
+  "Algebra/CharP": 0.006,
+  "Algebra/FiniteSupport": 0.005,
+  "Basic/Nonempty": 0.005,
+  "Topology/Sets": 0.005,
+  "Analysis/PSeries": 0.004
+ },
+ "areas_filled_pct": 0.0,
+ "borrowed": {
+  "mathlib_pct": 65.4,
+  "core_pct": 6.1,
+  "own_pct": 28.5,
+  "mathlib_uses": 32417,
+  "core_uses": 3011,
+  "own_uses": 14118,
+  "folder_level": "Carleson/",
+  "by_folder": [
+   {
+    "folder": "ToMathlib",
+    "lines_pct": 35.7,
+    "own_pct": 21.9
+   },
+   {
+    "folder": "ForestOperator",
+    "lines_pct": 15.5,
+    "own_pct": 30.6
+   },
+   {
+    "folder": "(files directly in Carleson/)",
+    "lines_pct": 14.3,
+    "own_pct": 34.9
+   },
+   {
+    "folder": "Classical",
+    "lines_pct": 10.1,
+    "own_pct": 16.2
+   },
+   {
+    "folder": "Discrete",
+    "lines_pct": 7.6,
+    "own_pct": 38.8
+   },
+   {
+    "folder": "TwoSidedCarleson",
+    "lines_pct": 7.2,
+    "own_pct": 34.6
+   },
+   {
+    "folder": "Antichain",
+    "lines_pct": 5.8,
+    "own_pct": 34.5
+   },
+   {
+    "folder": "MetricCarleson",
+    "lines_pct": 3.8,
+    "own_pct": 31.1
+   }
+  ]
+ },
+ "statement": {
+  "main_file": "Carleson/Classical/ClassicalCarleson.lean",
+  "sentences": [
+   "classical_carleson is stated with Mathlib's own definitions Continuous, Tendsto and atTop."
+  ],
+  "trace": [
+   [
+    {
+     "name": "classical_carleson",
+     "file": "Carleson/Classical/ClassicalCarleson.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem classical_carleson {f : ℝ → ℂ} (cont_f : Continuous f) (periodic_f : f.Periodic (2 * π)) :\n    ∀ᵐ x, Tendsto (S_ · f x) atTop (𝓝 (f x))",
+     "refs": [
+      {
+       "name": "cont_f",
+       "where": "local"
+      },
+      {
+       "name": "Continuous",
+       "where": "mathlib",
+       "module": "Mathlib.Topology.Defs.Basic",
+       "full": "Continuous",
+       "kind": "structure"
+      },
+      {
+       "name": "periodic_f",
+       "where": "local"
+      },
+      {
+       "name": "f.Periodic",
+       "where": "local"
+      },
+      {
+       "name": "Tendsto",
+       "where": "mathlib",
+       "module": "Mathlib.Order.Filter.Defs",
+       "full": "Filter.Tendsto",
+       "kind": "def"
+      },
+      {
+       "name": "atTop",
+       "where": "mathlib",
+       "module": "Mathlib.Order.Filter.AtTopBot.Defs",
+       "full": "Filter.atTop",
+       "kind": "def"
+      }
+     ]
+    }
+   ]
+  ]
+ },
+ "famous": [
+  {
+   "title": "The Triangle Inequality",
+   "files": 5
+  },
+  {
+   "title": "Lebesgue Measure and Integration",
+   "files": 4
+  },
+  {
+   "title": "Fatou–Lebesgue theorem",
+   "files": 1
+  }
+ ],
+ "map": null,
+ "folder_map": {
+  "level": 3,
+  "nodes": [
+   {
+    "id": "Carleson/ForestOperator/",
+    "lines_pct": 15.49,
+    "label": "ForestOperator",
+    "folder": "Carleson/ForestOperator/"
+   },
+   {
+    "id": "Carleson/",
+    "lines_pct": 14.26,
+    "label": "Carleson",
+    "folder": "Carleson/"
+   },
+   {
+    "id": "Carleson/ToMathlib/MeasureTheory",
+    "lines_pct": 12.57,
+    "label": "MeasureTheory",
+    "folder": "Carleson/ToMathlib/MeasureTheory"
+   },
+   {
+    "id": "Carleson/ToMathlib/",
+    "lines_pct": 11.67,
+    "label": "ToMathlib",
+    "folder": "Carleson/ToMathlib/"
+   },
+   {
+    "id": "Carleson/Classical/",
+    "lines_pct": 10.08,
+    "label": "Classical",
+    "folder": "Carleson/Classical/"
+   },
+   {
+    "id": "Carleson/ToMathlib/RealInterpolation",
+    "lines_pct": 9.84,
+    "label": "RealInterpolation",
+    "folder": "Carleson/ToMathlib/RealInterpolation"
+   },
+   {
+    "id": "Carleson/Discrete/",
+    "lines_pct": 7.64,
+    "label": "Discrete",
+    "folder": "Carleson/Discrete/"
+   },
+   {
+    "id": "Carleson/TwoSidedCarleson/",
+    "lines_pct": 7.15,
+    "label": "TwoSidedCarleson",
+    "folder": "Carleson/TwoSidedCarleson/"
+   },
+   {
+    "id": "Carleson/Antichain/",
+    "lines_pct": 5.82,
+    "label": "Antichain",
+    "folder": "Carleson/Antichain/"
+   },
+   {
+    "id": "Carleson/MetricCarleson/",
+    "lines_pct": 3.81,
+    "label": "MetricCarleson",
+    "folder": "Carleson/MetricCarleson/"
+   },
+   {
+    "id": "Carleson/ToMathlib/Analysis",
+    "lines_pct": 0.96,
+    "label": "Analysis",
+    "folder": "Carleson/ToMathlib/Analysis"
+   },
+   {
+    "id": "Carleson/ToMathlib/Data",
+    "lines_pct": 0.33,
+    "label": "Data",
+    "folder": "Carleson/ToMathlib/Data"
+   }
+  ],
+  "edges": [
+   [
+    "Carleson/ToMathlib/",
+    "Carleson/ToMathlib/MeasureTheory",
+    17
+   ],
+   [
+    "Carleson/",
+    "Carleson/ToMathlib/",
+    6
+   ],
+   [
+    "Carleson/",
+    "Carleson/Antichain/",
+    5
+   ],
+   [
+    "Carleson/",
+    "Carleson/ForestOperator/",
+    5
+   ],
+   [
+    "Carleson/Classical/",
+    "Carleson/ToMathlib/MeasureTheory",
+    5
+   ],
+   [
+    "Carleson/Classical/",
+    "Carleson/TwoSidedCarleson/",
+    4
+   ],
+   [
+    "Carleson/ToMathlib/",
+    "Carleson/ToMathlib/Analysis",
+    4
+   ],
+   [
+    "Carleson/ToMathlib/",
+    "Carleson/ToMathlib/RealInterpolation",
+    4
+   ],
+   [
+    "Carleson/ToMathlib/MeasureTheory",
+    "Carleson/ToMathlib/RealInterpolation",
+    4
+   ],
+   [
+    "Carleson/",
+    "Carleson/Discrete/",
+    3
+   ],
+   [
+    "Carleson/ForestOperator/",
+    "Carleson/ToMathlib/MeasureTheory",
+    3
+   ],
+   [
+    "Carleson/ToMathlib/Analysis",
+    "Carleson/ToMathlib/MeasureTheory",
+    3
+   ],
+   [
+    "Carleson/",
+    "Carleson/MetricCarleson/",
+    2
+   ],
+   [
+    "Carleson/",
+    "Carleson/ToMathlib/MeasureTheory",
+    2
+   ],
+   [
+    "Carleson/Antichain/",
+    "Carleson/ToMathlib/MeasureTheory",
+    2
+   ],
+   [
+    "Carleson/Discrete/",
+    "Carleson/ToMathlib/",
+    2
+   ],
+   [
+    "Carleson/ToMathlib/",
+    "Carleson/TwoSidedCarleson/",
+    2
+   ],
+   [
+    "Carleson/ToMathlib/MeasureTheory",
+    "Carleson/TwoSidedCarleson/",
+    2
+   ],
+   [
+    "Carleson/",
+    "Carleson/Classical/",
+    1
+   ],
+   [
+    "Carleson/",
+    "Carleson/TwoSidedCarleson/",
+    1
+   ],
+   [
+    "Carleson/Antichain/",
+    "Carleson/Discrete/",
+    1
+   ],
+   [
+    "Carleson/Antichain/",
+    "Carleson/ToMathlib/",
+    1
+   ],
+   [
+    "Carleson/Classical/",
+    "Carleson/ToMathlib/",
+    1
+   ],
+   [
+    "Carleson/Classical/",
+    "Carleson/ToMathlib/Analysis",
+    1
+   ],
+   [
+    "Carleson/Discrete/",
+    "Carleson/ForestOperator/",
+    1
+   ],
+   [
+    "Carleson/ForestOperator/",
+    "Carleson/ToMathlib/",
+    1
+   ],
+   [
+    "Carleson/ForestOperator/",
+    "Carleson/ToMathlib/Data",
+    1
+   ],
+   [
+    "Carleson/MetricCarleson/",
+    "Carleson/ToMathlib/RealInterpolation",
+    1
+   ],
+   [
+    "Carleson/MetricCarleson/",
+    "Carleson/TwoSidedCarleson/",
+    1
+   ],
+   [
+    "Carleson/ToMathlib/",
+    "Carleson/ToMathlib/Data",
+    1
+   ],
+   [
+    "Carleson/ToMathlib/Analysis",
+    "Carleson/ToMathlib/RealInterpolation",
+    1
+   ],
+   [
+    "Carleson/ToMathlib/RealInterpolation",
+    "Carleson/TwoSidedCarleson/",
+    1
+   ]
+  ],
+  "shown": 12,
+  "folders": 15
+ },
+ "history": {
+  "commits": 1043,
+  "contributors": 39,
+  "first": "2023-10-20",
+  "last": "2026-11-17",
+  "months": 38,
+  "per_month": [
+   [
+    "2023-10",
+    10
+   ],
+   [
+    "2023-11",
+    31
+   ],
+   [
+    "2023-12",
+    10
+   ],
+   [
+    "2024-01",
+    0
+   ],
+   [
+    "2024-02",
+    0
+   ],
+   [
+    "2024-03",
+    6
+   ],
+   [
+    "2024-04",
+    24
+   ],
+   [
+    "2024-05",
+    25
+   ],
+   [
+    "2024-06",
+    114
+   ],
+   [
+    "2024-07",
+    110
+   ],
+   [
+    "2024-08",
+    12
+   ],
+   [
+    "2024-09",
+    55
+   ],
+   [
+    "2024-10",
+    22
+   ],
+   [
+    "2024-11",
+    40
+   ],
+   [
+    "2024-12",
+    7
+   ],
+   [
+    "2025-01",
+    32
+   ],
+   [
+    "2025-02",
+    27
+   ],
+   [
+    "2025-03",
+    32
+   ],
+   [
+    "2025-04",
+    47
+   ],
+   [
+    "2025-05",
+    44
+   ],
+   [
+    "2025-06",
+    60
+   ],
+   [
+    "2025-07",
+    62
+   ],
+   [
+    "2025-08",
+    16
+   ],
+   [
+    "2025-09",
+    2
+   ],
+   [
+    "2025-10",
+    28
+   ],
+   [
+    "2025-11",
+    23
+   ],
+   [
+    "2025-12",
+    2
+   ],
+   [
+    "2026-01",
+    34
+   ],
+   [
+    "2026-02",
+    2
+   ],
+   [
+    "2026-03",
+    5
+   ],
+   [
+    "2026-04",
+    12
+   ],
+   [
+    "2026-05",
+    17
+   ],
+   [
+    "2026-06",
+    23
+   ],
+   [
+    "2026-07",
+    40
+   ],
+   [
+    "2026-08",
+    13
+   ],
+   [
+    "2026-09",
+    24
+   ],
+   [
+    "2026-10",
+    23
+   ],
+   [
+    "2026-11",
+    9
+   ]
+  ],
+  "rule": "commits by authors whose name or e-mail marks a bot are left out; shown only with at least 20 commits over 3 months"
+ },
+ "pins": {
+  "mathlib_rev": "d88814353fcbcc0461c55b2a4585d3f44d903df1",
+  "toolchain": "leanprover/lean4:v4.36.0-rc1"
+ },
+ "coverage": {
+  "qualified_uses": 9328,
+  "resolved_to_mathlib_pct": 86.1
+ },
+ "resemblance": {
+  "compared": 6,
+  "method": "Similarity of two projects' mixes of Mathlib areas: the share of code lines attributed to each of Mathlib's second-level folders (such as NumberTheory/LSeries), compared by cosine similarity; 1 means the same mix, 0 nothing in common. It compares the foundations the code is built on, not the problems the proofs solve.",
+  "closest": [
+   {
+    "key": "strongpnt",
+    "title": "Strong prime number theorem (Math Inc, mostly AI-generated by Gauss)",
+    "short": "Strong PNT",
+    "similarity": 0.725
+   },
+   {
+    "key": "erdos846",
+    "title": "Erdős problem 846 (AlphaProof Nexus, AI-generated)",
+    "short": "Erdős 846",
+    "similarity": 0.713
+   },
+   {
+    "key": "pfr",
+    "title": "Polynomial Freiman–Ruzsa conjecture (Gowers, Green, Manners, Tao; Lean project led by Tao)",
+    "short": "PFR conjecture",
+    "similarity": 0.707
+   },
+   {
+    "key": "spherepacking",
+    "title": "Sphere packing in dimension 8 (Lean project, completed with Math Inc's Gauss)",
+    "short": "Sphere packing (dim 8)",
+    "similarity": 0.696
+   },
+   {
+    "key": "rh",
+    "title": "Proof of the Riemann Hypothesis (Alpöge, 2026)",
+    "short": "Riemann Hypothesis",
+    "similarity": 0.618
+   },
+   {
+    "key": "flt",
+    "title": "Fermat's Last Theorem project (Imperial College London, in progress)",
+    "short": "FLT project",
+    "similarity": 0.577
+   }
+  ]
+ }
+}

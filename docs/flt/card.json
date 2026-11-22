@@ -1,0 +1,964 @@
+{
+ "title": "Fermat's Last Theorem project (Imperial College London, in progress)",
+ "short": "FLT project",
+ "url": "github.com/ImperialCollegeLondon/FLT",
+ "source": {
+  "url": "github.com/ImperialCollegeLondon/FLT",
+  "commit": "019805815d7da565ed1e9f427b6fbd0cbc9d00d3"
+ },
+ "tool": "proof-anatomy",
+ "mathlib_table": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "numbers": {
+  "files": 262,
+  "code_lines": 39789,
+  "theorems": 2241,
+  "definitions": 749
+ },
+ "mathlib": {
+  "theorems": 246464,
+  "definitions": 44906,
+  "files": 8557,
+  "source": "leanprover-community.github.io/mathlib4_docs declaration data"
+ },
+ "areas": {
+  "Algebra": 32.55,
+  "Data": 10.8,
+  "Lean core & other libraries": 10.52,
+  "Topology": 9.26,
+  "RingTheory": 9.1,
+  "LinearAlgebra": 5.91,
+  "GroupTheory": 4.57,
+  "Order": 3.71,
+  "Basic": 3.04,
+  "MeasureTheory": 1.9,
+  "NumberTheory": 1.73,
+  "AlgebraicGeometry": 1.67,
+  "Analysis": 1.21,
+  "FieldTheory": 1.02,
+  "SetTheory": 0.94,
+  "Logic": 0.74,
+  "RepresentationTheory": 0.68,
+  "Tactic": 0.37,
+  "CategoryTheory": 0.2,
+  "Dynamics": 0.04,
+  "Geometry": 0.04,
+  "Combinatorics": 0.01
+ },
+ "areas_L2": {
+  "Algebra/Group": 15.021,
+  "Lean core & other libraries": 10.517,
+  "Topology/Algebra": 4.571,
+  "Data/Set": 4.227,
+  "Algebra/Module": 3.008,
+  "Algebra/Ring": 2.918,
+  "Algebra/Algebra": 2.608,
+  "RingTheory/Ideal": 2.345,
+  "Algebra/GroupWithZero": 2.235,
+  "LinearAlgebra/Matrix": 1.775,
+  "AlgebraicGeometry/EllipticCurve": 1.671,
+  "Topology/Defs": 1.608,
+  "Order/Defs": 1.507,
+  "Algebra/Order": 1.485,
+  "Data/Nat": 1.432,
+  "Algebra/Polynomial": 1.407,
+  "LinearAlgebra/TensorProduct": 1.318,
+  "RingTheory/DedekindDomain": 1.31,
+  "Data/Fintype": 1.276,
+  "Algebra/BigOperators": 1.175,
+  "Order/Filter": 1.131,
+  "NumberTheory/NumberField": 1.022,
+  "Data/Finset": 1.021,
+  "RingTheory/LocalRing": 1.003,
+  "Data/Matrix": 0.961,
+  "SetTheory/Cardinal": 0.939,
+  "Basic/Logic": 0.902,
+  "GroupTheory/OrderOfElement": 0.897,
+  "MeasureTheory/Measure": 0.815,
+  "GroupTheory/GroupAction": 0.664,
+  "Topology/Constructions": 0.662,
+  "GroupTheory/Coset": 0.652,
+  "Algebra/Notation": 0.613,
+  "GroupTheory/Sylow": 0.552,
+  "RingTheory/Valuation": 0.55,
+  "LinearAlgebra/Dimension": 0.532,
+  "Data/ZMod": 0.481,
+  "Logic/Equiv": 0.48,
+  "LinearAlgebra/Quotient": 0.48,
+  "RingTheory/TensorProduct": 0.472,
+  "GroupTheory/Index": 0.46,
+  "Basic/Finite": 0.457,
+  "Analysis/Normed": 0.452,
+  "Basic/SetLike": 0.426,
+  "Algebra/Field": 0.396,
+  "RingTheory/Localization": 0.383,
+  "Topology/Order": 0.383,
+  "Analysis/SpecialFunctions": 0.376,
+  "MeasureTheory/MeasurableSpace": 0.351,
+  "RingTheory/Finiteness": 0.343,
+  "LinearAlgebra/FreeModule": 0.337,
+  "GroupTheory/QuotientGroup": 0.325,
+  "GroupTheory/Subgroup": 0.301,
+  "Algebra/Category": 0.297,
+  "RepresentationTheory/Homological": 0.295,
+  "Algebra/Divisibility": 0.295,
+  "Data/Int": 0.294,
+  "MeasureTheory/Group": 0.289,
+  "NumberTheory/Padics": 0.285,
+  "Basic/Nontrivial": 0.285,
+  "Data/Quot": 0.277,
+  "RingTheory/IntegralClosure": 0.275,
+  "Order/BoundedOrder": 0.274,
+  "RingTheory/PowerSeries": 0.27,
+  "MeasureTheory/Constructions": 0.266,
+  "LinearAlgebra/Projectivization": 0.266,
+  "Topology/Continuous": 0.259,
+  "Topology/Compactness": 0.252,
+  "Topology/Separation": 0.25,
+  "GroupTheory/SpecificGroups": 0.246,
+  "RepresentationTheory/Continuous": 0.244,
+  "Basic/Complex": 0.243,
+  "Tactic/NormNum": 0.233,
+  "Logic/Function": 0.224,
+  "LinearAlgebra/Span": 0.221,
+  "Data/PNat": 0.204,
+  "Basic/FunLike": 0.204,
+  "RingTheory/AdjoinRoot": 0.185,
+  "LinearAlgebra/FiniteDimensional": 0.174,
+  "GroupTheory/DoubleCoset": 0.171,
+  "Data/Fin": 0.166,
+  "RingTheory/Noetherian": 0.164,
+  "GroupTheory/PGroup": 0.162,
+  "LinearAlgebra/Finsupp": 0.157,
+  "Topology/Bases": 0.153,
+  "Topology/MetricSpace": 0.153,
+  "Topology/Closure": 0.144,
+  "FieldTheory/Finite": 0.144,
+  "Analysis/Complex": 0.143,
+  "FieldTheory/IsAlgClosed": 0.142,
+  "MeasureTheory/Integral": 0.139,
+  "Algebra/Lie": 0.138,
+  "Topology/UniformSpace": 0.136,
+  "Basic/ENNReal": 0.136,
+  "FieldTheory/IntermediateField": 0.134,
+  "Data/Subtype": 0.128,
+  "Basic/NNReal": 0.123,
+  "Algebra/NeZero": 0.121,
+  "Topology/CompactOpen": 0.119,
+  "RingTheory/TwoSidedIdeal": 0.119,
+  "Tactic/Positivity": 0.118,
+  "Algebra/CharP": 0.117,
+  "FieldTheory/Minpoly": 0.114,
+  "Algebra/Quaternion": 0.113,
+  "LinearAlgebra/Basis": 0.113,
+  "Algebra/Colimit": 0.11,
+  "FieldTheory/RatFunc": 0.109,
+  "Algebra/CharZero": 0.108,
+  "RingTheory/KrullDimension": 0.108,
+  "RingTheory/Norm": 0.104,
+  "NumberTheory/FLT": 0.102,
+  "Data/Finsupp": 0.101,
+  "RingTheory/Length": 0.099,
+  "Basic/Nonempty": 0.097,
+  "LinearAlgebra/Determinant": 0.097,
+  "FieldTheory/Separable": 0.097,
+  "RingTheory/Etale": 0.095,
+  "Algebra/DirectSum": 0.094,
+  "Topology/Basic": 0.092,
+  "RingTheory/Flat": 0.091,
+  "RingTheory/Spectrum": 0.088,
+  "RepresentationTheory/Basic": 0.084,
+  "Order/Monotone": 0.084,
+  "Order/Interval": 0.083,
+  "LinearAlgebra/Pi": 0.079,
+  "NumberTheory/Cyclotomic": 0.076,
+  "Topology/Connected": 0.074,
+  "Order/CompleteLattice": 0.071,
+  "LinearAlgebra/LinearIndependent": 0.071,
+  "RingTheory/UniqueFactorizationDomain": 0.069,
+  "RingTheory/Algebraic": 0.069,
+  "Basic/IsEmpty": 0.069,
+  "CategoryTheory/Subfunctor": 0.069,
+  "Data/Multiset": 0.066,
+  "RingTheory/Artinian": 0.066,
+  "Algebra/Central": 0.066,
+  "Order/RelClasses": 0.065,
+  "FieldTheory/Galois": 0.065,
+  "RingTheory/SimpleRing": 0.064,
+  "Topology/ContinuousMap": 0.064,
+  "Topology/Homeomorph": 0.063,
+  "Topology/Neighborhoods": 0.063,
+  "FieldTheory/Normal": 0.061,
+  "RingTheory/RootsOfUnity": 0.06,
+  "RingTheory/DiscreteValuationRing": 0.059,
+  "Order/Directed": 0.059,
+  "Topology/Maps": 0.058,
+  "RingTheory/Polynomial": 0.058,
+  "FieldTheory/AbsoluteGaloisGroup": 0.057,
+  "NumberTheory/TsumDivisorsAntidiagonal": 0.057,
+  "Analysis/SpecificLimits": 0.054,
+  "Order/TypeTags": 0.054,
+  "Order/BooleanAlgebra": 0.052,
+  "Analysis/Analytic": 0.051,
+  "Basic/Countable": 0.051,
+  "LinearAlgebra/Eigenspace": 0.05,
+  "RingTheory/Trace": 0.05,
+  "RingTheory/RamificationInertia": 0.049,
+  "RingTheory/Support": 0.048,
+  "Basic/Unique": 0.047,
+  "Analysis/InnerProductSpace": 0.046,
+  "Data/Rat": 0.046,
+  "Algebra/Opposites": 0.044,
+  "LinearAlgebra/BilinearMap": 0.043,
+  "RingTheory/Unramified": 0.039,
+  "Data/Sym": 0.039,
+  "Geometry/Manifold": 0.038,
+  "NumberTheory/LSeries": 0.038,
+  "RingTheory/Idempotents": 0.038,
+  "RepresentationTheory/Subrepresentation": 0.037,
+  "Order/DirectedInverseSystem": 0.037,
+  "LinearAlgebra/Prod": 0.037,
+  "NumberTheory/Divisors": 0.037,
+  "CategoryTheory/Category": 0.036,
+  "Order/SetNotation": 0.036,
+  "Order/WithBot": 0.035,
+  "RingTheory/Invariant": 0.034,
+  "Order/KrullDimension": 0.033,
+  "CategoryTheory/ConcreteCategory": 0.033,
+  "Data/ENat": 0.033,
+  "Algebra/Exact": 0.032,
+  "Algebra/GCDMonoid": 0.032,
+  "LinearAlgebra/Trace": 0.032,
+  "Topology/ContinuousOn": 0.031,
+  "RingTheory/Multiplicity": 0.03,
+  "NumberTheory/LocalField": 0.03,
+  "NumberTheory/ArithmeticFunction": 0.029,
+  "FieldTheory/SplittingField": 0.029,
+  "MeasureTheory/OuterMeasure": 0.029,
+  "Order/Disjoint": 0.029,
+  "NumberTheory/Bernoulli": 0.028,
+  "RingTheory/Nilpotent": 0.028,
+  "RingTheory/Regular": 0.027,
+  "RingTheory/Filtration": 0.027,
+  "Analysis/Real": 0.027,
+  "GroupTheory/Transfer": 0.026,
+  "Algebra/QuadraticDiscriminant": 0.026,
+  "GroupTheory/Exponent": 0.025,
+  "LinearAlgebra/StdBasis": 0.025,
+  "RingTheory/SimpleModule": 0.025,
+  "Order/Basic": 0.025,
+  "Logic/Pairwise": 0.025,
+  "Dynamics/Ergodic": 0.025,
+  "Order/Lattice": 0.024,
+  "RingTheory/FiniteType": 0.024,
+  "Algebra/Homology": 0.023,
+  "Algebra/Star": 0.022,
+  "Topology/Instances": 0.022,
+  "Topology/LocallyConstant": 0.022,
+  "RingTheory/Bialgebra": 0.022,
+  "Data/DFinsupp": 0.022,
+  "CategoryTheory/EqToHom": 0.021,
+  "LinearAlgebra/Dual": 0.021,
+  "Analysis/Matrix": 0.02,
+  "CategoryTheory/Iso": 0.019,
+  "Topology/UrysohnsLemma": 0.019,
+  "RingTheory/Frobenius": 0.019,
+  "Order/OrderDual": 0.019,
+  "Topology/NhdsWithin": 0.019,
+  "Tactic/Measurability": 0.018,
+  "RingTheory/Coalgebra": 0.018,
+  "LinearAlgebra/DirectSum": 0.018,
+  "Algebra/WithConv": 0.017,
+  "FieldTheory/IsSepClosed": 0.017,
+  "Analysis/Calculus": 0.017,
+  "Order/Bounds": 0.016,
+  "Topology/Sets": 0.016,
+  "GroupTheory/IndexNormal": 0.016,
+  "Order/SuccPred": 0.016,
+  "RingTheory/Henselian": 0.016,
+  "RingTheory/AdicCompletion": 0.016,
+  "Dynamics/FixedPoints": 0.015,
+  "GroupTheory/Divisible": 0.015,
+  "GroupTheory/Perm": 0.015,
+  "FieldTheory/Perfect": 0.015,
+  "RingTheory/QuotSMulTop": 0.015,
+  "LinearAlgebra/Charpoly": 0.015,
+  "Logic/Embedding": 0.015,
+  "Analysis/Quaternion": 0.014,
+  "FieldTheory/Finiteness": 0.014,
+  "RingTheory/IntegralDomain": 0.014,
+  "RingTheory/HopfAlgebra": 0.014,
+  "RingTheory/Coprime": 0.014,
+  "NumberTheory/ModularForms": 0.014,
+  "Data/Sigma": 0.013,
+  "FieldTheory/KrullTopology": 0.013,
+  "RingTheory/PrincipalIdealDomain": 0.012,
+  "Order/GaloisConnection": 0.012,
+  "GroupTheory/SemidirectProduct": 0.012,
+  "LinearAlgebra/SpecialLinearGroup": 0.011,
+  "GroupTheory/Torsion": 0.011,
+  "Order/Setoid": 0.011,
+  "Algebra/EuclideanDomain": 0.011,
+  "LinearAlgebra/Contraction": 0.011,
+  "RepresentationTheory/Irreducible": 0.011,
+  "RingTheory/Jacobson": 0.01,
+  "Topology/Metrizable": 0.01,
+  "NumberTheory/RamificationInertia": 0.01,
+  "Order/ConditionallyCompleteLattice": 0.01,
+  "RingTheory/EssentialFiniteness": 0.009,
+  "RingTheory/Nakayama": 0.009,
+  "MeasureTheory/Function": 0.009,
+  "Combinatorics/Enumerative": 0.009,
+  "Order/RelSeries": 0.008,
+  "CategoryTheory/CofilteredSystem": 0.008,
+  "LinearAlgebra/UnitaryGroup": 0.008,
+  "Topology/ClusterPt": 0.007,
+  "Data/Finite": 0.007,
+  "CategoryTheory/Limits": 0.007,
+  "LinearAlgebra/SModEq": 0.007,
+  "Algebra/AlgebraicCard": 0.007,
+  "Analysis/RCLike": 0.007,
+  "Order/MinMax": 0.007,
+  "RingTheory/Adjoin": 0.007,
+  "GroupTheory/MonoidLocalization": 0.006,
+  "Algebra/Regular": 0.006,
+  "LinearAlgebra/Isomorphisms": 0.006,
+  "LinearAlgebra/InvariantBasisNumber": 0.006,
+  "Order/Atoms": 0.006,
+  "GroupTheory/SchurZassenhaus": 0.006,
+  "Topology/Clopen": 0.006,
+  "Analysis/Convex": 0.006,
+  "RingTheory/QuasiFinite": 0.005,
+  "FieldTheory/Fixed": 0.005,
+  "GroupTheory/Solvable": 0.005,
+  "CategoryTheory/Endomorphism": 0.005,
+  "CategoryTheory/Simple": 0.005,
+  "RepresentationTheory/FDRep": 0.005,
+  "RingTheory/Derivation": 0.005,
+  "RingTheory/FinitePresentation": 0.005,
+  "RingTheory/PrincipalIdealDomainOfPrime": 0.004,
+  "Order/Hom": 0.004,
+  "Order/OrderIsoNat": 0.004,
+  "Topology/InductiveDimension": 0.004,
+  "RingTheory/Depth": 0.004,
+  "Algebra/FiveLemma": 0.004,
+  "RingTheory/IsTensorProduct": 0.004,
+  "Topology/DenseEmbedding": 0.003,
+  "RingTheory/PowerBasis": 0.003,
+  "FieldTheory/SeparableDegree": 0.003,
+  "LinearAlgebra/Complex": 0.003,
+  "RingTheory/Complex": 0.003,
+  "RingTheory/EuclideanDomain": 0.003
+ },
+ "areas_filled_pct": 0.04,
+ "borrowed": {
+  "mathlib_pct": 70.4,
+  "core_pct": 12.2,
+  "own_pct": 17.4,
+  "mathlib_uses": 33793,
+  "core_uses": 5867,
+  "own_uses": 8373,
+  "folder_level": "FLT/",
+  "by_folder": [
+   {
+    "folder": "Slop",
+    "lines_pct": 27.3,
+    "own_pct": 15.7
+   },
+   {
+    "folder": "Mathlib",
+    "lines_pct": 21.4,
+    "own_pct": 12.7
+   },
+   {
+    "folder": "AutomorphicForm",
+    "lines_pct": 8.5,
+    "own_pct": 23.3
+   },
+   {
+    "folder": "Patching",
+    "lines_pct": 7.9,
+    "own_pct": 17.7
+   },
+   {
+    "folder": "KnownIn1980s",
+    "lines_pct": 6.4,
+    "own_pct": 24.1
+   },
+   {
+    "folder": "DedekindDomain",
+    "lines_pct": 5.6,
+    "own_pct": 17.5
+   },
+   {
+    "folder": "HaarMeasure",
+    "lines_pct": 5.0,
+    "own_pct": 17.1
+   },
+   {
+    "folder": "Deformations",
+    "lines_pct": 4.5,
+    "own_pct": 20.8
+   },
+   {
+    "folder": "NumberField",
+    "lines_pct": 3.1,
+    "own_pct": 22.7
+   },
+   {
+    "folder": "Data",
+    "lines_pct": 2.9,
+    "own_pct": 29.7
+   }
+  ]
+ },
+ "statement": {
+  "main_file": "FermatsLastTheorem.lean",
+  "sentences": [
+   "PNat.pow_add_pow_ne_pow is stated with notation only (numbers, arithmetic, logic), without named definitions."
+  ],
+  "trace": [
+   [
+    {
+     "name": "PNat.pow_add_pow_ne_pow",
+     "file": "FermatsLastTheorem.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem PNat.pow_add_pow_ne_pow\n    (x y z : ℕ+)\n    (n : ℕ) (hn : n > 2) :\n    x^n + y^n ≠ z^n",
+     "refs": []
+    }
+   ]
+  ]
+ },
+ "famous": [
+  {
+   "title": "Sylow theorems",
+   "files": 5
+  },
+  {
+   "title": "Lagrange's theorem (group theory)",
+   "files": 4
+  },
+  {
+   "title": "Orbit-stabilizer theorem",
+   "files": 3
+  },
+  {
+   "title": "The Factor and Remainder Theorems",
+   "files": 2
+  },
+  {
+   "title": "The Principle of Mathematical Induction",
+   "files": 2
+  },
+  {
+   "title": "Cauchy's theorem (group theory)",
+   "files": 1
+  },
+  {
+   "title": "Greatest Common Divisor Algorithm",
+   "files": 1
+  },
+  {
+   "title": "Heine–Borel theorem",
+   "files": 1
+  },
+  {
+   "title": "Isomorphism theorem",
+   "files": 1
+  },
+  {
+   "title": "Jacobson density theorem",
+   "files": 1
+  },
+  {
+   "title": "Metrization theorems",
+   "files": 1
+  },
+  {
+   "title": "Squeeze theorem",
+   "files": 1
+  },
+  {
+   "title": "Wedderburn–Artin theorem",
+   "files": 1
+  }
+ ],
+ "map": null,
+ "folder_map": {
+  "level": 2,
+  "nodes": [
+   {
+    "id": "FLT/Slop",
+    "lines_pct": 27.26,
+    "label": "Slop",
+    "folder": "FLT/Slop"
+   },
+   {
+    "id": "FLT/Mathlib",
+    "lines_pct": 21.41,
+    "label": "Mathlib",
+    "folder": "FLT/Mathlib"
+   },
+   {
+    "id": "FLT/AutomorphicForm",
+    "lines_pct": 8.5,
+    "label": "AutomorphicForm",
+    "folder": "FLT/AutomorphicForm"
+   },
+   {
+    "id": "FLT/Patching",
+    "lines_pct": 7.93,
+    "label": "Patching",
+    "folder": "FLT/Patching"
+   },
+   {
+    "id": "FLT/KnownIn1980s",
+    "lines_pct": 6.4,
+    "label": "KnownIn1980s",
+    "folder": "FLT/KnownIn1980s"
+   },
+   {
+    "id": "FLT/DedekindDomain",
+    "lines_pct": 5.62,
+    "label": "DedekindDomain",
+    "folder": "FLT/DedekindDomain"
+   },
+   {
+    "id": "FLT/HaarMeasure",
+    "lines_pct": 5.0,
+    "label": "HaarMeasure",
+    "folder": "FLT/HaarMeasure"
+   },
+   {
+    "id": "FLT/Deformations",
+    "lines_pct": 4.48,
+    "label": "Deformations",
+    "folder": "FLT/Deformations"
+   },
+   {
+    "id": "FLT/NumberField",
+    "lines_pct": 3.13,
+    "label": "NumberField",
+    "folder": "FLT/NumberField"
+   },
+   {
+    "id": "FLT/Data",
+    "lines_pct": 2.92,
+    "label": "Data",
+    "folder": "FLT/Data"
+   },
+   {
+    "id": "FLT/DivisionAlgebra",
+    "lines_pct": 1.97,
+    "label": "DivisionAlgebra",
+    "folder": "FLT/DivisionAlgebra"
+   },
+   {
+    "id": "FLT/HenselianLocalRing",
+    "lines_pct": 1.58,
+    "label": "HenselianLocalRing",
+    "folder": "FLT/HenselianLocalRing"
+   },
+   {
+    "id": "FLT/QuaternionAlgebra",
+    "lines_pct": 1.15,
+    "label": "QuaternionAlgebra",
+    "folder": "FLT/QuaternionAlgebra"
+   },
+   {
+    "id": "FLT/GlobalLanglandsConjectures",
+    "lines_pct": 0.65,
+    "label": "GlobalLanglandsConjectures",
+    "folder": "FLT/GlobalLanglandsConjectures"
+   },
+   {
+    "id": "FLT/FreyCurve",
+    "lines_pct": 0.63,
+    "label": "FreyCurve",
+    "folder": "FLT/FreyCurve"
+   },
+   {
+    "id": "FLT/GaloisRepresentation",
+    "lines_pct": 0.62,
+    "label": "GaloisRepresentation",
+    "folder": "FLT/GaloisRepresentation"
+   },
+   {
+    "id": "FLT/Hacks",
+    "lines_pct": 0.37,
+    "label": "Hacks",
+    "folder": "FLT/Hacks"
+   }
+  ],
+  "edges": [
+   [
+    "FLT/HaarMeasure",
+    "FLT/Mathlib",
+    33
+   ],
+   [
+    "FLT/DedekindDomain",
+    "FLT/Mathlib",
+    26
+   ],
+   [
+    "FLT/Mathlib",
+    "FLT/NumberField",
+    26
+   ],
+   [
+    "FLT/KnownIn1980s",
+    "FLT/Mathlib",
+    13
+   ],
+   [
+    "FLT/DivisionAlgebra",
+    "FLT/Mathlib",
+    11
+   ],
+   [
+    "FLT/Deformations",
+    "FLT/Mathlib",
+    10
+   ],
+   [
+    "FLT/AutomorphicForm",
+    "FLT/Mathlib",
+    9
+   ],
+   [
+    "FLT/HaarMeasure",
+    "FLT/NumberField",
+    7
+   ],
+   [
+    "FLT/Mathlib",
+    "FLT/QuaternionAlgebra",
+    6
+   ],
+   [
+    "FLT/DivisionAlgebra",
+    "FLT/HaarMeasure",
+    5
+   ],
+   [
+    "FLT/AutomorphicForm",
+    "FLT/QuaternionAlgebra",
+    4
+   ],
+   [
+    "FLT/KnownIn1980s",
+    "FLT/Slop",
+    4
+   ],
+   [
+    "FLT/DedekindDomain",
+    "FLT/NumberField",
+    3
+   ],
+   [
+    "FLT/Deformations",
+    "FLT/GaloisRepresentation",
+    3
+   ],
+   [
+    "FLT/Hacks",
+    "FLT/Mathlib",
+    3
+   ],
+   [
+    "FLT/AutomorphicForm",
+    "FLT/DedekindDomain",
+    2
+   ],
+   [
+    "FLT/AutomorphicForm",
+    "FLT/HaarMeasure",
+    2
+   ],
+   [
+    "FLT/DedekindDomain",
+    "FLT/HaarMeasure",
+    2
+   ],
+   [
+    "FLT/Deformations",
+    "FLT/Patching",
+    2
+   ],
+   [
+    "FLT/FreyCurve",
+    "FLT/GaloisRepresentation",
+    2
+   ],
+   [
+    "FLT/AutomorphicForm",
+    "FLT/DivisionAlgebra",
+    1
+   ],
+   [
+    "FLT/AutomorphicForm",
+    "FLT/GaloisRepresentation",
+    1
+   ],
+   [
+    "FLT/Data",
+    "FLT/GaloisRepresentation",
+    1
+   ],
+   [
+    "FLT/DedekindDomain",
+    "FLT/DivisionAlgebra",
+    1
+   ],
+   [
+    "FLT/DedekindDomain",
+    "FLT/GaloisRepresentation",
+    1
+   ],
+   [
+    "FLT/Deformations",
+    "FLT/NumberField",
+    1
+   ],
+   [
+    "FLT/DivisionAlgebra",
+    "FLT/Hacks",
+    1
+   ],
+   [
+    "FLT/GaloisRepresentation",
+    "FLT/Mathlib",
+    1
+   ],
+   [
+    "FLT/Hacks",
+    "FLT/QuaternionAlgebra",
+    1
+   ],
+   [
+    "FLT/Mathlib",
+    "FLT/Patching",
+    1
+   ],
+   [
+    "FLT/NumberField",
+    "FLT/QuaternionAlgebra",
+    1
+   ]
+  ],
+  "shown": 17,
+  "folders": 24
+ },
+ "history": {
+  "commits": 1581,
+  "contributors": 75,
+  "first": "2023-11-19",
+  "last": "2026-11-18",
+  "months": 37,
+  "per_month": [
+   [
+    "2023-11",
+    49
+   ],
+   [
+    "2023-12",
+    60
+   ],
+   [
+    "2024-01",
+    8
+   ],
+   [
+    "2024-02",
+    8
+   ],
+   [
+    "2024-03",
+    73
+   ],
+   [
+    "2024-04",
+    68
+   ],
+   [
+    "2024-05",
+    248
+   ],
+   [
+    "2024-06",
+    117
+   ],
+   [
+    "2024-07",
+    21
+   ],
+   [
+    "2024-08",
+    60
+   ],
+   [
+    "2024-09",
+    154
+   ],
+   [
+    "2024-10",
+    57
+   ],
+   [
+    "2024-11",
+    36
+   ],
+   [
+    "2024-12",
+    52
+   ],
+   [
+    "2025-01",
+    31
+   ],
+   [
+    "2025-02",
+    44
+   ],
+   [
+    "2025-03",
+    25
+   ],
+   [
+    "2025-04",
+    46
+   ],
+   [
+    "2025-05",
+    83
+   ],
+   [
+    "2025-06",
+    44
+   ],
+   [
+    "2025-07",
+    26
+   ],
+   [
+    "2025-08",
+    16
+   ],
+   [
+    "2025-09",
+    24
+   ],
+   [
+    "2025-10",
+    16
+   ],
+   [
+    "2025-11",
+    19
+   ],
+   [
+    "2025-12",
+    32
+   ],
+   [
+    "2026-01",
+    21
+   ],
+   [
+    "2026-02",
+    12
+   ],
+   [
+    "2026-03",
+    4
+   ],
+   [
+    "2026-04",
+    28
+   ],
+   [
+    "2026-05",
+    27
+   ],
+   [
+    "2026-06",
+    13
+   ],
+   [
+    "2026-07",
+    24
+   ],
+   [
+    "2026-08",
+    20
+   ],
+   [
+    "2026-09",
+    10
+   ],
+   [
+    "2026-10",
+    4
+   ],
+   [
+    "2026-11",
+    1
+   ]
+  ],
+  "rule": "commits by authors whose name or e-mail marks a bot are left out; shown only with at least 20 commits over 3 months"
+ },
+ "pins": {
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "toolchain": "leanprover/lean4:v4.35.0"
+ },
+ "coverage": {
+  "qualified_uses": 18537,
+  "resolved_to_mathlib_pct": 83.7
+ },
+ "resemblance": {
+  "compared": 6,
+  "method": "Similarity of two projects' mixes of Mathlib areas: the share of code lines attributed to each of Mathlib's second-level folders (such as NumberTheory/LSeries), compared by cosine similarity; 1 means the same mix, 0 nothing in common. It compares the foundations the code is built on, not the problems the proofs solve.",
+  "closest": [
+   {
+    "key": "rh",
+    "title": "Proof of the Riemann Hypothesis (Alpöge, 2026)",
+    "short": "Riemann Hypothesis",
+    "similarity": 0.92
+   },
+   {
+    "key": "spherepacking",
+    "title": "Sphere packing in dimension 8 (Lean project, completed with Math Inc's Gauss)",
+    "short": "Sphere packing (dim 8)",
+    "similarity": 0.772
+   },
+   {
+    "key": "pfr",
+    "title": "Polynomial Freiman–Ruzsa conjecture (Gowers, Green, Manners, Tao; Lean project led by Tao)",
+    "short": "PFR conjecture",
+    "similarity": 0.715
+   },
+   {
+    "key": "erdos846",
+    "title": "Erdős problem 846 (AlphaProof Nexus, AI-generated)",
+    "short": "Erdős 846",
+    "similarity": 0.686
+   },
+   {
+    "key": "carleson",
+    "title": "Carleson's theorem (van Doorn et al.)",
+    "short": "Carleson",
+    "similarity": 0.577
+   },
+   {
+    "key": "strongpnt",
+    "title": "Strong prime number theorem (Math Inc, mostly AI-generated by Gauss)",
+    "short": "Strong PNT",
+    "similarity": 0.533
+   }
+  ]
+ }
+}

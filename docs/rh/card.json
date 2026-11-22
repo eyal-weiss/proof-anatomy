@@ -1,0 +1,1918 @@
+{
+ "title": "Proof of the Riemann Hypothesis (Alpöge, 2026)",
+ "short": "Riemann Hypothesis",
+ "url": "alpo.ge (archive)",
+ "source": {
+  "url": "alpo.ge (archive)",
+  "commit": null
+ },
+ "tool": "proof-anatomy",
+ "mathlib_table": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "numbers": {
+  "files": 175187,
+  "code_lines": 14621937,
+  "theorems": 818755,
+  "definitions": 226021
+ },
+ "mathlib": {
+  "theorems": 246464,
+  "definitions": 44906,
+  "files": 8557,
+  "source": "leanprover-community.github.io/mathlib4_docs declaration data"
+ },
+ "areas": {
+  "Algebra": 32.57,
+  "Lean core & other libraries": 12.8,
+  "Data": 10.64,
+  "RingTheory": 8.18,
+  "LinearAlgebra": 7.07,
+  "Analysis": 5.36,
+  "Topology": 4.38,
+  "Order": 3.58,
+  "CategoryTheory": 2.88,
+  "Basic": 2.63,
+  "MeasureTheory": 2.33,
+  "AlgebraicGeometry": 2.23,
+  "NumberTheory": 1.76,
+  "GroupTheory": 0.93,
+  "Logic": 0.78,
+  "FieldTheory": 0.66,
+  "RepresentationTheory": 0.43,
+  "Tactic": 0.39,
+  "SetTheory": 0.3,
+  "Dynamics": 0.03,
+  "AlgebraicTopology": 0.02,
+  "Geometry": 0.02,
+  "Combinatorics": 0.02,
+  "Control": 0.0,
+  "Probability": 0.0,
+  "Util": 0.0
+ },
+ "areas_L2": {
+  "Lean core & other libraries": 12.803,
+  "Algebra/Group": 11.538,
+  "Algebra/Module": 4.028,
+  "LinearAlgebra/Matrix": 3.425,
+  "Algebra/BigOperators": 3.227,
+  "Data/Matrix": 3.119,
+  "Algebra/Order": 2.474,
+  "RingTheory/Ideal": 2.118,
+  "Algebra/GroupWithZero": 2.063,
+  "Algebra/Ring": 1.921,
+  "Data/Set": 1.823,
+  "Data/Finset": 1.754,
+  "Order/Defs": 1.723,
+  "Algebra/MvPolynomial": 1.315,
+  "Algebra/Algebra": 1.299,
+  "Analysis/Normed": 1.241,
+  "Topology/Algebra": 1.234,
+  "Data/Fintype": 1.188,
+  "Analysis/SpecialFunctions": 1.176,
+  "NumberTheory/NumberField": 1.16,
+  "Algebra/Notation": 1.15,
+  "Topology/Defs": 1.012,
+  "Analysis/Complex": 0.942,
+  "Algebra/Polynomial": 0.866,
+  "Analysis/Calculus": 0.865,
+  "AlgebraicGeometry/Scheme": 0.837,
+  "Basic/Logic": 0.819,
+  "Data/Nat": 0.806,
+  "Basic/Complex": 0.802,
+  "LinearAlgebra/Span": 0.78,
+  "CategoryTheory/Comma": 0.779,
+  "MeasureTheory/Measure": 0.682,
+  "RingTheory/DedekindDomain": 0.679,
+  "CategoryTheory/Category": 0.65,
+  "MeasureTheory/Integral": 0.61,
+  "CategoryTheory/Monoidal": 0.605,
+  "RingTheory/MvPowerSeries": 0.602,
+  "RingTheory/Localization": 0.552,
+  "AlgebraicGeometry/Morphisms": 0.526,
+  "Order/Filter": 0.508,
+  "RingTheory/PowerSeries": 0.502,
+  "RingTheory/Valuation": 0.493,
+  "Analysis/InnerProductSpace": 0.49,
+  "LinearAlgebra/Dimension": 0.486,
+  "LinearAlgebra/TensorProduct": 0.46,
+  "Algebra/Star": 0.46,
+  "Algebra/Field": 0.448,
+  "Algebra/Category": 0.425,
+  "RingTheory/LocalRing": 0.42,
+  "Basic/ENNReal": 0.417,
+  "Data/Fin": 0.414,
+  "Logic/Equiv": 0.375,
+  "Logic/Function": 0.374,
+  "Topology/Constructions": 0.354,
+  "Data/Finsupp": 0.34,
+  "Data/ZMod": 0.33,
+  "MeasureTheory/MeasurableSpace": 0.328,
+  "Order/Interval": 0.312,
+  "SetTheory/Cardinal": 0.302,
+  "LinearAlgebra/Quotient": 0.296,
+  "CategoryTheory/Limits": 0.294,
+  "GroupTheory/GroupAction": 0.292,
+  "Data/Int": 0.27,
+  "RingTheory/IntegralClosure": 0.269,
+  "Topology/Continuous": 0.261,
+  "MeasureTheory/Function": 0.258,
+  "Topology/MetricSpace": 0.255,
+  "Analysis/Real": 0.251,
+  "NumberTheory/Padics": 0.238,
+  "Data/Multiset": 0.238,
+  "Order/BoundedOrder": 0.232,
+  "LinearAlgebra/FiniteDimensional": 0.226,
+  "Tactic/Positivity": 0.217,
+  "FieldTheory/IntermediateField": 0.213,
+  "RingTheory/MvPolynomial": 0.205,
+  "LinearAlgebra/Basis": 0.203,
+  "RingTheory/TensorProduct": 0.202,
+  "MeasureTheory/Constructions": 0.197,
+  "RingTheory/Finiteness": 0.195,
+  "RingTheory/Spectrum": 0.193,
+  "MeasureTheory/Group": 0.175,
+  "Algebra/Homology": 0.175,
+  "Tactic/NormNum": 0.174,
+  "Algebra/NeZero": 0.169,
+  "RingTheory/FractionalIdeal": 0.161,
+  "FieldTheory/IsAlgClosed": 0.157,
+  "GroupTheory/Coset": 0.155,
+  "LinearAlgebra/LinearIndependent": 0.153,
+  "Algebra/CharZero": 0.153,
+  "CategoryTheory/Iso": 0.15,
+  "RepresentationTheory/Basic": 0.149,
+  "Algebra/TrivSqZeroExt": 0.149,
+  "Algebra/Divisibility": 0.148,
+  "RepresentationTheory/Rep": 0.147,
+  "Algebra/MonoidAlgebra": 0.133,
+  "Basic/Finite": 0.132,
+  "AlgebraicGeometry/AffineScheme": 0.122,
+  "Topology/Order": 0.117,
+  "Order/CompleteLattice": 0.115,
+  "Algebra/CharP": 0.111,
+  "Analysis/Analytic": 0.106,
+  "Order/SetNotation": 0.103,
+  "Order/Monotone": 0.103,
+  "GroupTheory/Index": 0.103,
+  "Topology/Separation": 0.102,
+  "GroupTheory/OrderOfElement": 0.101,
+  "LinearAlgebra/BilinearMap": 0.101,
+  "LinearAlgebra/Finsupp": 0.1,
+  "AlgebraicGeometry/EllipticCurve": 0.099,
+  "RingTheory/DiscreteValuationRing": 0.094,
+  "Algebra/DualNumber": 0.092,
+  "LinearAlgebra/Dual": 0.089,
+  "Data/Quot": 0.088,
+  "AlgebraicGeometry/OpenImmersion": 0.088,
+  "Topology/Sets": 0.088,
+  "LinearAlgebra/FreeModule": 0.088,
+  "RingTheory/Trace": 0.087,
+  "RingTheory/AdicCompletion": 0.086,
+  "LinearAlgebra/PiTensorProduct": 0.085,
+  "Order/TypeTags": 0.084,
+  "Basic/SetLike": 0.084,
+  "Topology/Compactness": 0.083,
+  "Analysis/Matrix": 0.083,
+  "FieldTheory/Galois": 0.082,
+  "RingTheory/Noetherian": 0.081,
+  "MeasureTheory/OuterMeasure": 0.081,
+  "Topology/Basic": 0.081,
+  "Topology/Sober": 0.081,
+  "AlgebraicGeometry/IdealSheaf": 0.077,
+  "RingTheory/WittVector": 0.077,
+  "Basic/Nontrivial": 0.076,
+  "Analysis/Distribution": 0.075,
+  "Basic/NNReal": 0.074,
+  "RingTheory/RootsOfUnity": 0.074,
+  "RingTheory/Algebraic": 0.073,
+  "AlgebraicGeometry/Restrict": 0.069,
+  "GroupTheory/QuotientGroup": 0.068,
+  "Topology/LocallyConstant": 0.068,
+  "NumberTheory/ModularForms": 0.066,
+  "Topology/Closure": 0.066,
+  "AlgebraicGeometry/Modules": 0.065,
+  "NumberTheory/LSeries": 0.064,
+  "Topology/UniformSpace": 0.061,
+  "LinearAlgebra/Determinant": 0.059,
+  "LinearAlgebra/Prod": 0.058,
+  "AlgebraicGeometry/GammaSpecAdjunction": 0.058,
+  "Basic/FunLike": 0.057,
+  "RingTheory/Flat": 0.055,
+  "AlgebraicGeometry/Stalk": 0.055,
+  "FieldTheory/Minpoly": 0.053,
+  "RingTheory/Norm": 0.053,
+  "Topology/Instances": 0.052,
+  "Order/Disjoint": 0.052,
+  "Data/Rat": 0.052,
+  "RingTheory/Coprime": 0.051,
+  "CategoryTheory/Functor": 0.05,
+  "Topology/Bases": 0.05,
+  "RingTheory/Derivation": 0.05,
+  "RingTheory/KrullDimension": 0.05,
+  "AlgebraicGeometry/Noetherian": 0.049,
+  "RingTheory/Polynomial": 0.049,
+  "Basic/IsEmpty": 0.048,
+  "Algebra/DirectSum": 0.048,
+  "LinearAlgebra/UnitaryGroup": 0.048,
+  "LinearAlgebra/Pi": 0.047,
+  "Data/Subtype": 0.045,
+  "LinearAlgebra/Eigenspace": 0.044,
+  "GroupTheory/MonoidLocalization": 0.044,
+  "Topology/NhdsWithin": 0.044,
+  "LinearAlgebra/StdBasis": 0.043,
+  "NumberTheory/DirichletCharacter": 0.043,
+  "RingTheory/Length": 0.042,
+  "Topology/Irreducible": 0.041,
+  "CategoryTheory/Sites": 0.041,
+  "LinearAlgebra/Multilinear": 0.041,
+  "CategoryTheory/MorphismProperty": 0.041,
+  "Order/MinMax": 0.04,
+  "Topology/Neighborhoods": 0.04,
+  "RingTheory/HahnSeries": 0.039,
+  "Topology/Connected": 0.039,
+  "NumberTheory/LocalField": 0.038,
+  "Order/WithBot": 0.038,
+  "Topology/ContinuousOn": 0.038,
+  "GroupTheory/DoubleCoset": 0.038,
+  "CategoryTheory/ConcreteCategory": 0.037,
+  "NumberTheory/LegendreSymbol": 0.037,
+  "Order/Category": 0.036,
+  "Basic/Countable": 0.036,
+  "Algebra/QuadraticAlgebra": 0.036,
+  "Data/EReal": 0.036,
+  "RepresentationTheory/Subrepresentation": 0.035,
+  "GroupTheory/Perm": 0.034,
+  "Basic/Opposite": 0.034,
+  "RingTheory/AlgebraicIndependent": 0.034,
+  "Data/ENat": 0.033,
+  "LinearAlgebra/Trace": 0.033,
+  "RingTheory/AdjoinRoot": 0.033,
+  "RingTheory/RingHom": 0.03,
+  "RepresentationTheory/Homological": 0.029,
+  "RingTheory/FiniteType": 0.029,
+  "FieldTheory/Normal": 0.029,
+  "Topology/Sheaves": 0.029,
+  "RepresentationTheory/Intertwining": 0.029,
+  "Data/List": 0.029,
+  "RingTheory/DividedPowers": 0.028,
+  "Analysis/CStarAlgebra": 0.028,
+  "Dynamics/Ergodic": 0.028,
+  "LinearAlgebra/Projection": 0.027,
+  "CategoryTheory/Preadditive": 0.026,
+  "Analysis/RCLike": 0.025,
+  "CategoryTheory/EqToHom": 0.025,
+  "CategoryTheory/Abelian": 0.024,
+  "AlgebraicGeometry/Geometrically": 0.024,
+  "GroupTheory/Subgroup": 0.024,
+  "RingTheory/GradedAlgebra": 0.023,
+  "Order/ConditionallyCompleteLattice": 0.023,
+  "RingTheory/Kaehler": 0.023,
+  "Order/RelClasses": 0.022,
+  "Algebra/Opposites": 0.022,
+  "Algebra/Exact": 0.022,
+  "NumberTheory/MulChar": 0.022,
+  "LinearAlgebra/Complex": 0.021,
+  "Analysis/SpecificLimits": 0.021,
+  "AlgebraicGeometry/Properties": 0.021,
+  "RingTheory/SimpleModule": 0.021,
+  "NumberTheory/Cyclotomic": 0.021,
+  "RingTheory/ClassGroup": 0.02,
+  "Topology/KrullDimension": 0.02,
+  "Topology/ContinuousMap": 0.02,
+  "RingTheory/Perfection": 0.019,
+  "FieldTheory/Finite": 0.019,
+  "RingTheory/UniqueFactorizationDomain": 0.019,
+  "LinearAlgebra/Charpoly": 0.019,
+  "FieldTheory/AlgebraicClosure": 0.019,
+  "AlgebraicGeometry/ProjectiveSpectrum": 0.019,
+  "Topology/Inseparable": 0.019,
+  "RingTheory/Artinian": 0.019,
+  "RingTheory/Etale": 0.018,
+  "Order/KrullDimension": 0.018,
+  "CategoryTheory/ObjectProperty": 0.018,
+  "FieldTheory/RatFunc": 0.017,
+  "FieldTheory/Perfect": 0.017,
+  "Topology/OpenPartialHomeomorph": 0.017,
+  "RingTheory/Unramified": 0.017,
+  "RingTheory/IsTensorProduct": 0.017,
+  "Topology/Homeomorph": 0.017,
+  "Order/Notation": 0.016,
+  "AlgebraicGeometry/ResidueField": 0.016,
+  "RingTheory/Bialgebra": 0.016,
+  "LinearAlgebra/SModEq": 0.016,
+  "Algebra/Lie": 0.016,
+  "RingTheory/Perfectoid": 0.016,
+  "RingTheory/Smooth": 0.016,
+  "NumberTheory/RamificationInertia": 0.015,
+  "Order/Bounds": 0.015,
+  "LinearAlgebra/ExteriorPower": 0.015,
+  "Order/BooleanAlgebra": 0.015,
+  "RingTheory/Jacobson": 0.014,
+  "AlgebraicGeometry/PullbackCarrier": 0.014,
+  "LinearAlgebra/ExteriorAlgebra": 0.014,
+  "Analysis/Convex": 0.014,
+  "Geometry/Manifold": 0.014,
+  "FieldTheory/Separable": 0.013,
+  "Order/Basic": 0.013,
+  "RingTheory/RamificationInertia": 0.013,
+  "AlgebraicGeometry/Sites": 0.013,
+  "Topology/Homotopy": 0.013,
+  "Analysis/Fourier": 0.013,
+  "RingTheory/Nilpotent": 0.013,
+  "Analysis/Meromorphic": 0.013,
+  "Algebra/FreeAlgebra": 0.013,
+  "Algebra/WithConv": 0.013,
+  "GroupTheory/SemidirectProduct": 0.013,
+  "NumberTheory/Harmonic": 0.013,
+  "Data/Ordering": 0.012,
+  "AlgebraicTopology/SimplexCategory": 0.012,
+  "Data/Sum": 0.012,
+  "RingTheory/Multiplicity": 0.011,
+  "Data/Sigma": 0.011,
+  "Basic/Nonempty": 0.011,
+  "Order/Lattice": 0.011,
+  "LinearAlgebra/BilinearForm": 0.011,
+  "Order/OrderDual": 0.011,
+  "AlgebraicGeometry/AffineSpace": 0.011,
+  "Algebra/Prime": 0.011,
+  "Basic/Unique": 0.011,
+  "LinearAlgebra/SymplecticGroup": 0.01,
+  "CategoryTheory/Endomorphism": 0.01,
+  "Logic/Embedding": 0.01,
+  "AlgebraicGeometry/Limits": 0.01,
+  "Topology/Category": 0.01,
+  "CategoryTheory/Yoneda": 0.01,
+  "Basic/Real": 0.01,
+  "CategoryTheory/ComposableArrows": 0.01,
+  "CategoryTheory/Action": 0.01,
+  "Algebra/Squarefree": 0.01,
+  "AlgebraicGeometry/FunctionField": 0.01,
+  "Order/Lex": 0.01,
+  "RingTheory/RegularLocalRing": 0.01,
+  "CategoryTheory/Filtered": 0.01,
+  "RingTheory/PrincipalIdealDomain": 0.009,
+  "GroupTheory/SpecificGroups": 0.009,
+  "Topology/NoetherianSpace": 0.009,
+  "CategoryTheory/Products": 0.009,
+  "Order/Fin": 0.009,
+  "GroupTheory/Commutator": 0.009,
+  "RepresentationTheory/Coinvariants": 0.008,
+  "RingTheory/EssentialFiniteness": 0.008,
+  "RingTheory/SimpleRing": 0.008,
+  "LinearAlgebra/Alternating": 0.008,
+  "Order/Atoms": 0.008,
+  "FieldTheory/KrullTopology": 0.008,
+  "CategoryTheory/Opposites": 0.008,
+  "Topology/Compactification": 0.008,
+  "Algebra/GradedMonoid": 0.008,
+  "AlgebraicGeometry/AlgClosed": 0.008,
+  "Order/SupIndep": 0.008,
+  "Data/Part": 0.008,
+  "FieldTheory/IsSepClosed": 0.007,
+  "RingTheory/Henselian": 0.007,
+  "RepresentationTheory/FDRep": 0.007,
+  "RingTheory/Coalgebra": 0.007,
+  "LinearAlgebra/Lagrange": 0.007,
+  "RingTheory/Adjoin": 0.007,
+  "NumberTheory/ArithmeticFunction": 0.007,
+  "RingTheory/LaurentSeries": 0.007,
+  "Logic/Relation": 0.007,
+  "Analysis/Asymptotics": 0.007,
+  "RingTheory/OrderOfVanishing": 0.007,
+  "Combinatorics/Young": 0.007,
+  "Basic/ExistsUnique": 0.007,
+  "Order/LiminfLimsup": 0.007,
+  "CategoryTheory/Core": 0.007,
+  "RingTheory/Regular": 0.006,
+  "AlgebraicGeometry/ValuativeCriterion": 0.006,
+  "Topology/JacobsonSpace": 0.006,
+  "Logic/Pairwise": 0.006,
+  "Data/Num": 0.006,
+  "LinearAlgebra/QuadraticForm": 0.006,
+  "RingTheory/Nullstellensatz": 0.006,
+  "LinearAlgebra/Vandermonde": 0.006,
+  "RepresentationTheory/Coinduced": 0.006,
+  "Data/Sym": 0.006,
+  "LinearAlgebra/Isomorphisms": 0.006,
+  "LinearAlgebra/Projectivization": 0.006,
+  "Data/Prod": 0.006,
+  "Topology/QuasiSeparated": 0.006,
+  "RepresentationTheory/Character": 0.006,
+  "Algebra/Quaternion": 0.006,
+  "CategoryTheory/Types": 0.006,
+  "LinearAlgebra/AffineSpace": 0.006,
+  "AlgebraicGeometry/Pullbacks": 0.006,
+  "Order/Hom": 0.006,
+  "Order/Directed": 0.006,
+  "Topology/Maps": 0.006,
+  "CategoryTheory/Elementwise": 0.005,
+  "Basic/Sign": 0.005,
+  "CategoryTheory/Subobject": 0.005,
+  "CategoryTheory/NatIso": 0.005,
+  "NumberTheory/Zsqrtd": 0.005,
+  "RingTheory/Frobenius": 0.005,
+  "Combinatorics/Enumerative": 0.005,
+  "CategoryTheory/Whiskering": 0.005,
+  "RingTheory/FiniteLength": 0.005,
+  "RepresentationTheory/Invariants": 0.005,
+  "Order/SuccPred": 0.005,
+  "Order/Preorder": 0.005,
+  "Data/DFinsupp": 0.005,
+  "AlgebraicGeometry/OrderOfVanishing": 0.005,
+  "Algebra/Regular": 0.005,
+  "RingTheory/TwoSidedIdeal": 0.005,
+  "RepresentationTheory/Irreducible": 0.005,
+  "FieldTheory/Relrank": 0.005,
+  "RingTheory/FinitePresentation": 0.005,
+  "GroupTheory/Finiteness": 0.005,
+  "RingTheory/PicardGroup": 0.005,
+  "FieldTheory/PrimitiveElement": 0.005,
+  "RingTheory/Discriminant": 0.005,
+  "AlgebraicGeometry/Gluing": 0.005,
+  "Topology/ClusterPt": 0.005,
+  "GroupTheory/Torsion": 0.005,
+  "Basic/Rel": 0.004,
+  "GroupTheory/Abelianization": 0.004,
+  "GroupTheory/FiniteAbelian": 0.004,
+  "RingTheory/Filtration": 0.004,
+  "CategoryTheory/Sigma": 0.004,
+  "RingTheory/Extension": 0.004,
+  "CategoryTheory/Adjunction": 0.004,
+  "RingTheory/Idempotents": 0.004,
+  "AlgebraicTopology/SimplicialObject": 0.004,
+  "RingTheory/Nakayama": 0.004,
+  "LinearAlgebra/DFinsupp": 0.004,
+  "AlgebraicGeometry/Cover": 0.004,
+  "Algebra/GCDMonoid": 0.004,
+  "Order/Max": 0.004,
+  "CategoryTheory/Simple": 0.004,
+  "FieldTheory/Finiteness": 0.004,
+  "CategoryTheory/EffectiveEpi": 0.004,
+  "NumberTheory/Divisors": 0.004,
+  "Order/Disjointed": 0.004,
+  "Topology/DiscreteSubset": 0.004,
+  "LinearAlgebra/SesquilinearForm": 0.004,
+  "Order/ConditionallyCompletePartialOrder": 0.004,
+  "LinearAlgebra/Semisimple": 0.003,
+  "GroupTheory/FreeAbelianGroup": 0.003,
+  "GroupTheory/Solvable": 0.003,
+  "GroupTheory/Exponent": 0.003,
+  "Analysis/LocallyConvex": 0.003,
+  "CategoryTheory/SingleObj": 0.003,
+  "GroupTheory/PGroup": 0.003,
+  "AlgebraicGeometry/StructureSheaf": 0.003,
+  "RingTheory/Invariant": 0.003,
+  "RingTheory/Binomial": 0.003,
+  "Geometry/RingedSpace": 0.003,
+  "Logic/Small": 0.003,
+  "Topology/IsLocalHomeomorph": 0.003,
+  "Combinatorics/Quiver": 0.003,
+  "CategoryTheory/NatTrans": 0.003,
+  "NumberTheory/Dioph": 0.003,
+  "AlgebraicGeometry/AffineTransitionLimit": 0.003,
+  "RingTheory/ReesAlgebra": 0.003,
+  "Data/Option": 0.003,
+  "RingTheory/LocalProperties": 0.003,
+  "RingTheory/Complex": 0.003,
+  "Topology/Path": 0.003,
+  "Order/RelSeries": 0.003,
+  "Topology/Bornology": 0.002,
+  "RingTheory/FormalGroup": 0.002,
+  "NumberTheory/Chebyshev": 0.002,
+  "AlgebraicTopology/AlternatingFaceMapComplex": 0.002,
+  "GroupTheory/ArchimedeanDensely": 0.002,
+  "RingTheory/QuotSMulTop": 0.002,
+  "RingTheory/HopfAlgebra": 0.002,
+  "FieldTheory/SplittingField": 0.002,
+  "RingTheory/IsGaloisGroup": 0.002,
+  "Geometry/Convex": 0.002,
+  "Algebra/NoZeroSMulDivisors": 0.002,
+  "FieldTheory/PolynomialGaloisGroup": 0.002,
+  "LinearAlgebra/SpecialLinearGroup": 0.002,
+  "Basic/PEquiv": 0.002,
+  "Dynamics/PeriodicPts": 0.002,
+  "Order/CompleteBooleanAlgebra": 0.002,
+  "Analysis/PSeries": 0.002,
+  "Topology/Semicontinuity": 0.002,
+  "RingTheory/Support": 0.002,
+  "Topology/UrysohnsLemma": 0.002,
+  "GroupTheory/NoncommPiCoprod": 0.002,
+  "NumberTheory/Modular": 0.002,
+  "CategoryTheory/Elements": 0.002,
+  "Topology/Clopen": 0.002,
+  "CategoryTheory/Linear": 0.002,
+  "AlgebraicGeometry/Group": 0.002,
+  "Order/ModularLattice": 0.002,
+  "Order/WellFounded": 0.002,
+  "CategoryTheory/Discrete": 0.002,
+  "LinearAlgebra/GeneralLinearGroup": 0.002,
+  "Analysis/Convolution": 0.002,
+  "LinearAlgebra/Contraction": 0.002,
+  "Data/PNat": 0.002,
+  "Algebra/FiniteSupport": 0.002,
+  "Algebra/FreeMonoid": 0.002,
+  "AlgebraicTopology/CechNerve": 0.002,
+  "LinearAlgebra/CliffordAlgebra": 0.002,
+  "NumberTheory/PrimeCounting": 0.002,
+  "NumberTheory/EllipticDivisibilitySequence": 0.002,
+  "GroupTheory/Divisible": 0.002,
+  "Analysis/MellinTransform": 0.002,
+  "RingTheory/PowerBasis": 0.002,
+  "Algebra/IsPrimePow": 0.002,
+  "Topology/Metrizable": 0.002,
+  "RingTheory/PiTensorProduct": 0.002,
+  "Topology/EMetricSpace": 0.002,
+  "NumberTheory/GaussSum": 0.002,
+  "Order/Int": 0.002,
+  "Control/Fix": 0.001,
+  "NumberTheory/Primorial": 0.001,
+  "RingTheory/Congruence": 0.001,
+  "NumberTheory/Bernoulli": 0.001,
+  "AlgebraicGeometry/Normalization": 0.001,
+  "RingTheory/Teichmuller": 0.001,
+  "CategoryTheory/CommSq": 0.001,
+  "RingTheory/QuasiFinite": 0.001,
+  "AlgebraicGeometry/ZariskisMainTheorem": 0.001,
+  "GroupTheory/FreeGroup": 0.001,
+  "FieldTheory/PurelyInseparable": 0.001,
+  "CategoryTheory/Balanced": 0.001,
+  "FieldTheory/Fixed": 0.001,
+  "Order/Heyting": 0.001,
+  "Topology/Covering": 0.001,
+  "RingTheory/OrzechProperty": 0.001,
+  "RingTheory/RingHomProperties": 0.001,
+  "RingTheory/IntegralDomain": 0.001,
+  "Algebra/Colimit": 0.001,
+  "Order/Prod": 0.001,
+  "NumberTheory/Height": 0.001,
+  "LinearAlgebra/Countable": 0.001,
+  "AlgebraicGeometry/Fiber": 0.001,
+  "Order/Zorn": 0.001,
+  "AlgebraicGeometry/Birational": 0.001,
+  "NumberTheory/Multiplicity": 0.001,
+  "Topology/Baire": 0.001,
+  "NumberTheory/FunctionField": 0.001,
+  "NumberTheory/Basic": 0.001,
+  "Order/Setoid": 0.001,
+  "Topology/Sequences": 0.001,
+  "RingTheory/Int": 0.001,
+  "FieldTheory/SeparableDegree": 0.001,
+  "RingTheory/AlgebraTower": 0.001,
+  "GroupTheory/Commensurable": 0.001,
+  "CategoryTheory/Shift": 0.001,
+  "Algebra/BrauerGroup": 0.001,
+  "LinearAlgebra/Unimodular": 0.001,
+  "Algebra/Central": 0.001,
+  "CategoryTheory/EpiMono": 0.001,
+  "GroupTheory/IndexNSmul": 0.001,
+  "GroupTheory/Sylow": 0.001,
+  "Order/DirectedInverseSystem": 0.001,
+  "Probability/ConditionalProbability": 0.001,
+  "Topology/Piecewise": 0.001,
+  "Algebra/QuadraticDiscriminant": 0.001,
+  "FieldTheory/Tower": 0.001,
+  "RepresentationTheory/Induced": 0.001,
+  "Topology/CompactOpen": 0.001,
+  "NumberTheory/BernoulliPolynomials": 0.001,
+  "LinearAlgebra/PerfectPairing": 0.001,
+  "RingTheory/ZMod": 0.001,
+  "Order/Sum": 0.001,
+  "Order/WellFoundedSet": 0.001,
+  "Analysis/Polynomial": 0.001,
+  "FieldTheory/AbsoluteGaloisGroup": 0.001,
+  "GroupTheory/OreLocalization": 0.001,
+  "FieldTheory/SeparableClosure": 0.001,
+  "GroupTheory/Congruence": 0.001,
+  "Order/RelIso": 0.001,
+  "Order/CompactlyGenerated": 0.001,
+  "Analysis/MeanInequalities": 0.001,
+  "LinearAlgebra/SymmetricAlgebra": 0.001,
+  "Algebra/Quotient": 0.001,
+  "LinearAlgebra/TensorAlgebra": 0.001,
+  "RepresentationTheory/Semisimple": 0.001,
+  "RingTheory/NoetherNormalization": 0.001,
+  "Order/Sigma": 0.001,
+  "LinearAlgebra/DirectSum": 0.001,
+  "Algebra/CubicDiscriminant": 0.001,
+  "NumberTheory/PrimesCongruentOne": 0.001,
+  "LinearAlgebra/LinearPMap": 0.001,
+  "Probability/Kernel": 0.001,
+  "RingTheory/HopkinsLevitzki": 0.001,
+  "NumberTheory/EulerProduct": 0.001,
+  "AlgebraicTopology/FundamentalGroupoid": 0.001,
+  "Topology/Constructible": 0.001,
+  "FieldTheory/Extension": 0.001,
+  "NumberTheory/ZetaValues": 0.001,
+  "GroupTheory/Submonoid": 0.001,
+  "Tactic/Measurability": 0.001,
+  "Algebra/EuclideanDomain": 0.001,
+  "Combinatorics/Additive": 0.001,
+  "Topology/DenseEmbedding": 0.0,
+  "Algebra/Azumaya": 0.0,
+  "Order/JordanHolder": 0.0,
+  "RingTheory/Conductor": 0.0,
+  "MeasureTheory/Covering": 0.0,
+  "FieldTheory/KummerPolynomial": 0.0,
+  "Combinatorics/SimpleGraph": 0.0,
+  "RepresentationTheory/Continuous": 0.0,
+  "Topology/GDelta": 0.0,
+  "RingTheory/OreLocalization": 0.0,
+  "LinearAlgebra/InvariantBasisNumber": 0.0,
+  "Control/Monad": 0.0,
+  "Data/FunLike": 0.0,
+  "GroupTheory/Nilpotent": 0.0,
+  "RepresentationTheory/FinGroupCharZero": 0.0,
+  "GroupTheory/CosetCover": 0.0,
+  "CategoryTheory/EssentiallySmall": 0.0,
+  "CategoryTheory/RegularCategory": 0.0,
+  "AlgebraicGeometry/SpreadingOut": 0.0,
+  "SetTheory/Lists": 0.0,
+  "Combinatorics/Derangements": 0.0,
+  "RingTheory/DualNumber": 0.0,
+  "Probability/ProductMeasure": 0.0,
+  "GroupTheory/IndexNormal": 0.0,
+  "NumberTheory/SumFourSquares": 0.0,
+  "RingTheory/PolynomialAlgebra": 0.0,
+  "Analysis/ODE": 0.0,
+  "FieldTheory/KummerExtension": 0.0,
+  "Analysis/AbsoluteValue": 0.0,
+  "Logic/Encodable": 0.0,
+  "Combinatorics/Nullstellensatz": 0.0,
+  "MeasureTheory/PiSystem": 0.0,
+  "LinearAlgebra/Transvection": 0.0,
+  "Tactic/Finiteness": 0.0,
+  "Logic/OpClass": 0.0,
+  "GroupTheory/Coxeter": 0.0,
+  "Control/Combinators": 0.0,
+  "RingTheory/SurjectiveOnStalks": 0.0,
+  "RingTheory/MatrixAlgebra": 0.0,
+  "FieldTheory/LinearDisjoint": 0.0,
+  "Order/PartialSups": 0.0,
+  "GroupTheory/Schreier": 0.0,
+  "RepresentationTheory/AlgebraRepresentation": 0.0,
+  "Probability/Process": 0.0,
+  "Topology/LocallyClosed": 0.0,
+  "Algebra/AlgebraicCard": 0.0,
+  "RepresentationTheory/FiniteIndex": 0.0,
+  "CategoryTheory/CofilteredSystem": 0.0,
+  "Order/Minimal": 0.0,
+  "RingTheory/NonUnitalSubring": 0.0,
+  "Order/SetAccumulate": 0.0,
+  "Order/OrderIsoNat": 0.0,
+  "Topology/LocallyFinite": 0.0,
+  "Algebra/RingQuot": 0.0,
+  "Order/Cover": 0.0,
+  "CategoryTheory/Equivalence": 0.0,
+  "Combinatorics/Matroid": 0.0,
+  "Control/Functor": 0.0,
+  "Order/SupClosed": 0.0,
+  "Tactic/Lift": 0.0,
+  "LinearAlgebra/TensorPower": 0.0,
+  "CategoryTheory/IsConnected": 0.0,
+  "NumberTheory/Real": 0.0,
+  "Topology/NhdsSet": 0.0,
+  "LinearAlgebra/JordanChevalley": 0.0,
+  "AlgebraicGeometry/Artinian": 0.0,
+  "CategoryTheory/Skeletal": 0.0,
+  "RingTheory/TotallySplit": 0.0,
+  "MeasureTheory/SpecificCodomains": 0.0,
+  "NumberTheory/Bertrand": 0.0,
+  "NumberTheory/LucasPrimality": 0.0,
+  "Topology/PartitionOfUnity": 0.0,
+  "CategoryTheory/InducedCategory": 0.0,
+  "AlgebraicGeometry/QuasiAffine": 0.0,
+  "AlgebraicTopology/SimplicialSet": 0.0,
+  "Topology/DiscreteQuotient": 0.0,
+  "NumberTheory/TsumDivisorsAntidiagonal": 0.0,
+  "Topology/ExtendFrom": 0.0,
+  "Data/PFun": 0.0,
+  "NumberTheory/ClassNumber": 0.0,
+  "CategoryTheory/Extensive": 0.0,
+  "NumberTheory/AbelSummation": 0.0,
+  "RingTheory/Depth": 0.0,
+  "LinearAlgebra/Orientation": 0.0,
+  "LinearAlgebra/PID": 0.0,
+  "NumberTheory/JacobiSum": 0.0,
+  "CategoryTheory/Retract": 0.0,
+  "CategoryTheory/Presentable": 0.0,
+  "RingTheory/Bezout": 0.0,
+  "Topology/UnitInterval": 0.0,
+  "Order/Antichain": 0.0,
+  "Order/PropInstances": 0.0,
+  "GroupTheory/NoncommCoprod": 0.0,
+  "Algebra/GradedMulAction": 0.0,
+  "Data/Vector": 0.0,
+  "CategoryTheory/HomCongr": 0.0,
+  "Topology/Ultrafilter": 0.0,
+  "Algebra/QuaternionBasis": 0.0,
+  "GroupTheory/Rank": 0.0,
+  "GroupTheory/Coprod": 0.0,
+  "AlgebraicGeometry/RelativeGluing": 0.0,
+  "FieldTheory/SeparablyGenerated": 0.0,
+  "GroupTheory/Transfer": 0.0,
+  "RingTheory/LittleWedderburn": 0.0,
+  "Topology/Germ": 0.0,
+  "RingTheory/ZariskisMainTheorem": 0.0,
+  "Dynamics/Newton": 0.0,
+  "RingTheory/FilteredAlgebra": 0.0,
+  "CategoryTheory/Subfunctor": 0.0,
+  "Data/TypeVec": 0.0,
+  "AlgebraicTopology/DoldKan": 0.0,
+  "Dynamics/Flow": 0.0,
+  "Algebra/Torsor": 0.0,
+  "FieldTheory/FinTrdeg": 0.0,
+  "Order/GaloisConnection": 0.0,
+  "Analysis/PSeriesComplex": 0.0,
+  "CategoryTheory/Localization": 0.0,
+  "Combinatorics/Colex": 0.0,
+  "Algebra/FiveLemma": 0.0,
+  "Dynamics/FixedPoints": 0.0,
+  "NumberTheory/RatFunc": 0.0,
+  "Topology/TietzeExtension": 0.0,
+  "Topology/InductiveDimension": 0.0,
+  "Util/VersoRoles": 0.0,
+  "NumberTheory/Wilson": 0.0,
+  "NumberTheory/Ostrowski": 0.0,
+  "MeasureTheory/Order": 0.0,
+  "CategoryTheory/Sums": 0.0,
+  "Topology/DerivedSet": 0.0,
+  "Order/WellQuasiOrder": 0.0,
+  "CategoryTheory/Triangulated": 0.0,
+  "CategoryTheory/Pi": 0.0,
+  "Analysis/MeanInequalitiesPow": 0.0,
+  "Probability/Independence": 0.0,
+  "CategoryTheory/FinCategory": 0.0,
+  "AlgebraicTopology/SingularHomology": 0.0,
+  "Basic/Denumerable": 0.0,
+  "RingTheory/Radical": 0.0,
+  "AlgebraicTopology/SingularSet": 0.0,
+  "Topology/LocallyFinsupp": 0.0,
+  "RingTheory/LinearDisjoint": 0.0,
+  "Algebra/SkewMonoidAlgebra": 0.0,
+  "Data/Bool": 0.0,
+  "AlgebraicTopology/ExtraDegeneracy": 0.0,
+  "Tactic/NormDet": 0.0,
+  "GroupTheory/SchurZassenhaus": 0.0,
+  "MeasureTheory/Topology": 0.0,
+  "Topology/Perfect": 0.0,
+  "CategoryTheory/ShrinkYoneda": 0.0,
+  "SetTheory/ZFC": 0.0,
+  "CategoryTheory/Quotient": 0.0,
+  "Combinatorics/Pigeonhole": 0.0,
+  "Order/KonigLemma": 0.0,
+  "CategoryTheory/PEmpty": 0.0,
+  "FieldTheory/PerfectClosure": 0.0,
+  "Order/Nat": 0.0,
+  "CategoryTheory/Generator": 0.0,
+  "Tactic/Eqns": 0.0,
+  "RepresentationTheory/Action": 0.0,
+  "AlgebraicGeometry/EffectiveEpi": 0.0,
+  "Order/PiLex": 0.0,
+  "NumberTheory/SumPrimeReciprocals": 0.0,
+  "Analysis/MellinInversion": 0.0,
+  "Order/Closure": 0.0,
+  "RepresentationTheory/Maschke": 0.0,
+  "Order/Extension": 0.0,
+  "GroupTheory/Complement": 0.0,
+  "FieldTheory/IsPerfectClosure": 0.0,
+  "CategoryTheory/PUnit": 0.0,
+  "FieldTheory/ChevalleyWarning": 0.0,
+  "NumberTheory/SmoothNumbers": 0.0,
+  "Data/Finite": 0.0,
+  "CategoryTheory/ConnectedComponents": 0.0,
+  "CategoryTheory/IsomorphismClasses": 0.0,
+  "RingTheory/NormTrace": 0.0,
+  "RingTheory/FiniteStability": 0.0,
+  "Data/ULift": 0.0,
+  "Combinatorics/HalesJewett": 0.0,
+  "NumberTheory/SumTwoSquares": 0.0,
+  "Topology/Spectral": 0.0,
+  "Topology/ShrinkingLemma": 0.0,
+  "RingTheory/PrincipalIdealDomainOfPrime": 0.0,
+  "Topology/PartialHomeomorph": 0.0,
+  "LinearAlgebra/Center": 0.0,
+  "FieldTheory/JacobsonNoether": 0.0,
+  "RepresentationTheory/Equiv": 0.0,
+  "Analysis/BoxIntegral": 0.0,
+  "Basic/SProd": 0.0,
+  "LinearAlgebra/AnnihilatingPolynomial": 0.0,
+  "Control/ULift": 0.0,
+  "CategoryTheory/GradedObject": 0.0,
+  "FieldTheory/PrimeField": 0.0,
+  "Order/Sym2": 0.0,
+  "RingTheory/EuclideanDomain": 0.0,
+  "Analysis/SumIntegralComparisons": 0.0,
+  "Topology/CWComplex": 0.0
+ },
+ "areas_filled_pct": 0.66,
+ "borrowed": {
+  "mathlib_pct": 42.2,
+  "core_pct": 14.0,
+  "own_pct": 43.9,
+  "mathlib_uses": 9444458,
+  "core_uses": 3127134,
+  "own_uses": 9832593,
+  "folder_level": "(top level)",
+  "by_folder": [
+   {
+    "folder": "Development",
+    "lines_pct": 70.1,
+    "own_pct": 44.2
+   },
+   {
+    "folder": "Formalism",
+    "lines_pct": 18.7,
+    "own_pct": 45.8
+   },
+   {
+    "folder": "GroundTheory",
+    "lines_pct": 6.4,
+    "own_pct": 37.5
+   },
+   {
+    "folder": "ReciprocityTheory",
+    "lines_pct": 3.3,
+    "own_pct": 38.8
+   },
+   {
+    "folder": "CompanionTheory",
+    "lines_pct": 1.1,
+    "own_pct": 42.0
+   }
+  ]
+ },
+ "statement": {
+  "main_file": "Main.lean",
+  "sentences": [
+   "riemannHypothesis is stated with Mathlib's own definition RiemannHypothesis.",
+   "riemannZeta_eq_zero_re is stated with the project's own definition RiemannZetaZerosOnLine, which is built on Mathlib's riemannZeta.",
+   "LFunction_ne_zero_of_half_lt_re is stated with the project's own definition DirichletLNonvanishingRightOfHalf, which is built on Mathlib's DirichletCharacter and DirichletCharacter.LFunction.",
+   "LFunction_eq_zero_re is stated with the project's own definition DirichletLZerosOnLine, which is built on Mathlib's DirichletCharacter and DirichletCharacter.LFunction."
+  ],
+  "trace": [
+   [
+    {
+     "name": "riemannHypothesis",
+     "file": "Main.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem riemannHypothesis : RiemannHypothesis",
+     "refs": [
+      {
+       "name": "RiemannHypothesis",
+       "where": "mathlib",
+       "module": "Mathlib.NumberTheory.LSeries.RiemannZeta",
+       "full": "RiemannHypothesis",
+       "kind": "def"
+      }
+     ]
+    }
+   ],
+   [
+    {
+     "name": "riemannZeta_eq_zero_re",
+     "file": "Main.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem riemannZeta_eq_zero_re : RiemannZetaZerosOnLine",
+     "refs": [
+      {
+       "name": "RiemannZetaZerosOnLine",
+       "where": "project",
+       "file": "Statements.lean",
+       "full": "RiemannZetaZerosOnLine",
+       "kind": "def"
+      }
+     ]
+    },
+    {
+     "name": "RiemannZetaZerosOnLine",
+     "file": "Statements.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "def RiemannZetaZerosOnLine : Prop :=\n  ∀ s : ℂ, riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * ((n : ℂ) + 1)) → s ≠ 1 → s.re = 1 / 2",
+     "refs": [
+      {
+       "name": "riemannZeta",
+       "where": "mathlib",
+       "module": "Mathlib.NumberTheory.LSeries.RiemannZeta",
+       "full": "riemannZeta",
+       "kind": "def"
+      },
+      {
+       "name": "s.re",
+       "where": "local"
+      }
+     ]
+    }
+   ],
+   [
+    {
+     "name": "LFunction_ne_zero_of_half_lt_re",
+     "file": "Main.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem LFunction_ne_zero_of_half_lt_re : DirichletLNonvanishingRightOfHalf",
+     "refs": [
+      {
+       "name": "DirichletLNonvanishingRightOfHalf",
+       "where": "project",
+       "file": "Statements.lean",
+       "full": "DirichletLNonvanishingRightOfHalf",
+       "kind": "def"
+      }
+     ]
+    },
+    {
+     "name": "DirichletLNonvanishingRightOfHalf",
+     "file": "Statements.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "def DirichletLNonvanishingRightOfHalf : Prop :=\n  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),\n    1 / 2 < s.re → (χ ≠ 1 ∨ s ≠ 1) → DirichletCharacter.LFunction χ s ≠ 0",
+     "refs": [
+      {
+       "name": "NeZero",
+       "where": "local"
+      },
+      {
+       "name": "DirichletCharacter",
+       "where": "mathlib",
+       "module": "Mathlib.NumberTheory.DirichletCharacter.Basic",
+       "full": "DirichletCharacter",
+       "kind": "def"
+      },
+      {
+       "name": "s.re",
+       "where": "local"
+      },
+      {
+       "name": "DirichletCharacter.LFunction",
+       "where": "mathlib",
+       "module": "Mathlib.NumberTheory.LSeries.DirichletContinuation",
+       "full": "DirichletCharacter.LFunction",
+       "kind": "def"
+      }
+     ]
+    }
+   ],
+   [
+    {
+     "name": "LFunction_eq_zero_re",
+     "file": "Main.lean",
+     "kind": "theorem",
+     "depth": 0,
+     "text": "theorem LFunction_eq_zero_re : DirichletLZerosOnLine",
+     "refs": [
+      {
+       "name": "DirichletLZerosOnLine",
+       "where": "project",
+       "file": "Statements.lean",
+       "full": "DirichletLZerosOnLine",
+       "kind": "def"
+      }
+     ]
+    },
+    {
+     "name": "DirichletLZerosOnLine",
+     "file": "Statements.lean",
+     "kind": "def",
+     "depth": 1,
+     "text": "def DirichletLZerosOnLine : Prop :=\n  ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),\n    0 < s.re → s.re < 1 → DirichletCharacter.LFunction χ s = 0 → s.re = 1 / 2",
+     "refs": [
+      {
+       "name": "NeZero",
+       "where": "local"
+      },
+      {
+       "name": "DirichletCharacter",
+       "where": "mathlib",
+       "module": "Mathlib.NumberTheory.DirichletCharacter.Basic",
+       "full": "DirichletCharacter",
+       "kind": "def"
+      },
+      {
+       "name": "s.re",
+       "where": "local"
+      },
+      {
+       "name": "DirichletCharacter.LFunction",
+       "where": "mathlib",
+       "module": "Mathlib.NumberTheory.LSeries.DirichletContinuation",
+       "full": "DirichletCharacter.LFunction",
+       "kind": "def"
+      }
+     ]
+    }
+   ]
+  ]
+ },
+ "famous": [
+  {
+   "title": "The Triangle Inequality",
+   "files": 872
+  },
+  {
+   "title": "The Cauchy-Schwarz Inequality",
+   "files": 281
+  },
+  {
+   "title": "Fubini's theorem",
+   "files": 220
+  },
+  {
+   "title": "Bézout's identity",
+   "files": 184
+  },
+  {
+   "title": "Binomial theorem",
+   "files": 172
+  },
+  {
+   "title": "Cayley–Hamilton theorem",
+   "files": 145
+  },
+  {
+   "title": "The Principle of Mathematical Induction",
+   "files": 115
+  },
+  {
+   "title": "The Factor and Remainder Theorems",
+   "files": 102
+  },
+  {
+   "title": "Formula for the Number of Combinations",
+   "files": 94
+  },
+  {
+   "title": "Sum of an arithmetic series",
+   "files": 94
+  },
+  {
+   "title": "Heine–Borel theorem",
+   "files": 79
+  },
+  {
+   "title": "Riesz representation theorem",
+   "files": 78
+  },
+  {
+   "title": "Fundamental theorem of arithmetic",
+   "files": 69
+  },
+  {
+   "title": "Primitive element theorem",
+   "files": 68
+  },
+  {
+   "title": "Krull's principal ideal theorem",
+   "files": 61
+  },
+  {
+   "title": "Euler's theorem",
+   "files": 61
+  },
+  {
+   "title": "Euclid's theorem",
+   "files": 58
+  },
+  {
+   "title": "Dominated convergence theorem",
+   "files": 57
+  },
+  {
+   "title": "Fermat's little theorem",
+   "files": 54
+  },
+  {
+   "title": "Sylvester's determinant theorem",
+   "files": 49
+  },
+  {
+   "title": "Isomorphism theorem",
+   "files": 48
+  },
+  {
+   "title": "Hilbert's Nullstellensatz",
+   "files": 41
+  },
+  {
+   "title": "Jacobson density theorem",
+   "files": 37
+  },
+  {
+   "title": "Squeeze theorem",
+   "files": 35
+  },
+  {
+   "title": "Lagrange's theorem (group theory)",
+   "files": 34
+  },
+  {
+   "title": "Hahn–Banach theorem",
+   "files": 28
+  },
+  {
+   "title": "Going-up and going-down theorems",
+   "files": 27
+  },
+  {
+   "title": "Tychonoff's theorem",
+   "files": 24
+  },
+  {
+   "title": "Rank–nullity theorem",
+   "files": 23
+  },
+  {
+   "title": "Cramer’s Rule",
+   "files": 23
+  },
+  {
+   "title": "Fatou–Lebesgue theorem",
+   "files": 20
+  },
+  {
+   "title": "Chinese remainder theorem",
+   "files": 19
+  },
+  {
+   "title": "Banach–Steinhaus theorem",
+   "files": 18
+  },
+  {
+   "title": "Basel problem",
+   "files": 18
+  },
+  {
+   "title": "Minkowski's theorem",
+   "files": 15
+  },
+  {
+   "title": "Arithmetic Mean/Geometric Mean",
+   "files": 15
+  },
+  {
+   "title": "Lagrange's four-square theorem",
+   "files": 14
+  },
+  {
+   "title": "Orbit-stabilizer theorem",
+   "files": 12
+  },
+  {
+   "title": "Metrization theorems",
+   "files": 11
+  },
+  {
+   "title": "Dirichlet's unit theorem",
+   "files": 11
+  },
+  {
+   "title": "Fourier theorem",
+   "files": 10
+  },
+  {
+   "title": "Fundamental Theorem of Algebra",
+   "files": 8
+  },
+  {
+   "title": "Sylow theorems",
+   "files": 7
+  },
+  {
+   "title": "Monotone convergence theorem",
+   "files": 7
+  },
+  {
+   "title": "The Irrationality of the Square Root of 2",
+   "files": 7
+  },
+  {
+   "title": "Bolzano–Weierstrass theorem",
+   "files": 7
+  },
+  {
+   "title": "Baire category theorem",
+   "files": 6
+  },
+  {
+   "title": "Vieta's formulas",
+   "files": 6
+  },
+  {
+   "title": "Hilbert projection theorem",
+   "files": 5
+  },
+  {
+   "title": "The Number of Subsets of a Set",
+   "files": 5
+  },
+  {
+   "title": "Cauchy's theorem (group theory)",
+   "files": 4
+  },
+  {
+   "title": "Heine–Cantor theorem",
+   "files": 4
+  },
+  {
+   "title": "Weierstrass preparation theorem",
+   "files": 4
+  },
+  {
+   "title": "Lebesgue Measure and Integration",
+   "files": 3
+  },
+  {
+   "title": "Wilson's theorem",
+   "files": 3
+  },
+  {
+   "title": "Mean value theorem",
+   "files": 3
+  },
+  {
+   "title": "Greatest Common Divisor Algorithm",
+   "files": 3
+  },
+  {
+   "title": "Derangements Formula",
+   "files": 3
+  },
+  {
+   "title": "Dirichlet's theorem on arithmetic progressions",
+   "files": 3
+  },
+  {
+   "title": "Structure theorem for finitely generated modules over a principal ideal domain",
+   "files": 3
+  },
+  {
+   "title": "Fundamental theorem of algebra",
+   "files": 2
+  },
+  {
+   "title": "Jordan–Hölder theorem",
+   "files": 2
+  },
+  {
+   "title": "Gershgorin circle theorem",
+   "files": 2
+  },
+  {
+   "title": "Von Staudt–Clausen theorem",
+   "files": 2
+  },
+  {
+   "title": "Quadratic reciprocity theorem",
+   "files": 2
+  },
+  {
+   "title": "Hilbert's basis theorem",
+   "files": 2
+  },
+  {
+   "title": "Well-ordering theorem",
+   "files": 2
+  },
+  {
+   "title": "Mellin inversion theorem",
+   "files": 2
+  },
+  {
+   "title": "Wedderburn's little theorem",
+   "files": 1
+  },
+  {
+   "title": "Fundamental theorem of calculus",
+   "files": 1
+  },
+  {
+   "title": "Szpilrajn extension theorem",
+   "files": 1
+  },
+  {
+   "title": "Maschke's theorem",
+   "files": 1
+  },
+  {
+   "title": "Mahler's theorem",
+   "files": 1
+  },
+  {
+   "title": "Steinhaus theorem",
+   "files": 1
+  },
+  {
+   "title": "Van der Waerden's theorem",
+   "files": 1
+  },
+  {
+   "title": "Uncountability of the continuum",
+   "files": 1
+  },
+  {
+   "title": "Krein–Milman theorem",
+   "files": 1
+  },
+  {
+   "title": "M. Riesz extension theorem",
+   "files": 1
+  },
+  {
+   "title": "Intermediate value theorem",
+   "files": 1
+  },
+  {
+   "title": "Cantor–Bernstein–Schroeder theorem",
+   "files": 1
+  },
+  {
+   "title": "Identity theorem",
+   "files": 1
+  }
+ ],
+ "map": null,
+ "folder_map": {
+  "level": 2,
+  "nodes": [
+   {
+    "id": "Development/AbelianVarietyTheory",
+    "lines_pct": 46.07,
+    "label": "AbelianVarietyTheory",
+    "folder": "Development/AbelianVarietyTheory"
+   },
+   {
+    "id": "Development/AutomorphicArithmetic",
+    "lines_pct": 10.68,
+    "label": "AutomorphicArithmetic",
+    "folder": "Development/AutomorphicArithmetic"
+   },
+   {
+    "id": "Development/AutomorphicSpectrum",
+    "lines_pct": 6.83,
+    "label": "AutomorphicSpectrum",
+    "folder": "Development/AutomorphicSpectrum"
+   },
+   {
+    "id": "Formalism/LocalToGlobal",
+    "lines_pct": 5.49,
+    "label": "LocalToGlobal",
+    "folder": "Formalism/LocalToGlobal"
+   },
+   {
+    "id": "Development/WeilBound",
+    "lines_pct": 4.91,
+    "label": "WeilBound",
+    "folder": "Development/WeilBound"
+   },
+   {
+    "id": "Formalism/SharpRestriction",
+    "lines_pct": 4.17,
+    "label": "SharpRestriction",
+    "folder": "Formalism/SharpRestriction"
+   },
+   {
+    "id": "GroundTheory/HeightsAndTheta",
+    "lines_pct": 3.63,
+    "label": "HeightsAndTheta",
+    "folder": "GroundTheory/HeightsAndTheta"
+   },
+   {
+    "id": "Formalism/HermitianCurvature",
+    "lines_pct": 2.72,
+    "label": "HermitianCurvature",
+    "folder": "Formalism/HermitianCurvature"
+   },
+   {
+    "id": "Formalism/PeriodIntegrals",
+    "lines_pct": 2.62,
+    "label": "PeriodIntegrals",
+    "folder": "Formalism/PeriodIntegrals"
+   },
+   {
+    "id": "ReciprocityTheory/ReductiveGroups",
+    "lines_pct": 2.43,
+    "label": "ReductiveGroups",
+    "folder": "ReciprocityTheory/ReductiveGroups"
+   },
+   {
+    "id": "GroundTheory/AutomorphicForms",
+    "lines_pct": 0.88,
+    "label": "AutomorphicForms (GroundTheory)",
+    "folder": "GroundTheory/AutomorphicForms"
+   },
+   {
+    "id": "Development/ResolutionOfSingularities",
+    "lines_pct": 0.84,
+    "label": "ResolutionOfSingularities",
+    "folder": "Development/ResolutionOfSingularities"
+   },
+   {
+    "id": "CompanionTheory/SpectralGeometry",
+    "lines_pct": 0.62,
+    "label": "SpectralGeometry",
+    "folder": "CompanionTheory/SpectralGeometry"
+   },
+   {
+    "id": "Development/EtaleCohomology",
+    "lines_pct": 0.6,
+    "label": "EtaleCohomology",
+    "folder": "Development/EtaleCohomology"
+   },
+   {
+    "id": "Formalism/GL3MeanSquares",
+    "lines_pct": 0.48,
+    "label": "GL3MeanSquares",
+    "folder": "Formalism/GL3MeanSquares"
+   },
+   {
+    "id": "GroundTheory/ProfiniteCohomology",
+    "lines_pct": 0.48,
+    "label": "ProfiniteCohomology",
+    "folder": "GroundTheory/ProfiniteCohomology"
+   },
+   {
+    "id": "GroundTheory/GlobalFields",
+    "lines_pct": 0.41,
+    "label": "GlobalFields",
+    "folder": "GroundTheory/GlobalFields"
+   },
+   {
+    "id": "GroundTheory/PAdicHodge",
+    "lines_pct": 0.37,
+    "label": "PAdicHodge",
+    "folder": "GroundTheory/PAdicHodge"
+   },
+   {
+    "id": "Formalism/ThetaLogCoordinates",
+    "lines_pct": 0.33,
+    "label": "ThetaLogCoordinates",
+    "folder": "Formalism/ThetaLogCoordinates"
+   },
+   {
+    "id": "PositivityTheory/AutomorphicForms",
+    "lines_pct": 0.31,
+    "label": "AutomorphicForms (PositivityTheory)",
+    "folder": "PositivityTheory/AutomorphicForms"
+   }
+  ],
+  "edges": [
+   [
+    "Development/AbelianVarietyTheory",
+    "ReciprocityTheory/ReductiveGroups",
+    28408
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Formalism/LocalToGlobal",
+    20148
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Development/AutomorphicArithmetic",
+    12553
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "Development/WeilBound",
+    12332
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Formalism/SharpRestriction",
+    10068
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Development/AutomorphicSpectrum",
+    7107
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Development/WeilBound",
+    5206
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "ReciprocityTheory/ReductiveGroups",
+    4336
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "GroundTheory/HeightsAndTheta",
+    3325
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Development/WeilBound",
+    1522
+   ],
+   [
+    "Development/WeilBound",
+    "GroundTheory/HeightsAndTheta",
+    1087
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Development/AutomorphicSpectrum",
+    983
+   ],
+   [
+    "Formalism/LocalToGlobal",
+    "Formalism/SharpRestriction",
+    945
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "PositivityTheory/AutomorphicForms",
+    936
+   ],
+   [
+    "Formalism/LocalToGlobal",
+    "Formalism/PeriodIntegrals",
+    933
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Formalism/HermitianCurvature",
+    816
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Development/AbelianVarietyTheory",
+    806
+   ],
+   [
+    "Development/WeilBound",
+    "ReciprocityTheory/ReductiveGroups",
+    797
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Formalism/PeriodIntegrals",
+    762
+   ],
+   [
+    "GroundTheory/HeightsAndTheta",
+    "ReciprocityTheory/ReductiveGroups",
+    734
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Development/EtaleCohomology",
+    712
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Development/AutomorphicSpectrum",
+    557
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "GroundTheory/AutomorphicForms",
+    529
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "GroundTheory/AutomorphicForms",
+    463
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "PositivityTheory/AutomorphicForms",
+    454
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "Formalism/LocalToGlobal",
+    435
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "GroundTheory/AutomorphicForms",
+    403
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Formalism/SharpRestriction",
+    366
+   ],
+   [
+    "Formalism/PeriodIntegrals",
+    "Formalism/SharpRestriction",
+    320
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "PositivityTheory/AutomorphicForms",
+    290
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Development/EtaleCohomology",
+    280
+   ],
+   [
+    "Formalism/LocalToGlobal",
+    "ReciprocityTheory/ReductiveGroups",
+    262
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "GroundTheory/GlobalFields",
+    255
+   ],
+   [
+    "Formalism/HermitianCurvature",
+    "Formalism/PeriodIntegrals",
+    244
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Formalism/LocalToGlobal",
+    242
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "GroundTheory/GlobalFields",
+    221
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "GroundTheory/GlobalFields",
+    203
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Development/WeilBound",
+    161
+   ],
+   [
+    "Formalism/GL3MeanSquares",
+    "Formalism/LocalToGlobal",
+    150
+   ],
+   [
+    "Formalism/SharpRestriction",
+    "ReciprocityTheory/ReductiveGroups",
+    148
+   ],
+   [
+    "Formalism/HermitianCurvature",
+    "Formalism/LocalToGlobal",
+    147
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "Formalism/SharpRestriction",
+    128
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "Formalism/GL3MeanSquares",
+    123
+   ],
+   [
+    "Formalism/HermitianCurvature",
+    "Formalism/SharpRestriction",
+    119
+   ],
+   [
+    "Development/WeilBound",
+    "Formalism/LocalToGlobal",
+    104
+   ],
+   [
+    "Development/WeilBound",
+    "GroundTheory/AutomorphicForms",
+    103
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "ReciprocityTheory/ReductiveGroups",
+    97
+   ],
+   [
+    "Development/WeilBound",
+    "GroundTheory/ProfiniteCohomology",
+    88
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "GroundTheory/HeightsAndTheta",
+    82
+   ],
+   [
+    "Development/WeilBound",
+    "GroundTheory/GlobalFields",
+    82
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "GroundTheory/ProfiniteCohomology",
+    80
+   ],
+   [
+    "GroundTheory/AutomorphicForms",
+    "GroundTheory/GlobalFields",
+    79
+   ],
+   [
+    "GroundTheory/GlobalFields",
+    "GroundTheory/ProfiniteCohomology",
+    76
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "Formalism/PeriodIntegrals",
+    75
+   ],
+   [
+    "Development/WeilBound",
+    "Formalism/SharpRestriction",
+    75
+   ],
+   [
+    "GroundTheory/GlobalFields",
+    "PositivityTheory/AutomorphicForms",
+    74
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Formalism/PeriodIntegrals",
+    65
+   ],
+   [
+    "Development/WeilBound",
+    "GroundTheory/PAdicHodge",
+    63
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "ReciprocityTheory/ReductiveGroups",
+    61
+   ],
+   [
+    "Development/AutomorphicSpectrum",
+    "GroundTheory/PAdicHodge",
+    52
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Formalism/HermitianCurvature",
+    47
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Formalism/PeriodIntegrals",
+    41
+   ],
+   [
+    "Development/ResolutionOfSingularities",
+    "Development/WeilBound",
+    39
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Formalism/SharpRestriction",
+    34
+   ],
+   [
+    "Formalism/LocalToGlobal",
+    "Formalism/ThetaLogCoordinates",
+    34
+   ],
+   [
+    "Formalism/SharpRestriction",
+    "Formalism/ThetaLogCoordinates",
+    34
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Formalism/GL3MeanSquares",
+    33
+   ],
+   [
+    "GroundTheory/GlobalFields",
+    "GroundTheory/HeightsAndTheta",
+    33
+   ],
+   [
+    "Development/WeilBound",
+    "Formalism/PeriodIntegrals",
+    30
+   ],
+   [
+    "GroundTheory/AutomorphicForms",
+    "GroundTheory/HeightsAndTheta",
+    30
+   ],
+   [
+    "Formalism/GL3MeanSquares",
+    "Formalism/SharpRestriction",
+    25
+   ],
+   [
+    "GroundTheory/AutomorphicForms",
+    "PositivityTheory/AutomorphicForms",
+    25
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Development/ResolutionOfSingularities",
+    24
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "Formalism/HermitianCurvature",
+    23
+   ],
+   [
+    "Formalism/PeriodIntegrals",
+    "ReciprocityTheory/ReductiveGroups",
+    21
+   ],
+   [
+    "Formalism/HermitianCurvature",
+    "ReciprocityTheory/ReductiveGroups",
+    20
+   ],
+   [
+    "CompanionTheory/SpectralGeometry",
+    "Development/AutomorphicArithmetic",
+    15
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "GroundTheory/ProfiniteCohomology",
+    15
+   ],
+   [
+    "Development/AbelianVarietyTheory",
+    "GroundTheory/PAdicHodge",
+    15
+   ],
+   [
+    "Development/AutomorphicArithmetic",
+    "GroundTheory/PAdicHodge",
+    15
+   ]
+  ],
+  "shown": 20,
+  "folders": 330
+ },
+ "history": null,
+ "pins": {
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "toolchain": "leanprover/lean4:v4.33.1"
+ },
+ "coverage": {
+  "qualified_uses": 6959824,
+  "resolved_to_mathlib_pct": 66.4
+ },
+ "resemblance": {
+  "compared": 6,
+  "method": "Similarity of two projects' mixes of Mathlib areas: the share of code lines attributed to each of Mathlib's second-level folders (such as NumberTheory/LSeries), compared by cosine similarity; 1 means the same mix, 0 nothing in common. It compares the foundations the code is built on, not the problems the proofs solve.",
+  "closest": [
+   {
+    "key": "flt",
+    "title": "Fermat's Last Theorem project (Imperial College London, in progress)",
+    "short": "FLT project",
+    "similarity": 0.92
+   },
+   {
+    "key": "spherepacking",
+    "title": "Sphere packing in dimension 8 (Lean project, completed with Math Inc's Gauss)",
+    "short": "Sphere packing (dim 8)",
+    "similarity": 0.812
+   },
+   {
+    "key": "erdos846",
+    "title": "Erdős problem 846 (AlphaProof Nexus, AI-generated)",
+    "short": "Erdős 846",
+    "similarity": 0.757
+   },
+   {
+    "key": "pfr",
+    "title": "Polynomial Freiman–Ruzsa conjecture (Gowers, Green, Manners, Tao; Lean project led by Tao)",
+    "short": "PFR conjecture",
+    "similarity": 0.747
+   },
+   {
+    "key": "carleson",
+    "title": "Carleson's theorem (van Doorn et al.)",
+    "short": "Carleson",
+    "similarity": 0.618
+   },
+   {
+    "key": "strongpnt",
+    "title": "Strong prime number theorem (Math Inc, mostly AI-generated by Gauss)",
+    "short": "Strong PNT",
+    "similarity": 0.569
+   }
+  ]
+ }
+}

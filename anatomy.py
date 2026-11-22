@@ -6,7 +6,8 @@
 SOURCE is a git URL (such as https://github.com/teorth/pfr) or a folder on this computer.
 The card lands in OUT/KEY/ (card.png, card.html, card.json); OUT/compare.html compares it with the reference set.
 
-What happens: Mathlib's declaration table is downloaded on the first run (about 70 MB, cached); a git SOURCE is
+What happens: Mathlib's declaration table is downloaded on the first run (about 70 MB, cached; if that fails, the
+copy included with the tool is used); a git SOURCE is
 cloned (history plus current files) into OUT/.clone-KEY and deleted at the end; the project's .lean files are read as
 plain text. Nothing from the project is built or executed, and no AI model is involved.
 """
@@ -485,8 +486,10 @@ def main():
     refuse_links(*(os.path.join(card_dir, f) for f in OUTPUT_FILES))
 
     step("1/4 Mathlib's tables")
-    _, meta = D.ensure(refresh=a.refresh_data)
-    print(f"declaration table downloaded on {meta.get('declarations', {}).get('fetched', '?')} (cache: {D.data_dir()})")
+    _, meta = D.ensure(refresh=a.refresh_data, retry=True)
+    tbl = meta.get("declarations", {})
+    print(f"declaration table {'included with the tool, ' if tbl.get('bundled') else ''}downloaded on "
+          f"{tbl.get('fetched', '?')} (cache: {D.data_dir()})")
 
     clone = None
     try:

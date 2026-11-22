@@ -34,7 +34,8 @@ and give you:
 - **compare.html**, a page that compares the project with the seven formalizations above.
 
 A small project takes under a minute. The 175,000-file Riemann Hypothesis archive takes about 3 minutes. The first
-run also downloads about 70 MB of data from Mathlib's website.
+run also downloads about 70 MB of data from Mathlib's website; if it cannot (for example in a cloud
+chatbot's sandbox), the tool uses the copy of that data included with it.
 
 ## How to read a card
 
@@ -121,7 +122,8 @@ Output: `cards/pfr/card.png`, `cards/pfr/card.html`, `cards/pfr/card.json` and `
 1. **Downloads Mathlib's tables once**: the declaration table behind the
    [Mathlib documentation](https://leanprover-community.github.io/mathlib4_docs/) (name, kind and module of every
    declaration) and Mathlib's `docs/1000.yaml` and `docs/100.yaml`. Cached in `~/.cache/proof-anatomy`
-   (or `$PROOF_ANATOMY_DATA`).
+   (or `$PROOF_ANATOMY_DATA`). If a download fails, the copy in `proof_anatomy/data/` (downloaded on 2026-11-21)
+   is used, the card says so, and the next run tries the download again.
 2. **Fetches the project**: its commit history without file contents, then one commit's `.lean` and metadata files,
    written by the tool itself (see "Safety" below); everything is deleted at the end. Nothing in it is built or executed.
 3. **Reads every `.lean` file as text** (`proof_anatomy/extract.py`): strips comments and literals, parses
@@ -163,7 +165,7 @@ Files that are too large, too deeply nested or too slow to read are skipped with
 HTML-escaped on the card, and the cached Mathlib index is plain JSON.
 
 The full method, every formula and every known limitation are in [METHOD.md](METHOD.md). `python3 tests/test_extract.py`,
-`python3 tests/test_wrapper.py` and `python3 tests/test_security.py` run the regression tests (161 checks). Proof
+`python3 tests/test_wrapper.py` and `python3 tests/test_security.py` run the regression tests (172 checks). Proof
 Anatomy was written with Claude Code (Anthropic). Before release, OpenAI Codex reviewed the code in three rounds and
 then for security; every confirmed finding was fixed and turned into a test, and the approximations that remain are
 listed in METHOD.md.
@@ -211,4 +213,6 @@ build the project and query the Lean environment itself (for example with `#prin
 
 ### License
 
-MIT. Mathlib's data is downloaded from the Mathlib project (Apache 2.0) when you run the tool, not redistributed.
+MIT, except `proof_anatomy/data/`: a copy of Mathlib's declaration table (the name, kind and module of each
+declaration) and of its `docs/1000.yaml` and `docs/100.yaml`, from the Mathlib project, under the Apache License 2.0
+(`proof_anatomy/data/LICENSE-Mathlib`).

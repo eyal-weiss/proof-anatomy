@@ -417,5 +417,96 @@ except SystemExit:
 check("git data plus Lean files over 5 GB is refused", refused_total)
 check("the same files fit when git's data is small", A.check_layout(big_files, used_bytes=50 * 2**20)[0] == 0)
 
+# --- cloud test (2026-11-22) ------------------------------------------------------------------------------
+# 37. When Mathlib's sites cannot be reached (a sandbox that allows only GitHub and package sites) or send something
+#     that is not the real file, the copy included with the tool is used and marked; a real download is never replaced
+#     by it; and a later run upgrades the included copy when the download works again.
+saved_urls, saved_env = dict(D.URLS), os.environ.get("PROOF_ANATOMY_DATA")
+cache = tempfile.mkdtemp(); os.environ["PROOF_ANATOMY_DATA"] = cache
+block = os.path.join(tempfile.mkdtemp(), "blocked.html"); open(block, "w").write("<html>Host not in allowlist</html>")
+try:
+    D.URLS.update({"declarations": "https://invalid.invalid/declaration-data.bmp", "1000.yaml": "file://" + block,
+                   "100.yaml": "https://invalid.invalid/100.yaml"})
+    _, meta = D.ensure(quiet=True, retry=True)
+    T = D.load_index()
+    same = all(open(os.path.join(cache, f), "rb").read() == open(os.path.join(D.BUNDLED, f), "rb").read()
+               for f in D.FILES.values())
+    check("unreachable or wrong downloads fall back to the included copy, marked as such",
+          same and all(meta[i].get("bundled") and meta[i]["fetched"] for i in D.FILES) and len(T["names"]) > 400000, meta)
+    D.URLS["declarations"] = "file://" + block
+    _, meta = D.ensure(quiet=True, retry=True)
+    check("a block page instead of the declaration table keeps the included copy", meta["declarations"].get("bundled"))
+    meta["declarations"] = {"url": "x", "fetched": "2020-01-01"}                       # pretend a real download is cached
+    json.dump(meta, open(os.path.join(cache, "fetched.json"), "w"))
+    idx_bytes = open(os.path.join(cache, D.INDEX), "rb").read()
+    _, meta = D.ensure(quiet=True, refresh=True)
+    check("a failed refresh keeps a real cached download", meta["declarations"] == {"url": "x", "fetched": "2020-01-01"}
+          and open(os.path.join(cache, D.INDEX), "rb").read() == idx_bytes, meta)
+    meta["declarations"] = {"url": "x", "fetched": "2020-01-01", "bundled": True}
+    json.dump(meta, open(os.path.join(cache, "fetched.json"), "w"))
+    fake = os.path.join(tempfile.mkdtemp(), "decl.json")
+    json.dump({"declarations": {f"N.d{i}": {"docLink": "./Mathlib/A/B.html#x", "kind": "theorem"} for i in range(100001)}},
+              open(fake, "w"))
+    D.URLS["declarations"] = "file://" + fake
+    _, meta = D.ensure(quiet=True)
+    check("without retry (the tool's worker processes) the included copy is not downloaded again",
+          meta["declarations"].get("bundled"))
+    _, meta = D.ensure(quiet=True, retry=True)
+    check("with retry, a working download replaces the included copy",
+          not meta["declarations"].get("bundled") and len(D.load_index()["names"]) == 100001, meta["declarations"])
+    # Codex review 12: a damaged fetched.json must not cost a real download, and one bad record must not cost the others.
+    real = open(os.path.join(cache, D.INDEX), "rb").read()
+    D.URLS["declarations"] = "https://invalid.invalid/declaration-data.bmp"
+    open(os.path.join(cache, "fetched.json"), "w").write('{"declarations": {"url": "x", "fetch')
+    D.ensure(quiet=True, retry=True)
+    check("a damaged fetched.json keeps the downloaded files", open(os.path.join(cache, D.INDEX), "rb").read() == real)
+    json.dump({"declarations": "junk", "100.yaml": {"url": "y", "fetched": "2021-01-01"}}, open(os.path.join(cache, "fetched.json"), "w"))
+    check("one damaged record leaves the others", D.fetched() == {"100.yaml": {"url": "y", "fetched": "2021-01-01"}}, D.fetched())
+    check("no partial files are left in the cache", not [f for f in os.listdir(cache) if f.endswith(".part")], os.listdir(cache))
+    # Two runs at once: a run whose download fails waits for the other and then keeps what that run installed.
+    import threading
+    cache2 = tempfile.mkdtemp(); os.environ["PROOF_ANATOMY_DATA"] = cache2
+    result = {}
+    with D._Lock(cache2):                                                             # the other run is updating
+        th = threading.Thread(target=lambda: result.update(meta=D.ensure(quiet=True, retry=True)[1])); th.start()
+        time.sleep(1.0); waited = th.is_alive()
+        for f in D.FILES.values(): shutil.copyfile(os.path.join(D.BUNDLED, f), os.path.join(cache2, f))
+        json.dump({i: {"url": "real", "fetched": "2026-01-01"} for i in D.FILES}, open(os.path.join(cache2, "fetched.json"), "w"))
+    th.join(60)
+    check("a concurrent run waits, then keeps the other run's download instead of the included copy",
+          waited and result.get("meta", {}).get("declarations") == {"url": "real", "fetched": "2026-01-01"}, result)
+    shutil.rmtree(cache2, ignore_errors=True)
+    # Codex review 13: on Windows, waiting is only for another run holding the lock; other errors stop the run.
+    import errno, types
+    calls = []
+    def fake_locking(fd, mode, n):
+        calls.append(mode)
+        if fake.fail == "busy" and len(calls) <= 2: raise OSError(errno.EACCES, "busy")
+        if fake.fail == "broken" and mode == fake.LK_NBLCK: raise OSError(errno.EIO, "drive gone")
+    fake = types.SimpleNamespace(LK_NBLCK=2, LK_UNLCK=0, locking=fake_locking, fail="busy")
+    saved_name, saved_mod = os.name, sys.modules.get("msvcrt")
+    sys.modules["msvcrt"] = fake; os.name = "nt"
+    try:
+        with D._Lock(cache):
+            pass
+        waited_busy = calls[:3] == [2, 2, 2] and calls[-1] == 0
+        calls.clear(); fake.fail = "broken"; t0 = time.time()
+        try:
+            D._Lock(cache); stopped = False
+        except SystemExit:
+            stopped = True
+    finally:
+        os.name = saved_name
+        if saved_mod is None: sys.modules.pop("msvcrt", None)
+        else: sys.modules["msvcrt"] = saved_mod
+    check("Windows: the lock waits while another run holds it, then is released", waited_busy, calls)
+    check("Windows: a locking error that is not contention stops at once with a message",
+          stopped and time.time() - t0 < 5 and len(calls) == 1, calls)
+finally:
+    D.URLS.clear(); D.URLS.update(saved_urls)
+    if saved_env is None: os.environ.pop("PROOF_ANATOMY_DATA", None)
+    else: os.environ["PROOF_ANATOMY_DATA"] = saved_env
+    shutil.rmtree(cache, ignore_errors=True)
+
 print(f"\n{len(FAILS)} failed" if FAILS else "\nall passed")
 sys.exit(1 if FAILS else 0)

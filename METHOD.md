@@ -23,6 +23,11 @@ the project, does not run Lean, and uses no AI model. This page gives each compu
   bring them in. The download date is recorded in `card.json` (`mathlib_table`).
 - **Mathlib's lists of famous theorems**: `docs/1000.yaml` (the 1000+ theorems project) and `docs/100.yaml`
   (Freek Wiedijk's 100 theorems), which name the Mathlib declarations that prove each listed theorem.
+- **When a download fails** (no network, a sandbox that allows only some sites, or a reply that is not the real file:
+  a declaration table with fewer than 100,000 declarations, or a list that is not a YAML mapping), the copies in
+  `proof_anatomy/data/`, downloaded on 2026-11-21, are used instead. `card.json` then records `"bundled": true`
+  under `mathlib_table`, and the card's notes say so. A cached real download is kept, never replaced by the copy; runs
+  that update the cache at the same time take turns; and the next run tries the download again.
 
 ## Pass 1: per-file records (`proof_anatomy/extract.py`)
 

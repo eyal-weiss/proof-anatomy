@@ -602,7 +602,7 @@ def details(K):
     pins = K.get("pins") or {}
     tbl = K.get("mathlib_table") or {}
     o.append('<h2>Method and limits</h2><ul class="note">'
-             f'<li>Counts are from the source text: comments and import lines removed; theorems = <code>theorem</code> and <code>lemma</code> declarations; definitions = <code>def</code> and <code>abbrev</code>. Mathlib\'s counts come from its published declaration table{(" as downloaded on " + esc(tbl["fetched"])) if tbl.get("fetched") else ""} ({fmt(K["mathlib"]["theorems"])} theorems, {fmt(K["mathlib"]["definitions"])} definitions, {fmt(K["mathlib"]["files"])} files); the two are counted differently, so ratios are approximate.</li>'
+             f'<li>Counts are from the source text: comments and import lines removed; theorems = <code>theorem</code> and <code>lemma</code> declarations; definitions = <code>def</code> and <code>abbrev</code>. Mathlib\'s counts come from its published declaration table{(" as downloaded on " + esc(tbl["fetched"])) if tbl.get("fetched") else ""} ({fmt(K["mathlib"]["theorems"])} theorems, {fmt(K["mathlib"]["definitions"])} definitions, {fmt(K["mathlib"]["files"])} files); the two are counted differently, so ratios are approximate.{" The table was the copy included with Proof Anatomy, because the download failed." if tbl.get("bundled") else ""}</li>'
              f'<li>Areas: each file\'s lines are split among Mathlib\'s top-level folders by the Mathlib names it uses, each name weighted by log(1 + uses) and discounted by how many of the project\'s files use it (1 + log((1 + files) / (1 + files using it)), where files counts the files that use any name from the table). Files with no Mathlib name ({K["areas_filled_pct"]}% of lines) take the mix of the files that import them.</li>'
              f'<li>Borrowed or new: each name is looked up in Lean\'s order, line by line (local variables, then the current namespace and its parents, then the name as written, then opened namespaces); the first match decides whether it is the project\'s own, Mathlib\'s, or from Lean core and the other libraries Mathlib uses. Local variables and names Lean generates are not counted.</li>'
              f'<li>Famous theorems: only declarations that Mathlib\'s own lists name (theorems, and the definitions or instances some entries point to), and only when the code names them; a theorem used through a tactic is missed.</li>'
@@ -660,10 +660,14 @@ CHROME_PATHS = ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", 
 
 
 def find_chrome():
-    import shutil
+    import glob, shutil
     for n in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser", "chrome", "msedge"):
         if shutil.which(n): return shutil.which(n)
-    return next((p for p in CHROME_PATHS if os.path.exists(p)), None)
+    found = next((p for p in CHROME_PATHS if os.path.exists(p)), None)
+    if found: return found
+    pw = [os.path.join(os.path.expanduser("~"), ".cache", "ms-playwright"), "/ms-playwright"]   # Playwright's Chromium
+    hits = sorted(h for b in pw for h in glob.glob(os.path.join(b, "chromium-*", "chrome-linux*", "chrome")) if os.access(h, os.X_OK))
+    return hits[-1] if hits else None
 
 
 def _browser_limits():

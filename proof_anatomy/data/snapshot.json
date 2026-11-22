@@ -1,0 +1,14 @@
+{
+ "declarations": {
+  "url": "https://leanprover-community.github.io/mathlib4_docs/declarations/declaration-data.bmp",
+  "fetched": "2026-11-21"
+ },
+ "1000.yaml": {
+  "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/master/docs/1000.yaml",
+  "fetched": "2026-11-21"
+ },
+ "100.yaml": {
+  "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/master/docs/100.yaml",
+  "fetched": "2026-11-21"
+ }
+}

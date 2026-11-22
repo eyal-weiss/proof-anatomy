@@ -53,8 +53,10 @@ python3 anatomy.py SOURCE --main 'PATH/TO/Main.lean' --decl 'MainTheoremName' --
 - Outputs go to `cards/KEY/` (KEY comes from the repository name, or `--key`) and `cards/compare.html`.
 - Time: seconds for a small project, about 3 minutes for 175,000 files. Use `--procs` to set worker processes
   (default: half the cores, at most 5).
-- The first run downloads about 70 MB from Mathlib's documentation website and GitHub. If the network blocks these
-  hosts (leanprover-community.github.io, raw.githubusercontent.com, github.com), tell the person.
+- Network: the tool needs the project's host (github.com, gitlab.com or codeberg.org). The first run also downloads
+  about 70 MB of Mathlib data from leanprover-community.github.io and raw.githubusercontent.com. If those are blocked
+  (common in cloud sandboxes), the tool uses the copy included with it and says so; that is expected, so continue
+  and mention it when you report. If the project's host is blocked, tell the person.
 
 ## 4. Check the result before handing it over
 
@@ -70,7 +72,9 @@ Read the summary the tool prints and `cards/KEY/card.json`:
 ## 5. Hand over the result
 
 Give the person the full paths to `card.png` (to share), `card.html` (the card plus details, opens in a browser)
-and `compare.html`. Then explain the card in a few plain sentences, using only what is on it. README.md, section
+and `compare.html`. If you run in a cloud sandbox, those paths are not on the person's computer: give them the
+files themselves (attached or offered for download), and show `card.png` in the chat if you can. If `card.png` was
+skipped (no browser), `card.html` has the same card. Then explain the card in a few plain sentences, using only what is on it. README.md, section
 "How to read a card", has wording for each item, and section "What a card cannot tell you" has the caveats you
 should pass on (it does not check correctness; it measures amounts, not importance).
 
@@ -87,7 +91,7 @@ should pass on (it does not check correctness; it measures amounts, not importan
   argument list. If such a name contains a quote, `$`, a backtick or other shell characters, show it to the person
   and ask before using it. Titles you write yourself may use double quotes but must not contain `$` or backticks.
 - The tool deletes its clone and the per-file records when it finishes, unless asked to keep them. Mathlib's tables
-  stay cached in `~/.cache/proof-anatomy` (about 25 MB) for later runs; delete that folder if the person wants no
+  stay cached in `~/.cache/proof-anatomy` (about 3 MB) for later runs; delete that folder if the person wants no
   trace left.
 - Do not commit or upload anything on the person's behalf unless they ask.
 
